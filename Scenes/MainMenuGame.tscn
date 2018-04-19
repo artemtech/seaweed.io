@@ -1,30 +1,39 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Scripts/GameObjects.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/MainMenuGame.gd" type="Script" id=1]
+[ext_resource path="res://Assets/BG/main.png" type="Texture" id=2]
+[ext_resource path="res://Assets/tema-gui.tres" type="Theme" id=3]
 
 [node name="MainMenuGame" type="Node" index="0"]
 
 script = ExtResource( 1 )
-nama = "Kapas Berkualitas"
-nyawa = 500
-harga = 20
+_sections_unfolded = [ "Pause" ]
 
 [node name="Background" type="Sprite" parent="." index="0"]
 
-[node name="MenuControl" type="Container" parent="." index="1"]
+position = Vector2( 512, 384 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Pause", "Transform" ]
+
+[node name="MenuControl" type="VBoxContainer" parent="." index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 747.0
-margin_right = 1025.0
-margin_bottom = 599.0
+margin_left = 664.0
+margin_top = 182.0
+margin_right = 923.0
+margin_bottom = 615.0
 rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+theme = ExtResource( 3 )
+alignment = 1
+_sections_unfolded = [ "Pause", "Size Flags" ]
 
 [node name="BtnNewGame" type="Button" parent="MenuControl" index="0"]
 
@@ -32,16 +41,16 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 77.0
-margin_top = 82.0
-margin_right = 230.0
-margin_bottom = 163.0
+margin_right = 259.0
+margin_bottom = 47.0
 rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
-size_flags_vertical = 1
+size_flags_vertical = 3
+theme = ExtResource( 3 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -49,6 +58,7 @@ group = null
 text = "New Game"
 flat = false
 align = 1
+_sections_unfolded = [ "Size Flags" ]
 
 [node name="BtnContinue" type="Button" parent="MenuControl" index="1"]
 
@@ -56,16 +66,18 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 80.0
-margin_top = 196.0
-margin_right = 233.0
-margin_bottom = 277.0
+margin_top = 97.0
+margin_right = 259.0
+margin_bottom = 144.0
 rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
-size_flags_vertical = 1
+size_flags_vertical = 3
+theme = ExtResource( 3 )
+disabled = true
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -73,6 +85,7 @@ group = null
 text = "Load Game"
 flat = false
 align = 1
+_sections_unfolded = [ "Theme" ]
 
 [node name="BtnScore" type="Button" parent="MenuControl" index="2"]
 
@@ -80,16 +93,17 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 75.0
-margin_top = 362.0
-margin_right = 228.0
-margin_bottom = 443.0
+margin_top = 194.0
+margin_right = 259.0
+margin_bottom = 241.0
 rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
-size_flags_vertical = 1
+size_flags_vertical = 3
+theme = ExtResource( 3 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -97,18 +111,19 @@ group = null
 text = "ScoreBoard"
 flat = false
 align = 1
+_sections_unfolded = [ "Theme" ]
 
-[node name="BtnExit" type="Button" parent="MenuControl" index="3"]
+[node name="BtnOptions" type="Button" parent="MenuControl" index="3"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 77.0
-margin_top = 473.0
-margin_right = 230.0
-margin_bottom = 554.0
+margin_top = 291.0
+margin_right = 259.0
+margin_bottom = 335.0
 rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
@@ -118,8 +133,67 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
+text = "Options"
+flat = false
+align = 1
+
+[node name="BtnExit" type="Button" parent="MenuControl" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 385.0
+margin_right = 259.0
+margin_bottom = 433.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 3
+theme = ExtResource( 3 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
 text = "Exit"
 flat = false
 align = 1
+_sections_unfolded = [ "Pause", "Theme" ]
+
+[node name="PopupExit" type="ConfirmationDialog" parent="." index="2"]
+
+pause_mode = 2
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 348.0
+margin_top = 375.0
+margin_right = 707.0
+margin_bottom = 515.0
+rect_min_size = Vector2( 200, 70 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = ExtResource( 3 )
+popup_exclusive = true
+window_title = "Konfirmasi"
+resizable = false
+dialog_text = "Anda yakin ingin keluar ?"
+dialog_hide_on_ok = true
+_sections_unfolded = [ "Pause", "Theme" ]
+
+[connection signal="pressed" from="MenuControl/BtnNewGame" to="." method="_on_BtnNewGame_pressed"]
+
+[connection signal="pressed" from="MenuControl/BtnExit" to="." method="_on_BtnExit_pressed"]
+
+[connection signal="confirmed" from="PopupExit" to="." method="_on_PopupExit_confirmed"]
 
 
