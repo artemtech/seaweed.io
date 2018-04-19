@@ -14,6 +14,19 @@ config/name="Seaweed.io"
 run/main_scene="res://Scenes/MainMenuGame.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Transition="*res://Scenes/Transition.tscn"
+
+[display]
+
+window/size/height=768
+window/stretch/mode="viewport"
+
+[locale]
+
+locale_filter=[ 1, [ "id", "id_ID" ] ]
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"
