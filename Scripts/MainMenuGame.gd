@@ -20,7 +20,6 @@ func _ready():
 			# connect with Back to Scene Awal function
 			btn_cancel.connect("pressed",self,"_on_BtnCancel_pressed")
 			pass
-	
 
 func reset_field():
 	# reset user input on new game fields
@@ -55,13 +54,23 @@ func _on_BtnPlay_pressed():
 			current_player.company = $NewScene/BtnContainer/TxtComp.text
 			pass
 		"LoadScene":
-			# TODO load game logic from user list,
+			# TODO load "NewScene/BtnContainer/LblComp"game logic from user list,
 			pass
 	get_node(current_scene).hide()
 	Utils.set_player(current_player)
 	$"MainScene/Username Panel/username_main_label".text = BANNER + Utils._player.name
 	$MainScene.show()
 	current_scene = "MainScene"
+
+func _validasi_data():
+	#TODO 1. cek username 2. cek perusahaan
+	if $NewScene/BtnContainer/TxtUname.text == data_db and $NewScene/BtnContainer/TxtComp.text == data_db:
+		$NewScene/PopUp.dialog_text = "Username dan perusahaan sudah digunakan!"
+	elif $NewScene/BtnContainer/TxtUname.text == data_db and $NewScene/BtnContainer/TxtComp.text != data_db:
+		$NewScene/PopUp.dialog_text = "Username sudah digunakan!"
+	elif $NewScene/BtnContainer/TxtUname.text != data_db and $NewScene/BtnContainer/TxtComp.text == data_db:
+		$NewScene/PopUp.dialog_text = "Perusahaan sudah digunakan!"
+	$NewScene/PopUp.show()
 
 func _on_BtnHelp_pressed():
 	$MainScene.hide()
