@@ -1,34 +1,43 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/GameObjects/Toko.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/GameObjects/Bank.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/GameObjects/Konsumen.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/GameObjects/Pabrik.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/GameObjects/Tambak.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/GameObjects/Gudang.tscn" type="PackedScene" id=6]
 
 [node name="InGameScene" type="Node2D" index="0"]
 
-_sections_unfolded = [ "Transform" ]
+z_index = 1
+_sections_unfolded = [ "Transform", "Z Index" ]
 
-[node name="Gudang" type="Sprite" parent="." index="0"]
+[node name="Toko" parent="." index="0" instance=ExtResource( 1 )]
 
-position = Vector2( 640.725, 418.062 )
-texture = ExtResource( 1 )
+position = Vector2( 845.922, 82.1948 )
+nama = "TOKO"
+gambar = "res://Assets/GameObjects/ini toko.png"
 
-[node name="Pabrik" type="Sprite" parent="." index="1"]
+[node name="Bank" parent="." index="1" instance=ExtResource( 2 )]
 
-position = Vector2( 845.212, 418.062 )
-texture = ExtResource( 1 )
+position = Vector2( 676.68, 82.0218 )
 
-[node name="Toko" type="Sprite" parent="." index="2"]
+[node name="Konsumen" parent="." index="2" instance=ExtResource( 3 )]
 
-position = Vector2( 845.212, 77.2505 )
-texture = ExtResource( 1 )
+position = Vector2( 584.406, 699.236 )
 
-[node name="Bank" type="Sprite" parent="." index="3"]
+[node name="Pabrik" parent="." index="3" instance=ExtResource( 4 )]
 
-position = Vector2( 638.453, 77.2505 )
-texture = ExtResource( 1 )
+position = Vector2( 846.876, 403.958 )
 
-[node name="Konsumen" type="Sprite" parent="." index="4"]
+[node name="Tambak" parent="." index="4" instance=ExtResource( 5 )]
 
-position = Vector2( 654.357, 667.99 )
-texture = ExtResource( 1 )
+position = Vector2( 172.246, 379.351 )
+
+[node name="Gudang" parent="." index="5" instance=ExtResource( 6 )]
+
+position = Vector2( 574.153, 408.059 )
+
+[connection signal="input_event" from="Toko" to="Toko" method="_on_input_event"]
 
 
