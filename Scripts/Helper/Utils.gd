@@ -1,6 +1,8 @@
 extends Node
 
 var _current_screen = ""
+var _daftar_player = []
+
 var _player = {
 	"name":"nganu",
 	"company":"sae",
@@ -19,3 +21,6 @@ func find_node_with_group(group, recursive=true):
 
 func set_player(var player={}):
 	_player = player
+
+func set_daftar_player(var lplayer = []):
+	_daftar_player = lplayer
