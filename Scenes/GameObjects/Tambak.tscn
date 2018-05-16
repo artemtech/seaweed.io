@@ -1,11 +1,11 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Scripts/Toko.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Tambak.gd" type="Script" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 32, 32 )
+extents = Vector2( 48, 48 )
 
 [node name="Tambak" type="Area2D"]
 
@@ -18,15 +18,17 @@ audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 1 )
 _sections_unfolded = [ "Audio Bus", "Collision", "Pickable", "Transform", "Visibility", "Z Index" ]
-nama = "Pabrik"
+nama = "Objek1"
 nyawa = 100
 harga = 10
-gambar = "res://Assets/GameObjects/ini tambak.png"
+gambar = "res://Assets/GameObjects/in-game/toko.png"
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
 shape = SubResource( 1 )
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
 
 
