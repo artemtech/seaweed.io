@@ -5,7 +5,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 32, 32 )
+extents = Vector2( 64, 64 )
 
 [node name="Konsumen" type="Area2D"]
 
@@ -21,7 +21,7 @@ _sections_unfolded = [ "Audio Bus", "Collision", "Pickable", "Transform", "Visib
 nama = "Konsumen"
 nyawa = 100
 harga = 10
-gambar = "res://Assets/GameObjects/ini konsumen.png"
+gambar = "res://Assets/GameObjects/in-game/konsumen.png"
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 

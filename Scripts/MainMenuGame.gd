@@ -10,6 +10,7 @@ onready var current_player = {
 }
 
 func _ready():
+	FileManager.get_all_player()
 	$PopupExit.get_cancel().connect("pressed",self,"_onPopupExit_cancel_pressed")
 	$PopupExit.get_close_button().connect("pressed",self,"_onPopupExit_cancel_pressed")
 	$PopupExit.get_label().set_align(Label.ALIGN_CENTER)
@@ -20,7 +21,6 @@ func _ready():
 			# connect with Back to Scene Awal function
 			btn_cancel.connect("pressed",self,"_on_BtnCancel_pressed")
 			pass
-	
 
 func reset_field():
 	# reset user input on new game fields
@@ -53,15 +53,27 @@ func _on_BtnPlay_pressed():
 			# TODO some new game logic
 			current_player.name = $NewScene/BtnContainer/TxtUname.text
 			current_player.company = $NewScene/BtnContainer/TxtComp.text
+			FileManager.save_data(current_player.name,current_player)
 			pass
 		"LoadScene":
-			# TODO load game logic from user list,
+			# TODO load "NewScene/BtnContainer/LblComp"game logic from user list,
 			pass
 	get_node(current_scene).hide()
 	Utils.set_player(current_player)
 	$"MainScene/Username Panel/username_main_label".text = BANNER + Utils._player.name
 	$MainScene.show()
 	current_scene = "MainScene"
+
+func _validasi_data():
+	#TODO 1. cek username 2. cek perusahaan
+#	if $NewScene/BtnContainer/TxtUname.text == data_db and $NewScene/BtnContainer/TxtComp.text == data_db:
+#		$NewScene/PopUp.dialog_text = "Username dan perusahaan sudah digunakan!"
+#	elif $NewScene/BtnContainer/TxtUname.text == data_db and $NewScene/BtnContainer/TxtComp.text != data_db:
+#		$NewScene/PopUp.dialog_text = "Username sudah digunakan!"
+#	elif $NewScene/BtnContainer/TxtUname.text != data_db and $NewScene/BtnContainer/TxtComp.text == data_db:
+#		$NewScene/PopUp.dialog_text = "Perusahaan sudah digunakan!"
+#	$NewScene/PopUp.show()
+	pass
 
 func _on_BtnHelp_pressed():
 	$MainScene.hide()

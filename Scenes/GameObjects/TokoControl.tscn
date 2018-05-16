@@ -52,7 +52,7 @@ tab_align = 1
 tabs_visible = true
 _sections_unfolded = [ "Theme" ]
 
-[node name="Sheet 1" type="Tabs" parent="TabContainer" index="0"]
+[node name="Bahan Baku" type="Tabs" parent="TabContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -72,7 +72,7 @@ tab_align = 1
 scrolling_enabled = true
 _sections_unfolded = [ "Focus", "Mouse", "Rect" ]
 
-[node name="ItemList" type="ScrollContainer" parent="TabContainer/Sheet 1" index="0"]
+[node name="ItemList" type="ScrollContainer" parent="TabContainer/Bahan Baku" index="0"]
 
 anchor_left = 0.5
 anchor_top = 0.0
@@ -95,14 +95,14 @@ scroll_vertical_enabled = true
 scroll_vertical = 0
 _sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Rect", "Scroll", "Size Flags", "Theme" ]
 
-[node name="ItemContainer" type="GridContainer" parent="TabContainer/Sheet 1/ItemList" index="0"]
+[node name="ItemContainer" type="GridContainer" parent="TabContainer/Bahan Baku/ItemList" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 632.0
-margin_bottom = 582.0
+margin_right = 701.0
+margin_bottom = 174.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -112,14 +112,14 @@ size_flags_vertical = 1
 columns = 2
 _sections_unfolded = [ "Anchor", "Hint", "Margin", "Mouse", "Rect", "Size Flags", "Theme", "custom_constants" ]
 
-[node name="Item1" type="VBoxContainer" parent="TabContainer/Sheet 1/ItemList/ItemContainer" index="0"]
+[node name="Item1" type="VBoxContainer" parent="TabContainer/Bahan Baku/ItemList/ItemContainer" index="0"]
 
 editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 301.0
+margin_right = 328.0
 margin_bottom = 174.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -130,13 +130,13 @@ size_flags_vertical = 1
 alignment = 0
 _sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Mouse", "Rect", "Size Flags" ]
 
-[node name="ItemIcon" type="TextureRect" parent="TabContainer/Sheet 1/ItemList/ItemContainer/Item1" index="0"]
+[node name="ItemIcon" type="TextureRect" parent="TabContainer/Bahan Baku/ItemList/ItemContainer/Item1" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 301.0
+margin_right = 328.0
 margin_bottom = 64.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -148,15 +148,14 @@ texture = ExtResource( 3 )
 stretch_mode = 0
 _sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Mouse", "Rect", "Size Flags" ]
 
-[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Sheet 1/ItemList/ItemContainer/Item1" index="1"]
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Bahan Baku/ItemList/ItemContainer/Item1" index="1"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 74.0
-margin_right = 301.0
+margin_right = 328.0
 margin_bottom = 120.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -166,14 +165,14 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 alignment = 0
 
-[node name="LblHarga" type="Label" parent="TabContainer/Sheet 1/ItemList/ItemContainer/Item1/HBoxContainer" index="0"]
+[node name="LblHarga" type="Label" parent="TabContainer/Bahan Baku/ItemList/ItemContainer/Item1/HBoxContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 5.0
-margin_right = 145.0
+margin_right = 172.0
 margin_bottom = 41.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -181,20 +180,20 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-text = "LABEL HARGA"
+text = "Bibit Rumput Laut"
 align = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Inputan" type="SpinBox" parent="TabContainer/Sheet 1/ItemList/ItemContainer/Item1/HBoxContainer" index="1"]
+[node name="Inputan" type="SpinBox" parent="TabContainer/Bahan Baku/ItemList/ItemContainer/Item1/HBoxContainer" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 155.0
-margin_right = 301.0
+margin_left = 182.0
+margin_right = 328.0
 margin_bottom = 46.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -213,14 +212,14 @@ editable = true
 prefix = ""
 suffix = ""
 
-[node name="BtnBeli" type="Button" parent="TabContainer/Sheet 1/ItemList/ItemContainer/Item1" index="2"]
+[node name="BtnBeli" type="Button" parent="TabContainer/Bahan Baku/ItemList/ItemContainer/Item1" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 130.0
-margin_right = 301.0
+margin_right = 328.0
 margin_bottom = 174.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -237,15 +236,15 @@ text = "BELI"
 flat = false
 align = 1
 
-[node name="Item2" type="VBoxContainer" parent="TabContainer/Sheet 1/ItemList/ItemContainer" index="1"]
+[node name="Item2" type="VBoxContainer" parent="TabContainer/Bahan Baku/ItemList/ItemContainer" index="1"]
 
 editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 331.0
-margin_right = 632.0
+margin_left = 358.0
+margin_right = 701.0
 margin_bottom = 174.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -256,13 +255,13 @@ size_flags_vertical = 1
 alignment = 0
 _sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Mouse", "Rect", "Size Flags" ]
 
-[node name="ItemIcon" type="TextureRect" parent="TabContainer/Sheet 1/ItemList/ItemContainer/Item2" index="0"]
+[node name="ItemIcon" type="TextureRect" parent="TabContainer/Bahan Baku/ItemList/ItemContainer/Item2" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 301.0
+margin_right = 343.0
 margin_bottom = 64.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -274,15 +273,14 @@ texture = ExtResource( 3 )
 stretch_mode = 0
 _sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Mouse", "Rect", "Size Flags" ]
 
-[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Sheet 1/ItemList/ItemContainer/Item2" index="1"]
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Bahan Baku/ItemList/ItemContainer/Item2" index="1"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 74.0
-margin_right = 301.0
+margin_right = 343.0
 margin_bottom = 120.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -292,14 +290,14 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 alignment = 0
 
-[node name="LblHarga" type="Label" parent="TabContainer/Sheet 1/ItemList/ItemContainer/Item2/HBoxContainer" index="0"]
+[node name="LblHarga" type="Label" parent="TabContainer/Bahan Baku/ItemList/ItemContainer/Item2/HBoxContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 5.0
-margin_right = 145.0
+margin_right = 187.0
 margin_bottom = 41.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -307,20 +305,20 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-text = "LABEL HARGA"
+text = "Rumput Laut Basah"
 align = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Inputan" type="SpinBox" parent="TabContainer/Sheet 1/ItemList/ItemContainer/Item2/HBoxContainer" index="1"]
+[node name="Inputan" type="SpinBox" parent="TabContainer/Bahan Baku/ItemList/ItemContainer/Item2/HBoxContainer" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 155.0
-margin_right = 301.0
+margin_left = 197.0
+margin_right = 343.0
 margin_bottom = 46.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -339,14 +337,14 @@ editable = true
 prefix = ""
 suffix = ""
 
-[node name="BtnBeli" type="Button" parent="TabContainer/Sheet 1/ItemList/ItemContainer/Item2" index="2"]
+[node name="BtnBeli" type="Button" parent="TabContainer/Bahan Baku/ItemList/ItemContainer/Item2" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 130.0
-margin_right = 301.0
+margin_right = 343.0
 margin_bottom = 174.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -363,515 +361,8 @@ text = "BELI"
 flat = false
 align = 1
 
-[node name="Item3" type="VBoxContainer" parent="TabContainer/Sheet 1/ItemList/ItemContainer" index="2"]
+[node name="Bahan Pendukung" type="Tabs" parent="TabContainer" index="1"]
 
-editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 204.0
-margin_right = 301.0
-margin_bottom = 378.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-alignment = 0
-_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Mouse", "Rect", "Size Flags" ]
-
-[node name="ItemIcon" type="TextureRect" parent="TabContainer/Sheet 1/ItemList/ItemContainer/Item3" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 301.0
-margin_bottom = 64.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-texture = ExtResource( 3 )
-stretch_mode = 0
-_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Mouse", "Rect", "Size Flags" ]
-
-[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Sheet 1/ItemList/ItemContainer/Item3" index="1"]
-
-editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 74.0
-margin_right = 301.0
-margin_bottom = 120.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-alignment = 0
-
-[node name="LblHarga" type="Label" parent="TabContainer/Sheet 1/ItemList/ItemContainer/Item3/HBoxContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 5.0
-margin_right = 145.0
-margin_bottom = 41.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-text = "LABEL HARGA"
-align = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="Inputan" type="SpinBox" parent="TabContainer/Sheet 1/ItemList/ItemContainer/Item3/HBoxContainer" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 155.0
-margin_right = 301.0
-margin_bottom = 46.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-min_value = 0.0
-max_value = 100.0
-step = 1.0
-page = 0.0
-value = 0.0
-exp_edit = false
-rounded = false
-editable = true
-prefix = ""
-suffix = ""
-
-[node name="BtnBeli" type="Button" parent="TabContainer/Sheet 1/ItemList/ItemContainer/Item3" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 130.0
-margin_right = 301.0
-margin_bottom = 174.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "BELI"
-flat = false
-align = 1
-
-[node name="Item4" type="VBoxContainer" parent="TabContainer/Sheet 1/ItemList/ItemContainer" index="3"]
-
-editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 331.0
-margin_top = 204.0
-margin_right = 632.0
-margin_bottom = 378.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-alignment = 0
-_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Mouse", "Rect", "Size Flags" ]
-
-[node name="ItemIcon" type="TextureRect" parent="TabContainer/Sheet 1/ItemList/ItemContainer/Item4" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 301.0
-margin_bottom = 64.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-texture = ExtResource( 3 )
-stretch_mode = 0
-_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Mouse", "Rect", "Size Flags" ]
-
-[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Sheet 1/ItemList/ItemContainer/Item4" index="1"]
-
-editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 74.0
-margin_right = 301.0
-margin_bottom = 120.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-alignment = 0
-
-[node name="LblHarga" type="Label" parent="TabContainer/Sheet 1/ItemList/ItemContainer/Item4/HBoxContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 5.0
-margin_right = 145.0
-margin_bottom = 41.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-text = "LABEL HARGA"
-align = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="Inputan" type="SpinBox" parent="TabContainer/Sheet 1/ItemList/ItemContainer/Item4/HBoxContainer" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 155.0
-margin_right = 301.0
-margin_bottom = 46.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-min_value = 0.0
-max_value = 100.0
-step = 1.0
-page = 0.0
-value = 0.0
-exp_edit = false
-rounded = false
-editable = true
-prefix = ""
-suffix = ""
-
-[node name="BtnBeli" type="Button" parent="TabContainer/Sheet 1/ItemList/ItemContainer/Item4" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 130.0
-margin_right = 301.0
-margin_bottom = 174.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "BELI"
-flat = false
-align = 1
-
-[node name="Item5" type="VBoxContainer" parent="TabContainer/Sheet 1/ItemList/ItemContainer" index="4"]
-
-editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 408.0
-margin_right = 301.0
-margin_bottom = 582.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-alignment = 0
-_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Mouse", "Rect", "Size Flags" ]
-
-[node name="ItemIcon" type="TextureRect" parent="TabContainer/Sheet 1/ItemList/ItemContainer/Item5" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 301.0
-margin_bottom = 64.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-texture = ExtResource( 3 )
-stretch_mode = 0
-_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Mouse", "Rect", "Size Flags" ]
-
-[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Sheet 1/ItemList/ItemContainer/Item5" index="1"]
-
-editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 74.0
-margin_right = 301.0
-margin_bottom = 120.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-alignment = 0
-
-[node name="LblHarga" type="Label" parent="TabContainer/Sheet 1/ItemList/ItemContainer/Item5/HBoxContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 5.0
-margin_right = 145.0
-margin_bottom = 41.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-text = "LABEL HARGA"
-align = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="Inputan" type="SpinBox" parent="TabContainer/Sheet 1/ItemList/ItemContainer/Item5/HBoxContainer" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 155.0
-margin_right = 301.0
-margin_bottom = 46.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-min_value = 0.0
-max_value = 100.0
-step = 1.0
-page = 0.0
-value = 0.0
-exp_edit = false
-rounded = false
-editable = true
-prefix = ""
-suffix = ""
-
-[node name="BtnBeli" type="Button" parent="TabContainer/Sheet 1/ItemList/ItemContainer/Item5" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 130.0
-margin_right = 301.0
-margin_bottom = 174.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "BELI"
-flat = false
-align = 1
-
-[node name="Item6" type="VBoxContainer" parent="TabContainer/Sheet 1/ItemList/ItemContainer" index="5"]
-
-editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 331.0
-margin_top = 408.0
-margin_right = 632.0
-margin_bottom = 582.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-alignment = 0
-_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Mouse", "Rect", "Size Flags" ]
-
-[node name="ItemIcon" type="TextureRect" parent="TabContainer/Sheet 1/ItemList/ItemContainer/Item6" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 301.0
-margin_bottom = 64.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-texture = ExtResource( 3 )
-stretch_mode = 0
-_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Mouse", "Rect", "Size Flags" ]
-
-[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Sheet 1/ItemList/ItemContainer/Item6" index="1"]
-
-editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 74.0
-margin_right = 301.0
-margin_bottom = 120.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-alignment = 0
-
-[node name="LblHarga" type="Label" parent="TabContainer/Sheet 1/ItemList/ItemContainer/Item6/HBoxContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 5.0
-margin_right = 145.0
-margin_bottom = 41.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-text = "LABEL HARGA"
-align = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="Inputan" type="SpinBox" parent="TabContainer/Sheet 1/ItemList/ItemContainer/Item6/HBoxContainer" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 155.0
-margin_right = 301.0
-margin_bottom = 46.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-min_value = 0.0
-max_value = 100.0
-step = 1.0
-page = 0.0
-value = 0.0
-exp_edit = false
-rounded = false
-editable = true
-prefix = ""
-suffix = ""
-
-[node name="BtnBeli" type="Button" parent="TabContainer/Sheet 1/ItemList/ItemContainer/Item6" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 130.0
-margin_right = 301.0
-margin_bottom = 174.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "BELI"
-flat = false
-align = 1
-
-[node name="Sheet 2" type="Tabs" parent="TabContainer" index="1"]
-
-editor/display_folded = true
 visible = false
 anchor_left = 0.0
 anchor_top = 0.0
@@ -891,7 +382,7 @@ tab_align = 1
 scrolling_enabled = true
 _sections_unfolded = [ "Focus", "Mouse", "Rect" ]
 
-[node name="ItemList" type="ScrollContainer" parent="TabContainer/Sheet 2" index="0"]
+[node name="ItemList" type="ScrollContainer" parent="TabContainer/Bahan Pendukung" index="0"]
 
 anchor_left = 0.5
 anchor_top = 0.0
@@ -914,7 +405,7 @@ scroll_vertical_enabled = true
 scroll_vertical = 0
 _sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Rect", "Scroll", "Size Flags", "Theme" ]
 
-[node name="ItemContainer" type="GridContainer" parent="TabContainer/Sheet 2/ItemList" index="0"]
+[node name="ItemContainer" type="GridContainer" parent="TabContainer/Bahan Pendukung/ItemList" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -929,14 +420,14 @@ size_flags_vertical = 1
 columns = 2
 _sections_unfolded = [ "Anchor", "Hint", "Margin", "Mouse", "Rect", "Size Flags", "Theme", "custom_constants" ]
 
-[node name="Item1" type="VBoxContainer" parent="TabContainer/Sheet 2/ItemList/ItemContainer" index="0"]
+[node name="Item1" type="VBoxContainer" parent="TabContainer/Bahan Pendukung/ItemList/ItemContainer" index="0"]
 
 editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 301.0
+margin_right = 328.0
 margin_bottom = 174.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -947,13 +438,13 @@ size_flags_vertical = 1
 alignment = 0
 _sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Mouse", "Rect", "Size Flags" ]
 
-[node name="ItemIcon" type="TextureRect" parent="TabContainer/Sheet 2/ItemList/ItemContainer/Item1" index="0"]
+[node name="ItemIcon" type="TextureRect" parent="TabContainer/Bahan Pendukung/ItemList/ItemContainer/Item1" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 301.0
+margin_right = 328.0
 margin_bottom = 64.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -965,15 +456,14 @@ texture = ExtResource( 3 )
 stretch_mode = 0
 _sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Mouse", "Rect", "Size Flags" ]
 
-[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Sheet 2/ItemList/ItemContainer/Item1" index="1"]
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Bahan Pendukung/ItemList/ItemContainer/Item1" index="1"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 74.0
-margin_right = 301.0
+margin_right = 328.0
 margin_bottom = 120.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -983,14 +473,14 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 alignment = 0
 
-[node name="LblHarga" type="Label" parent="TabContainer/Sheet 2/ItemList/ItemContainer/Item1/HBoxContainer" index="0"]
+[node name="LblHarga" type="Label" parent="TabContainer/Bahan Pendukung/ItemList/ItemContainer/Item1/HBoxContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 5.0
-margin_right = 145.0
+margin_right = 124.0
 margin_bottom = 41.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -998,20 +488,20 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-text = "LABEL HARGA"
+text = "Metil Alkohol"
 align = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Inputan" type="SpinBox" parent="TabContainer/Sheet 2/ItemList/ItemContainer/Item1/HBoxContainer" index="1"]
+[node name="Inputan" type="SpinBox" parent="TabContainer/Bahan Pendukung/ItemList/ItemContainer/Item1/HBoxContainer" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 155.0
-margin_right = 301.0
+margin_left = 134.0
+margin_right = 280.0
 margin_bottom = 46.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1030,14 +520,14 @@ editable = true
 prefix = ""
 suffix = ""
 
-[node name="BtnBeli" type="Button" parent="TabContainer/Sheet 2/ItemList/ItemContainer/Item1" index="2"]
+[node name="BtnBeli" type="Button" parent="TabContainer/Bahan Pendukung/ItemList/ItemContainer/Item1" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 130.0
-margin_right = 301.0
+margin_right = 328.0
 margin_bottom = 174.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1054,15 +544,15 @@ text = "BELI"
 flat = false
 align = 1
 
-[node name="Item2" type="VBoxContainer" parent="TabContainer/Sheet 2/ItemList/ItemContainer" index="1"]
+[node name="Item2" type="VBoxContainer" parent="TabContainer/Bahan Pendukung/ItemList/ItemContainer" index="1"]
 
 editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 331.0
-margin_right = 632.0
+margin_left = 310.0
+margin_right = 653.0
 margin_bottom = 174.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1073,13 +563,13 @@ size_flags_vertical = 1
 alignment = 0
 _sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Mouse", "Rect", "Size Flags" ]
 
-[node name="ItemIcon" type="TextureRect" parent="TabContainer/Sheet 2/ItemList/ItemContainer/Item2" index="0"]
+[node name="ItemIcon" type="TextureRect" parent="TabContainer/Bahan Pendukung/ItemList/ItemContainer/Item2" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 301.0
+margin_right = 343.0
 margin_bottom = 64.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1091,7 +581,7 @@ texture = ExtResource( 3 )
 stretch_mode = 0
 _sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Mouse", "Rect", "Size Flags" ]
 
-[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Sheet 2/ItemList/ItemContainer/Item2" index="1"]
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Bahan Pendukung/ItemList/ItemContainer/Item2" index="1"]
 
 editor/display_folded = true
 anchor_left = 0.0
@@ -1099,7 +589,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 74.0
-margin_right = 301.0
+margin_right = 343.0
 margin_bottom = 120.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1109,14 +599,14 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 alignment = 0
 
-[node name="LblHarga" type="Label" parent="TabContainer/Sheet 2/ItemList/ItemContainer/Item2/HBoxContainer" index="0"]
+[node name="LblHarga" type="Label" parent="TabContainer/Bahan Pendukung/ItemList/ItemContainer/Item2/HBoxContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 5.0
-margin_right = 145.0
+margin_right = 64.0
 margin_bottom = 41.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1124,20 +614,20 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-text = "LABEL HARGA"
+text = "Garam"
 align = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Inputan" type="SpinBox" parent="TabContainer/Sheet 2/ItemList/ItemContainer/Item2/HBoxContainer" index="1"]
+[node name="Inputan" type="SpinBox" parent="TabContainer/Bahan Pendukung/ItemList/ItemContainer/Item2/HBoxContainer" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 155.0
-margin_right = 301.0
+margin_left = 74.0
+margin_right = 220.0
 margin_bottom = 46.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1156,14 +646,14 @@ editable = true
 prefix = ""
 suffix = ""
 
-[node name="BtnBeli" type="Button" parent="TabContainer/Sheet 2/ItemList/ItemContainer/Item2" index="2"]
+[node name="BtnBeli" type="Button" parent="TabContainer/Bahan Pendukung/ItemList/ItemContainer/Item2" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 130.0
-margin_right = 301.0
+margin_right = 343.0
 margin_bottom = 174.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1180,7 +670,7 @@ text = "BELI"
 flat = false
 align = 1
 
-[node name="Item3" type="VBoxContainer" parent="TabContainer/Sheet 2/ItemList/ItemContainer" index="2"]
+[node name="Item3" type="VBoxContainer" parent="TabContainer/Bahan Pendukung/ItemList/ItemContainer" index="2"]
 
 editor/display_folded = true
 anchor_left = 0.0
@@ -1188,7 +678,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 204.0
-margin_right = 301.0
+margin_right = 328.0
 margin_bottom = 378.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1199,13 +689,13 @@ size_flags_vertical = 1
 alignment = 0
 _sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Mouse", "Rect", "Size Flags" ]
 
-[node name="ItemIcon" type="TextureRect" parent="TabContainer/Sheet 2/ItemList/ItemContainer/Item3" index="0"]
+[node name="ItemIcon" type="TextureRect" parent="TabContainer/Bahan Pendukung/ItemList/ItemContainer/Item3" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 301.0
+margin_right = 328.0
 margin_bottom = 64.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1217,7 +707,7 @@ texture = ExtResource( 3 )
 stretch_mode = 0
 _sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Mouse", "Rect", "Size Flags" ]
 
-[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Sheet 2/ItemList/ItemContainer/Item3" index="1"]
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Bahan Pendukung/ItemList/ItemContainer/Item3" index="1"]
 
 editor/display_folded = true
 anchor_left = 0.0
@@ -1225,7 +715,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 74.0
-margin_right = 301.0
+margin_right = 328.0
 margin_bottom = 120.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1235,14 +725,14 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 alignment = 0
 
-[node name="LblHarga" type="Label" parent="TabContainer/Sheet 2/ItemList/ItemContainer/Item3/HBoxContainer" index="0"]
+[node name="LblHarga" type="Label" parent="TabContainer/Bahan Pendukung/ItemList/ItemContainer/Item3/HBoxContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 5.0
-margin_right = 145.0
+margin_right = 42.0
 margin_bottom = 41.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1250,20 +740,20 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-text = "LABEL HARGA"
+text = "Gula"
 align = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Inputan" type="SpinBox" parent="TabContainer/Sheet 2/ItemList/ItemContainer/Item3/HBoxContainer" index="1"]
+[node name="Inputan" type="SpinBox" parent="TabContainer/Bahan Pendukung/ItemList/ItemContainer/Item3/HBoxContainer" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 155.0
-margin_right = 301.0
+margin_left = 52.0
+margin_right = 198.0
 margin_bottom = 46.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1282,14 +772,266 @@ editable = true
 prefix = ""
 suffix = ""
 
-[node name="BtnBeli" type="Button" parent="TabContainer/Sheet 2/ItemList/ItemContainer/Item3" index="2"]
+[node name="BtnBeli" type="Button" parent="TabContainer/Bahan Pendukung/ItemList/ItemContainer/Item3" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 130.0
-margin_right = 301.0
+margin_right = 328.0
+margin_bottom = 174.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "BELI"
+flat = false
+align = 1
+
+[node name="Item4" type="VBoxContainer" parent="TabContainer/Bahan Pendukung/ItemList/ItemContainer" index="3"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 310.0
+margin_top = 204.0
+margin_right = 653.0
+margin_bottom = 378.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Mouse", "Rect", "Size Flags" ]
+
+[node name="ItemIcon" type="TextureRect" parent="TabContainer/Bahan Pendukung/ItemList/ItemContainer/Item4" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 343.0
+margin_bottom = 64.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 3 )
+stretch_mode = 0
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Mouse", "Rect", "Size Flags" ]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Bahan Pendukung/ItemList/ItemContainer/Item4" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 74.0
+margin_right = 343.0
+margin_bottom = 120.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+
+[node name="LblHarga" type="Label" parent="TabContainer/Bahan Pendukung/ItemList/ItemContainer/Item4/HBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 5.0
+margin_right = 172.0
+margin_bottom = 41.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Pewarna Makanan"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Inputan" type="SpinBox" parent="TabContainer/Bahan Pendukung/ItemList/ItemContainer/Item4/HBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 182.0
+margin_right = 328.0
+margin_bottom = 46.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+page = 0.0
+value = 0.0
+exp_edit = false
+rounded = false
+editable = true
+prefix = ""
+suffix = ""
+
+[node name="BtnBeli" type="Button" parent="TabContainer/Bahan Pendukung/ItemList/ItemContainer/Item4" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 130.0
+margin_right = 343.0
+margin_bottom = 174.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "BELI"
+flat = false
+align = 1
+
+[node name="Item5" type="VBoxContainer" parent="TabContainer/Bahan Pendukung/ItemList/ItemContainer" index="4"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 408.0
+margin_right = 328.0
+margin_bottom = 582.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Mouse", "Rect", "Size Flags" ]
+
+[node name="ItemIcon" type="TextureRect" parent="TabContainer/Bahan Pendukung/ItemList/ItemContainer/Item5" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 328.0
+margin_bottom = 64.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 3 )
+stretch_mode = 0
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Mouse", "Rect", "Size Flags" ]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Bahan Pendukung/ItemList/ItemContainer/Item5" index="1"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 74.0
+margin_right = 328.0
+margin_bottom = 120.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+
+[node name="LblHarga" type="Label" parent="TabContainer/Bahan Pendukung/ItemList/ItemContainer/Item5/HBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 5.0
+margin_right = 120.0
+margin_bottom = 41.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Perasa Buah"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Inputan" type="SpinBox" parent="TabContainer/Bahan Pendukung/ItemList/ItemContainer/Item5/HBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 130.0
+margin_right = 276.0
+margin_bottom = 46.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+page = 0.0
+value = 0.0
+exp_edit = false
+rounded = false
+editable = true
+prefix = ""
+suffix = ""
+
+[node name="BtnBeli" type="Button" parent="TabContainer/Bahan Pendukung/ItemList/ItemContainer/Item5" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 130.0
+margin_right = 328.0
 margin_bottom = 174.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1308,14 +1050,13 @@ align = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." index="1"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 93.0
 margin_top = 649.0
-margin_right = 951.0
+margin_right = 952.0
 margin_bottom = 713.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1398,7 +1139,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 363.0
-margin_right = 781.0
+margin_right = 859.0
 margin_bottom = 64.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1406,7 +1147,7 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-columns = 6
+columns = 7
 _sections_unfolded = [ "Hint", "Size Flags", "Theme" ]
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/GridContainer" index="0"]
@@ -1661,9 +1402,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 36.0
-margin_right = 28.0
-margin_bottom = 64.0
+margin_left = 468.0
+margin_right = 496.0
+margin_bottom = 28.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -1675,216 +1416,6 @@ stretch_mode = 0
 _sections_unfolded = [ "Rect" ]
 
 [node name="Label" type="Label" parent="HBoxContainer/GridContainer/TextureRect7" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 36.0
-margin_top = -2.0
-margin_right = 93.0
-margin_bottom = 34.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-text = "0"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="TextureRect8" type="TextureRect" parent="HBoxContainer/GridContainer" index="7"]
-
-editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 78.0
-margin_top = 36.0
-margin_right = 106.0
-margin_bottom = 64.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-texture = ExtResource( 5 )
-stretch_mode = 0
-_sections_unfolded = [ "Rect" ]
-
-[node name="Label" type="Label" parent="HBoxContainer/GridContainer/TextureRect8" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 36.0
-margin_top = -2.0
-margin_right = 93.0
-margin_bottom = 34.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-text = "0"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="TextureRect9" type="TextureRect" parent="HBoxContainer/GridContainer" index="8"]
-
-editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 156.0
-margin_top = 36.0
-margin_right = 184.0
-margin_bottom = 64.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-texture = ExtResource( 5 )
-stretch_mode = 0
-_sections_unfolded = [ "Rect" ]
-
-[node name="Label" type="Label" parent="HBoxContainer/GridContainer/TextureRect9" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 36.0
-margin_top = -2.0
-margin_right = 93.0
-margin_bottom = 34.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-text = "0"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="TextureRect10" type="TextureRect" parent="HBoxContainer/GridContainer" index="9"]
-
-editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 234.0
-margin_top = 36.0
-margin_right = 262.0
-margin_bottom = 64.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-texture = ExtResource( 5 )
-stretch_mode = 0
-_sections_unfolded = [ "Rect" ]
-
-[node name="Label" type="Label" parent="HBoxContainer/GridContainer/TextureRect10" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 36.0
-margin_top = -2.0
-margin_right = 93.0
-margin_bottom = 34.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-text = "0"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="TextureRect11" type="TextureRect" parent="HBoxContainer/GridContainer" index="10"]
-
-editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 312.0
-margin_top = 36.0
-margin_right = 340.0
-margin_bottom = 64.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-texture = ExtResource( 5 )
-stretch_mode = 0
-_sections_unfolded = [ "Rect" ]
-
-[node name="Label" type="Label" parent="HBoxContainer/GridContainer/TextureRect11" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 36.0
-margin_top = -2.0
-margin_right = 93.0
-margin_bottom = 34.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-text = "0"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="TextureRect12" type="TextureRect" parent="HBoxContainer/GridContainer" index="11"]
-
-editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 390.0
-margin_top = 36.0
-margin_right = 418.0
-margin_bottom = 64.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-texture = ExtResource( 5 )
-stretch_mode = 0
-_sections_unfolded = [ "Rect" ]
-
-[node name="Label" type="Label" parent="HBoxContainer/GridContainer/TextureRect12" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0

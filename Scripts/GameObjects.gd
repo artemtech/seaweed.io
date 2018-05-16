@@ -4,7 +4,7 @@ extends Area2D
 export var nama = "Objek1"
 export var nyawa = 100
 export var harga = 10
-export var gambar = "res://Assets/GameObjects/ini toko.png"
+export var gambar = "res://Assets/GameObjects/in-game/toko.png"
 
 func _ready():
 	$Sprite.set_texture(load(gambar))

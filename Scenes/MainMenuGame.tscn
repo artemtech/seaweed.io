@@ -17,7 +17,7 @@ use_filter = false
 font_data = ExtResource( 5 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="MainMenuGame" type="Node"]
+[node name="MainMenuGame" type="Node" index="0"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Pause" ]
@@ -161,7 +161,8 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-_sections_unfolded = [ "Rect" ]
+theme = ExtResource( 4 )
+_sections_unfolded = [ "Rect", "Theme" ]
 
 [node name="Background" type="Sprite" parent="NewScene" index="0"]
 
@@ -171,6 +172,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="BtnContainer" type="VBoxContainer" parent="NewScene" index="1"]
 
+editor/display_folded = true
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -282,6 +284,7 @@ caret_position = 0
 
 [node name="NewGameContainer" type="HBoxContainer" parent="NewScene/BtnContainer" index="4"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -348,6 +351,29 @@ text = "Play!"
 flat = false
 align = 1
 _sections_unfolded = [ "Size Flags", "Theme" ]
+
+[node name="PopUp" type="AcceptDialog" parent="NewScene" index="2"]
+
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -134.5
+margin_top = -70.0
+margin_right = 134.5
+margin_bottom = 70.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+popup_exclusive = true
+window_title = "Alert!"
+resizable = false
+dialog_hide_on_ok = true
+_sections_unfolded = [ "Dialog", "Popup" ]
 
 [node name="LoadScene" type="Control" parent="." index="3"]
 
@@ -723,6 +749,7 @@ _sections_unfolded = [ "Size Flags", "Theme" ]
 
 [node name="MainScene" type="Control" parent="." index="4"]
 
+editor/display_folded = true
 visible = false
 anchor_left = 0.0
 anchor_top = 0.0
