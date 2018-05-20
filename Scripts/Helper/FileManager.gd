@@ -2,10 +2,12 @@ extends Node
 
 var file = null
 
+func _ready():
+	get_all_player()
+
 # fungsi save game
-func save_data(player, var data={}):
-	var nama = player
-	var save_path = "user://%s.dat" % nama
+func save_data(var data={}):
+	var save_path = "user://"+data.name+data.company+".dat"
 	var save_dict = {}
 	var nodes_to_save = get_tree().get_nodes_in_group("persistent_data")
 #	save_dict[nama] = {}
@@ -13,19 +15,15 @@ func save_data(player, var data={}):
 #		save_dict["%s" % nama][keys] = data[keys]
 		save_dict[keys] = data[keys]
 		pass
-	print(save_dict)
 	_data_writer(save_path,to_json(save_dict))
 	pass
 
 # fungsi load game
-func load_data(player):
-	var save_data = "user://%s.dat" % player
+func load_data(var player):
+	var save_data = "user://"+player[0]+player[1]+".dat" 
 	var loaded_data = _data_reader(save_data)
 	if loaded_data != null:
-		Utils.set_player(loaded_data)
-		pass
-	return 
-	pass
+		return loaded_data
 
 # ketika kita temukan semua nama file dalam folder, 
 # masukkan ke array, lalu return sebagai array 2D, berisi:
@@ -43,10 +41,14 @@ func get_all_player():
 			file = "user://%s" % file
 			files.append([_data_reader(file).name,_data_reader(file).company])
 	dir.list_dir_end()
-	print(files)
+#	print(files)
 	Utils.set_daftar_player(files)
 
 func delete_data(player):
+	var file = "user://"+player[0]+player[1]+".dat"
+	var dir = Directory.new()
+	dir.open("user://")
+	dir.remove(file)
 	pass
 
 # fungsi tulis file
