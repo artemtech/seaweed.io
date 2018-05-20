@@ -440,7 +440,6 @@ max_lines_visible = -1
 
 [node name="UserContainer" type="ScrollContainer" parent="LoadScene/BtnContainer" index="1"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -463,13 +462,12 @@ _sections_unfolded = [ "Grow Direction", "Scroll", "Size Flags", "Theme" ]
 
 [node name="UserLists" type="VBoxContainer" parent="LoadScene/BtnContainer/UserContainer" index="0"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 267.0
-margin_bottom = 170.0
+margin_bottom = 120.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -479,150 +477,6 @@ size_flags_vertical = 3
 custom_constants/separation = 10
 alignment = 1
 _sections_unfolded = [ "Anchor", "Margin", "Size Flags", "custom_constants" ]
-
-[node name="usrname" type="Button" parent="LoadScene/BtnContainer/UserContainer/UserLists" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 255.0
-margin_bottom = 20.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "Paijo"
-flat = false
-align = 1
-_sections_unfolded = [ "Size Flags" ]
-
-[node name="usrname2" type="Button" parent="LoadScene/BtnContainer/UserContainer/UserLists" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 30.0
-margin_right = 255.0
-margin_bottom = 50.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "Paimin"
-flat = false
-align = 1
-
-[node name="usrname3" type="Button" parent="LoadScene/BtnContainer/UserContainer/UserLists" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 60.0
-margin_right = 255.0
-margin_bottom = 80.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "Pakjisung"
-flat = false
-align = 1
-
-[node name="usrname4" type="Button" parent="LoadScene/BtnContainer/UserContainer/UserLists" index="3"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 90.0
-margin_right = 255.0
-margin_bottom = 110.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "Pakimin"
-flat = false
-align = 1
-
-[node name="usrname5" type="Button" parent="LoadScene/BtnContainer/UserContainer/UserLists" index="4"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 120.0
-margin_right = 255.0
-margin_bottom = 140.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "Parsiman"
-flat = false
-align = 1
-
-[node name="usrname6" type="Button" parent="LoadScene/BtnContainer/UserContainer/UserLists" index="5"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 150.0
-margin_right = 255.0
-margin_bottom = 170.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "Paiplus"
-flat = false
-align = 1
 
 [node name="CurrentUser" type="Label" parent="LoadScene/BtnContainer" index="2"]
 
@@ -1012,7 +866,7 @@ flat = false
 align = 1
 _sections_unfolded = [ "Size Flags" ]
 
-[node name="PopupExit" type="ConfirmationDialog" parent="." index="6"]
+[node name="Konfirmasi" type="ConfirmationDialog" parent="." index="6"]
 
 pause_mode = 2
 visible = false
@@ -1033,11 +887,35 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 theme = ExtResource( 4 )
 popup_exclusive = true
-window_title = "Konfirmasi"
+window_title = "Confirmation"
 resizable = false
 dialog_text = "Anda yakin ingin keluar ?"
 dialog_hide_on_ok = true
-_sections_unfolded = [ "Pause", "Theme" ]
+_sections_unfolded = [ "Dialog", "Pause", "Theme" ]
+
+[node name="Notifikasi" type="AcceptDialog" parent="." index="7"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 384.0
+margin_top = 272.0
+margin_right = 653.0
+margin_bottom = 412.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = ExtResource( 4 )
+popup_exclusive = false
+window_title = "Alert!"
+resizable = false
+dialog_hide_on_ok = true
+_sections_unfolded = [ "Dialog", "Theme" ]
 
 [connection signal="pressed" from="FirstScene/BtnContainer/BtnNewGame" to="." method="_on_BtnNewGame_pressed"]
 
@@ -1047,6 +925,8 @@ _sections_unfolded = [ "Pause", "Theme" ]
 
 [connection signal="pressed" from="NewScene/BtnContainer/NewGameContainer/BtnPlay" to="." method="_on_BtnPlay_pressed"]
 
+[connection signal="pressed" from="LoadScene/BtnContainer/HBoxContainer/BtnDelete" to="." method="_on_BtnDelete_pressed"]
+
 [connection signal="pressed" from="LoadScene/BtnContainer/HBoxContainer/BtnPlay" to="." method="_on_BtnPlay_pressed"]
 
 [connection signal="pressed" from="MainScene/MainMenu/BtnPlayGame" to="." method="_on_BtnPlayGame_pressed"]
@@ -1055,6 +935,6 @@ _sections_unfolded = [ "Pause", "Theme" ]
 
 [connection signal="pressed" from="HelpScene/HelpBtnContainer/BtnCancel" to="." method="_on_BtnCancel_pressed"]
 
-[connection signal="confirmed" from="PopupExit" to="." method="_on_PopupExit_confirmed"]
+[connection signal="confirmed" from="Konfirmasi" to="." method="_on_Konfirmasi_confirmed"]
 
 

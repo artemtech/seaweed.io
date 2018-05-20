@@ -19,8 +19,15 @@ func find_node_with_group(group, recursive=true):
 				return node
 	pass
 
+func get_player_with_name_and_company(var player):
+	var data = FileManager.load_data(player)
+	return data
+
 func set_player(var player={}):
 	_player = player
 
 func set_daftar_player(var lplayer = []):
 	_daftar_player = lplayer
+	
+func get_all_player_lists():
+	return _daftar_player
