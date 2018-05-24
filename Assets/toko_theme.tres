@@ -29,6 +29,7 @@ shadow_color = Color( 0, 0, 0, 0.6 )
 shadow_size = 0
 anti_aliasing = true
 anti_aliasing_size = 1
+_sections_unfolded = [ "Border", "Expand Margin" ]
 
 [sub_resource type="StyleBoxFlat" id=2]
 
@@ -44,13 +45,13 @@ border_width_right = 0
 border_width_bottom = 0
 border_color = Color( 0.8, 0.8, 0.8, 1 )
 border_blend = false
-corner_radius_top_left = 6
-corner_radius_top_right = 6
-corner_radius_bottom_right = 6
-corner_radius_bottom_left = 6
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
 corner_detail = 8
-expand_margin_left = 6.0
-expand_margin_right = 6.0
+expand_margin_left = 0.0
+expand_margin_right = 0.0
 expand_margin_top = 0.0
 expand_margin_bottom = 0.0
 shadow_color = Color( 0, 0, 0, 0.6 )
@@ -70,23 +71,23 @@ draw_center = true
 border_width_left = 0
 border_width_top = 0
 border_width_right = 0
-border_width_bottom = 8
+border_width_bottom = 4
 border_color = Color( 0.329412, 0.431373, 0.478431, 1 )
 border_blend = false
-corner_radius_top_left = 6
-corner_radius_top_right = 6
-corner_radius_bottom_right = 6
-corner_radius_bottom_left = 6
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
 corner_detail = 8
-expand_margin_left = 10.0
-expand_margin_right = 10.0
-expand_margin_top = 10.0
-expand_margin_bottom = 10.0
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
 shadow_color = Color( 0, 0, 0, 0.6 )
 shadow_size = 2
 anti_aliasing = true
 anti_aliasing_size = 1
-_sections_unfolded = [ "Border" ]
+_sections_unfolded = [ "Border", "Border Width", "Corner Radius", "Expand Margin" ]
 
 [sub_resource type="StyleBoxFlat" id=4]
 
@@ -102,19 +103,20 @@ border_width_right = 0
 border_width_bottom = 0
 border_color = Color( 0.8, 0.8, 0.8, 1 )
 border_blend = false
-corner_radius_top_left = 6
-corner_radius_top_right = 6
+corner_radius_top_left = 3
+corner_radius_top_right = 3
 corner_radius_bottom_right = 6
 corner_radius_bottom_left = 6
 corner_detail = 8
-expand_margin_left = 10.0
-expand_margin_right = 10.0
+expand_margin_left = 0.0
+expand_margin_right = 0.0
 expand_margin_top = 0.0
 expand_margin_bottom = 0.0
 shadow_color = Color( 0, 0, 0, 0.6 )
 shadow_size = 2
 anti_aliasing = true
 anti_aliasing_size = 1
+_sections_unfolded = [ "Corner Radius", "Expand Margin" ]
 
 [sub_resource type="DynamicFont" id=5]
 
@@ -155,7 +157,7 @@ _sections_unfolded = [ "Border" ]
 
 [sub_resource type="DynamicFont" id=7]
 
-size = 24
+size = 16
 use_mipmaps = false
 use_filter = false
 font_data = ExtResource( 1 )
@@ -200,5 +202,5 @@ WindowDialog/fonts/title_font = SubResource( 5 )
 WindowDialog/icons/close = null
 WindowDialog/icons/close_highlight = null
 WindowDialog/styles/panel = SubResource( 6 )
-_sections_unfolded = [ "ColorPicker/icons", "ColorPickerButton", "ColorPickerButton/colors", "Dialogs/constants", "GridContainer/constants", "HBoxContainer", "HBoxContainer/constants", "Label/colors", "PanelContainer/styles", "PopupMenu", "PopupMenu/styles", "PopupPanel", "PopupPanel/styles", "RichTextLabel", "SpinBox", "SpinBox/icons", "TextEdit", "TextEdit/styles", "VBoxContainer", "VBoxContainer/constants", "VScrollBar", "VScrollBar/styles", "WindowDialog/colors", "WindowDialog/styles" ]
+_sections_unfolded = [ "Button", "Button/styles", "ColorPicker/icons", "ColorPickerButton", "ColorPickerButton/colors", "Dialogs/constants", "GridContainer/constants", "HBoxContainer", "HBoxContainer/constants", "Label/colors", "PanelContainer/styles", "PopupMenu", "PopupMenu/styles", "PopupPanel", "PopupPanel/styles", "RichTextLabel", "SpinBox/icons", "TextEdit", "TextEdit/styles", "VBoxContainer/constants", "VScrollBar", "VScrollBar/styles", "WindowDialog/colors", "WindowDialog/styles" ]
 
