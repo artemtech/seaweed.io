@@ -16,6 +16,7 @@ func save_data(var data={}):
 		save_dict[keys] = data[keys]
 		pass
 	_data_writer(save_path,to_json(save_dict))
+	Utils.set_player(save_dict)
 	pass
 
 # fungsi load game

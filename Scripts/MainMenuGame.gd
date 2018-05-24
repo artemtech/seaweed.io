@@ -91,8 +91,20 @@ func _on_BtnPlay_pressed():
 	match current_scene:
 		"NewScene":
 			# kalo user dan kompany sudah ada, tolak!
+			var namaku = $NewScene/BtnContainer/TxtUname.text
+			var perusahaanku = $NewScene/BtnContainer/TxtComp.text
 			if is_user_data_exist():
 				$Notifikasi.dialog_text = "This profile is exist!"
+				$Notifikasi.show()
+				return
+			# cek nama
+			if not namaku.is_valid_identifier() :
+				$Notifikasi.dialog_text = "Oops, your Username is invalid!!"
+				$Notifikasi.show()
+				return
+			# cek perusahaan
+			if not perusahaanku.is_valid_identifier() :
+				$Notifikasi.dialog_text = "Oops, your Company Name is invalid!!"
 				$Notifikasi.show()
 				return
 			current_player.name = $NewScene/BtnContainer/TxtUname.text

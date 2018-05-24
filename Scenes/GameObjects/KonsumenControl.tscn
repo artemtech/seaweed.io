@@ -1,0 +1,284 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Assets/tema-gui.tres" type="Theme" id=1]
+[ext_resource path="res://Scripts/KonsumenControl.gd" type="Script" id=2]
+[ext_resource path="res://Assets/BG/in-game/konsumen/1.png" type="Texture" id=3]
+[ext_resource path="res://Assets/BG/in-game/konsumen/2.png" type="Texture" id=4]
+[ext_resource path="res://Assets/GameObjects/btn/Kirim.png" type="Texture" id=5]
+[ext_resource path="res://Assets/GameObjects/btn/Kirim Klik.png" type="Texture" id=6]
+[ext_resource path="res://Assets/GameObjects/btn/Kirim Hover.png" type="Texture" id=7]
+[ext_resource path="res://Assets/GameObjects/btn/Hapus.png" type="Texture" id=8]
+[ext_resource path="res://Assets/GameObjects/btn/Hapus klik.png" type="Texture" id=9]
+[ext_resource path="res://Assets/GameObjects/btn/Hapus hover.png" type="Texture" id=10]
+[ext_resource path="res://Assets/GameObjects/btn/Close.png" type="Texture" id=11]
+[ext_resource path="res://Assets/GameObjects/btn/Close Klik.png" type="Texture" id=12]
+[ext_resource path="res://Assets/GameObjects/btn/Close Hover.png" type="Texture" id=13]
+[ext_resource path="res://Assets/Fonts/papercuts-2.ttf" type="DynamicFontData" id=14]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 1.0
+} ]
+
+[sub_resource type="DynamicFont" id=2]
+
+size = 26
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 14 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[node name="KonsumenControl" type="Control" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = ExtResource( 1 )
+script = ExtResource( 2 )
+_sections_unfolded = [ "Theme" ]
+__meta__ = {
+"_edit_vertical_guides_": [ 972.695 ]
+}
+
+[node name="bg" type="AnimatedSprite" parent="." index="0"]
+
+position = Vector2( 512, 384 )
+frames = SubResource( 1 )
+animation = "default"
+playing = true
+_sections_unfolded = [ "Transform" ]
+
+[node name="btnKirim" type="TextureButton" parent="." index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 796.0
+margin_top = 592.0
+margin_right = 972.0
+margin_bottom = 658.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 6 )
+texture_hover = ExtResource( 7 )
+_sections_unfolded = [ "Textures" ]
+
+[node name="btnHapus" type="TextureButton" parent="." index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 796.0
+margin_top = 661.0
+margin_right = 972.0
+margin_bottom = 727.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 9 )
+texture_hover = ExtResource( 10 )
+_sections_unfolded = [ "Textures" ]
+
+[node name="btnClose" type="TextureButton" parent="." index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 907.0
+margin_top = 43.0
+margin_right = 957.0
+margin_bottom = 93.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 11 )
+texture_pressed = ExtResource( 12 )
+texture_hover = ExtResource( 13 )
+_sections_unfolded = [ "Textures" ]
+
+[node name="stok_gdg_rumput" type="Label" parent="." index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 922.0
+margin_top = 254.0
+margin_right = 958.0
+margin_bottom = 293.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.462745, 0.180392, 0.027451, 1 )
+text = "999"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="stok_gdg_tepung" type="Label" parent="." index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 922.0
+margin_top = 366.0
+margin_right = 958.0
+margin_bottom = 405.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.462745, 0.180392, 0.027451, 1 )
+text = "999"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="stok_gdg_agar" type="Label" parent="." index="6"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 922.0
+margin_top = 494.0
+margin_right = 958.0
+margin_bottom = 533.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.462745, 0.180392, 0.027451, 1 )
+text = "999"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="usr_rumput" type="Label" parent="." index="7"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 321.0
+margin_top = 667.0
+margin_right = 357.0
+margin_bottom = 706.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.462745, 0.180392, 0.027451, 1 )
+text = "999"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="usr_tepung" type="Label" parent="." index="8"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 489.0
+margin_top = 667.0
+margin_right = 525.0
+margin_bottom = 706.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.462745, 0.180392, 0.027451, 1 )
+text = "999"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="usr_agar" type="Label" parent="." index="9"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 661.0
+margin_top = 666.0
+margin_right = 697.0
+margin_bottom = 705.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.462745, 0.180392, 0.027451, 1 )
+text = "999"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+
