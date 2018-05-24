@@ -1,50 +1,82 @@
-extends Node2D
+extends Control
 
 enum HASIL {NOTHING,S,M,L}
+enum STATUS {LOCKED,UNLOCKED}
+enum GAME_STATE {NEW,LOAD,PAUSED,GAMEOVER}
+
+signal gamedata_changed
+
+onready var tokocontrol = load("res://Scenes/GameObjects/TokoControl.tscn")
+onready var konsumencontrol = load("res://Scenes/GameObjects/KonsumenControl.tscn")
+onready var bankcontrol = load("res://Scenes/GameObjects/BankControl.tscn")
+onready var pabrikcontrol = load("res://Scenes/GameObjects/PabrikControl.tscn")
+onready var tambakcontrol = load("res://Scenes/GameObjects/TambakControl.tscn")
 
 var game_data = {
-	"money" : 0,
+	"money" : 5000,
 	"time" : "00:00:00",
 	"day" : 0,
+	"reputasi" : 200,
+	"game_state" : NEW,
 	"pabrik" : {
-		"reputasi" : 200
+		"m_kering" : {
+			"status" : LOCKED,
+			"harga" : 3000,
+			"on_production" : false,
+			"time_remaining" : -1,
+			"hasil" : NOTHING
+		},
+		"m_tepung" : {
+			"status" : LOCKED,
+			"harga" : 4000,
+			"on_production" : false,
+			"time_remaining" : -1,
+			"hasil" : NOTHING
+		},
+		"m_agar2" : {
+			"status" : LOCKED,
+			"harga" : 7500,
+			"on_production" : false,
+			"time_remaining" : -1,
+			"hasil" : NOTHING
+		},
 	},
 	"tambak" : {
 		"petak1": {
 			"time_remaining" : 10,
 			"on_production" : true,
 			"actions" : [],
-			"hasil" : HASIL.NOTHING
+			"hasil" : NOTHING
 		},
 		"petak2": {
 			"time_remaining" : -1,
 			"on_production" : false,
 			"actions" : [],
-			"hasil" : HASIL.NOTHING
+			"hasil" : NOTHING
 		},
 		"petak3": {
 			"time_remaining" : -1,
 			"on_production" : false,
 			"actions" : [],
-			"hasil" : HASIL.NOTHING
+			"hasil" : NOTHING
 		},
 		"petak4": {
 			"time_remaining" : -1,
 			"on_production" : false,
 			"actions" : [],
-			"hasil" : HASIL.NOTHING
+			"hasil" : NOTHING
 		},
 		"petak5": {
 			"time_remaining" : -1,
 			"on_production" : false,
 			"actions" : [],
-			"hasil" : HASIL.NOTHING
+			"hasil" : NOTHING
 		},
 		"petak6": {
 			"time_remaining" : -1,
 			"on_production" : false,
 			"actions" : [],
-			"hasil" : HASIL.NOTHING
+			"hasil" : NOTHING
 		}
 	},
 	"bank" : {
@@ -65,17 +97,9 @@ var game_data = {
 			"reputasi" : 200
 		}
 	},
-	"toko" : {
-		"bibit_rumput_laut" : 500,
-		"gula" : 25,
-		"garam" : 25,
-		"metil_alkohol" : 25,
-		"pewarna" : 25,
-		"perasa" : 25,
-	},
 	"gudang" : {
-		"bibit_rumput_laut" : {
-			"qty" : 0,
+		"bibit" : {
+			"qty" : 10,
 		},
 		"rl_basah_s" : {
 			"qty" : 0,
@@ -131,11 +155,50 @@ var game_data = {
 		"metil_alkohol" : {
 			"qty" : 0,
 		},
-		"pewarna_makanan" : {
+		"pewarna" : {
 			"qty" : 0,
 		},
-		"perasa_buah" : {
+		"perasa" : {
 			"qty" : 0,
 		}
 	},
 }
+
+func _ready():
+	if Utils.get_player().has("game_state"):
+		game_data = Utils.get_player()
+		pass
+	else:
+		game_data["name"] = Utils.get_player().name
+		game_data["company"] = Utils.get_player().company
+	pass
+
+func _on_Toko_pressed():
+	if not has_node("TokoControl"):
+			var child = tokocontrol.instance()
+			add_child(child)
+			get_node("TokoControl").show()
+
+func _on_Konsumen_pressed():
+	if not has_node("KonsumenControl"):
+			var child = konsumencontrol.instance()
+			add_child(child)
+			get_node("KonsumenControl").show()
+
+func _on_Bank_pressed():
+	if not has_node("BankControl"):
+			var child = bankcontrol.instance()
+			add_child(child)
+			get_node("BankControl").show()
+
+func _on_Pabrik_pressed():
+	if not has_node("PabrikControl"):
+			var child = pabrikcontrol.instance()
+			add_child(child)
+			get_node("PabrikControl").show()
+
+func _on_Tambak_pressed():
+	if not has_node("TambakControl"):
+			var child = tambakcontrol.instance()
+			add_child(child)
+			get_node("TambakControl").show()

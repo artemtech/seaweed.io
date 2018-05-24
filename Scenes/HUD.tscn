@@ -1,6 +1,13 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Assets/tema-gui.tres" type="Theme" id=1]
+[ext_resource path="res://Scripts/HUD.gd" type="Script" id=2]
+[ext_resource path="res://Assets/GameObjects/in-game/Pengaturan.png" type="Texture" id=3]
+[ext_resource path="res://Assets/GameObjects/in-game/Pengaturan-klik.png" type="Texture" id=4]
+[ext_resource path="res://Assets/GameObjects/in-game/Pengaturan-hover.png" type="Texture" id=5]
+[ext_resource path="res://Assets/GameObjects/in-game/gudang.png" type="Texture" id=6]
+[ext_resource path="res://Assets/GameObjects/in-game/gudang-klik.png" type="Texture" id=7]
+[ext_resource path="res://Assets/GameObjects/in-game/gudang-hover.png" type="Texture" id=8]
 
 [node name="HUD" type="Control"]
 
@@ -8,7 +15,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 0.0
-margin_bottom = 50.0
+margin_bottom = 768.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -16,7 +23,11 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 theme = ExtResource( 1 )
+script = ExtResource( 2 )
 _sections_unfolded = [ "Rect", "Theme" ]
+__meta__ = {
+"_edit_horizontal_guides_": [ 727.111 ]
+}
 
 [node name="LblDay" type="Label" parent="." index="0"]
 
@@ -62,7 +73,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="LblWeather" type="Label" parent="." index="2"]
+[node name="LblTime" type="Label" parent="." index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -78,22 +89,22 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-text = "Cerah"
+text = "00:00:00"
 align = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="BtnMenu" type="Button" parent="." index="3"]
+[node name="BtnMenu" type="TextureButton" parent="." index="3"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 961.0
-margin_top = 693.0
-margin_right = 1011.0
-margin_bottom = 737.0
+margin_left = 953.0
+margin_top = 684.0
+margin_right = 1028.0
+margin_bottom = 756.0
 rect_scale = Vector2( 0.6, 0.6 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -106,21 +117,21 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "Menu"
-flat = false
-align = 1
-_sections_unfolded = [ "Rect" ]
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+_sections_unfolded = [ "Rect", "Textures" ]
 
-[node name="BtnGudang" type="Button" parent="." index="4"]
+[node name="BtnGudang" type="TextureButton" parent="." index="4"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 870.0
-margin_top = 695.0
-margin_right = 941.0
-margin_bottom = 739.0
+margin_left = 867.0
+margin_top = 684.0
+margin_right = 943.0
+margin_bottom = 757.0
 rect_scale = Vector2( 0.6, 0.6 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -133,9 +144,13 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "Gudang"
-flat = false
-align = 1
-_sections_unfolded = [ "Rect" ]
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 7 )
+texture_hover = ExtResource( 8 )
+_sections_unfolded = [ "Rect", "Textures" ]
+
+[connection signal="pressed" from="BtnMenu" to="." method="_on_BtnMenu_pressed"]
+
+[connection signal="pressed" from="BtnGudang" to="." method="_on_BtnGudang_pressed"]
 
 

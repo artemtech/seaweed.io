@@ -6,7 +6,6 @@ var _daftar_player = []
 var _player = {
 	"name":"nganu",
 	"company":"sae",
-	"uang":100
 }
 
 func find_node_with_group(group, recursive=true):
@@ -26,8 +25,11 @@ func get_player_with_name_and_company(var player):
 func set_player(var player={}):
 	_player = player
 
+func get_player():
+	return _player
+
 func set_daftar_player(var lplayer = []):
 	_daftar_player = lplayer
-	
+
 func get_all_player_lists():
 	return _daftar_player
