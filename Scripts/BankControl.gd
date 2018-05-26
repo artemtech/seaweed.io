@@ -22,3 +22,12 @@ func _on_BtnKembali_pressed():
 func _on_BtnKeluar_pressed():
 	queue_free()
 	get_tree().paused = false
+
+
+func _on_btnKembali_pressed():
+	pass # replace with function body
+
+
+func _on_btnKeluar_pressed():
+	queue_free()
+	get_tree().paused = false

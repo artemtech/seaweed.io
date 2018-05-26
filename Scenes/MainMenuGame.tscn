@@ -148,7 +148,6 @@ _sections_unfolded = [ "Pause", "Theme" ]
 
 [node name="NewScene" type="Control" parent="." index="2"]
 
-editor/display_folded = true
 visible = false
 anchor_left = 0.0
 anchor_top = 0.0
@@ -171,7 +170,6 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="BtnContainer" type="VBoxContainer" parent="NewScene" index="1"]
 
-editor/display_folded = true
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -283,7 +281,6 @@ caret_position = 0
 
 [node name="NewGameContainer" type="HBoxContainer" parent="NewScene/BtnContainer" index="4"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -376,7 +373,6 @@ _sections_unfolded = [ "Dialog", "Popup" ]
 
 [node name="LoadScene" type="Control" parent="." index="3"]
 
-editor/display_folded = true
 visible = false
 anchor_left = 0.0
 anchor_top = 0.0
@@ -602,7 +598,6 @@ _sections_unfolded = [ "Size Flags", "Theme" ]
 
 [node name="MainScene" type="Control" parent="." index="4"]
 
-editor/display_folded = true
 visible = false
 anchor_left = 0.0
 anchor_top = 0.0
@@ -745,7 +740,6 @@ _sections_unfolded = [ "Rect", "Theme", "custom_colors", "custom_fonts" ]
 
 [node name="HelpScene" type="Control" parent="." index="5"]
 
-editor/display_folded = true
 visible = false
 anchor_left = 0.0
 anchor_top = 0.0
@@ -772,7 +766,6 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="HelpBtnContainer" type="HBoxContainer" parent="HelpScene" index="2"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -931,8 +924,6 @@ _sections_unfolded = [ "Dialog", "Theme" ]
 [connection signal="pressed" from="MainScene/MainMenu/BtnPlayGame" to="." method="_on_BtnPlayGame_pressed"]
 
 [connection signal="pressed" from="MainScene/MainMenu/BtnHelp" to="." method="_on_BtnHelp_pressed"]
-
-[connection signal="pressed" from="HelpScene/HelpBtnContainer/BtnCancel" to="." method="_on_BtnCancel_pressed"]
 
 [connection signal="confirmed" from="Konfirmasi" to="." method="_on_Konfirmasi_confirmed"]
 

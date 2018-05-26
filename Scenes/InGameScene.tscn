@@ -61,14 +61,14 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 script = ExtResource( 1 )
-_sections_unfolded = [ "Rect", "Theme", "Transform", "Z Index" ]
+_sections_unfolded = [ "Theme", "Transform", "Z Index" ]
 
 [node name="Sprite" type="AnimatedSprite" parent="." index="0"]
 
 position = Vector2( 512, 384 )
 frames = SubResource( 1 )
 animation = "default"
-frame = 6
+frame = 16
 _sections_unfolded = [ "Transform" ]
 
 [node name="HUD" parent="." index="1" instance=ExtResource( 33 )]

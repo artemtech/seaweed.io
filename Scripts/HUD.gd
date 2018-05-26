@@ -12,6 +12,7 @@ signal waktu
 
 func _ready():
 	connect("koin",self,"on_koin_changed")
+	connect("waktu",self,"on_waktu_changed")
 	set_process(true)
 	pass
 
@@ -46,8 +47,12 @@ func _process(delta):
 			emit_signal("koin")
 		if day != Utils.get_player().day:
 			emit_signal("hari")
+		if time != Utils.get_player().time:
+			print("waktune! berubah")
+			emit_signal("waktu")
 	else:
 		on_koin_changed()
+#		on_waktu_changed()
 	pass
 
 func on_koin_changed():
@@ -55,6 +60,16 @@ func on_koin_changed():
 	$LblCoin.text = str(get_parent().game_data.money)
 	pass
 
+func on_waktu_changed():
+	s = get_parent().game_data.time.s
+	m = get_parent().game_data.time.m
+	h = get_parent().game_data.time.h
+	if s<10:
+		$LblTime.text = "%d:%d:0%d" %[h,m,s]
+	if m<10:
+		$LblTime.text = "%d:0%d:%d" %[h,m,s]
+		$LblTime.text = "%d:%d:%d" %[h,m,s]
+	pass
 
 func _on_BtnMenu_pressed():
 	if not get_parent().has_node("PopupPengaturan"):

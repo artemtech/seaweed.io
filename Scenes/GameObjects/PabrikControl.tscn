@@ -1,8 +1,22 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Assets/tema-gui.tres" type="Theme" id=1]
 [ext_resource path="res://Scripts/PabrikControl.gd" type="Script" id=2]
-[ext_resource path="res://Assets/GameObjects/obj1.png" type="Texture" id=3]
+[ext_resource path="res://Assets/BG/in-game/pabrik/Background Pabrik 1.png" type="Texture" id=3]
+[ext_resource path="res://Assets/BG/in-game/pabrik/Background Pabrik 3.png" type="Texture" id=4]
+[ext_resource path="res://Assets/BG/in-game/pabrik/Background Pabrik 2.png" type="Texture" id=5]
+[ext_resource path="res://Assets/GameObjects/btn/Close.png" type="Texture" id=6]
+[ext_resource path="res://Assets/GameObjects/btn/Close Klik.png" type="Texture" id=7]
+[ext_resource path="res://Assets/GameObjects/btn/Close Hover.png" type="Texture" id=8]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
+"loop": false,
+"name": "default",
+"speed": 5.0
+} ]
 
 [node name="PabrikControl" type="Control"]
 
@@ -11,8 +25,6 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = -941.0
-margin_bottom = -683.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -22,76 +34,26 @@ size_flags_vertical = 1
 theme = ExtResource( 1 )
 script = ExtResource( 2 )
 _sections_unfolded = [ "Pause", "Theme" ]
+curr_state = null
 
-[node name="TabContainer" type="TabContainer" parent="." index="0"]
+[node name="bg" type="AnimatedSprite" parent="." index="0"]
+
+position = Vector2( 512, 384 )
+frames = SubResource( 1 )
+animation = "default"
+frame = 2
+_sections_unfolded = [ "Transform" ]
+
+[node name="ProgressBar" type="ProgressBar" parent="." index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 98.0
-margin_top = 71.0
-margin_right = 909.0
-margin_bottom = 710.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-tab_align = 2
-tabs_visible = true
-
-[node name="Pabrik" type="Tabs" parent="TabContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 4.0
-margin_top = 54.0
-margin_right = -4.0
-margin_bottom = -4.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-tab_align = 1
-scrolling_enabled = true
-
-[node name="Sprite" type="TextureRect" parent="TabContainer/Pabrik" index="0"]
-
-editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 263.0
-margin_top = 75.0
-margin_right = 553.0
-margin_bottom = 349.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-texture = ExtResource( 3 )
-stretch_mode = 0
-
-[node name="ProgressBar" type="ProgressBar" parent="TabContainer/Pabrik/Sprite" index="0"]
-
-visible = false
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 9.0
-margin_top = 242.0
-margin_right = 278.0
-margin_bottom = 278.0
+margin_left = 302.0
+margin_top = 573.0
+margin_right = 571.0
+margin_bottom = 609.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -107,16 +69,16 @@ exp_edit = false
 rounded = false
 percent_visible = true
 
-[node name="BtnProduksi" type="Button" parent="TabContainer/Pabrik" index="1"]
+[node name="BtnProduksi" type="Button" parent="." index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 268.0
-margin_top = 425.0
-margin_right = 545.0
-margin_bottom = 469.0
+margin_left = 319.0
+margin_top = 618.0
+margin_right = 563.0
+margin_bottom = 650.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -132,16 +94,16 @@ text = "Produksi"
 flat = false
 align = 1
 
-[node name="BtnNext" type="Button" parent="TabContainer/Pabrik" index="2"]
+[node name="BtnNext" type="Button" parent="." index="3"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 733.0
-margin_top = 228.0
-margin_right = 784.0
-margin_bottom = 341.0
+margin_left = 781.0
+margin_top = 451.0
+margin_right = 832.0
+margin_bottom = 564.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -157,16 +119,16 @@ text = ">"
 flat = false
 align = 1
 
-[node name="BtnPrev" type="Button" parent="TabContainer/Pabrik" index="3"]
+[node name="BtnPrev" type="Button" parent="." index="4"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 33.0
-margin_top = 228.0
-margin_right = 84.0
-margin_bottom = 341.0
+margin_left = 42.0
+margin_top = 447.0
+margin_right = 93.0
+margin_bottom = 560.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -182,18 +144,16 @@ text = "<"
 flat = false
 align = 1
 
-[node name="BtnKembali" type="Button" parent="TabContainer/Pabrik" index="4" groups=[
-"kembali",
-]]
+[node name="btnClose" type="TextureButton" parent="." index="5"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 268.0
-margin_top = 501.0
-margin_right = 549.0
-margin_bottom = 545.0
+margin_left = 907.0
+margin_top = 34.0
+margin_right = 957.0
+margin_bottom = 84.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -205,287 +165,17 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "Kembali"
-flat = false
-align = 1
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 7 )
+texture_hover = ExtResource( 8 )
+_sections_unfolded = [ "Textures" ]
 
-[node name="PrepareDialog" type="VBoxContainer" parent="." index="1"]
+[connection signal="pressed" from="BtnProduksi" to="." method="_on_BtnPrepareProduksi_pressed"]
 
-visible = false
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 363.0
-margin_top = 158.0
-margin_right = 533.0
-margin_bottom = 587.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-alignment = 0
-_sections_unfolded = [ "Popup" ]
+[connection signal="pressed" from="BtnNext" to="." method="_on_BtnNext_pressed"]
 
-[node name="item1" type="CheckButton" parent="PrepareDialog" index="0"]
+[connection signal="pressed" from="BtnPrev" to="." method="_on_BtnPrev_pressed"]
 
-editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 253.0
-margin_bottom = 44.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = true
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "Rumput Laut Basah"
-flat = false
-align = 0
-
-[node name="SpinBox" type="SpinBox" parent="PrepareDialog/item1" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 291.0
-margin_top = -5.0
-margin_right = 437.0
-margin_bottom = 41.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-min_value = 0.0
-max_value = 100.0
-step = 1.0
-page = 0.0
-value = 0.0
-exp_edit = false
-rounded = false
-editable = true
-prefix = ""
-suffix = ""
-
-[node name="item2" type="CheckButton" parent="PrepareDialog" index="1"]
-
-editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 94.0
-margin_right = 253.0
-margin_bottom = 138.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = true
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "Rumput Laut Basah"
-flat = false
-align = 0
-
-[node name="SpinBox" type="SpinBox" parent="PrepareDialog/item2" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 291.0
-margin_top = -5.0
-margin_right = 437.0
-margin_bottom = 41.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-min_value = 0.0
-max_value = 100.0
-step = 1.0
-page = 0.0
-value = 0.0
-exp_edit = false
-rounded = false
-editable = true
-prefix = ""
-suffix = ""
-
-[node name="item3" type="CheckButton" parent="PrepareDialog" index="2"]
-
-editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 188.0
-margin_right = 253.0
-margin_bottom = 232.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = true
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "Rumput Laut Basah"
-flat = false
-align = 0
-
-[node name="SpinBox" type="SpinBox" parent="PrepareDialog/item3" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 291.0
-margin_top = -5.0
-margin_right = 437.0
-margin_bottom = 41.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-min_value = 0.0
-max_value = 100.0
-step = 1.0
-page = 0.0
-value = 0.0
-exp_edit = false
-rounded = false
-editable = true
-prefix = ""
-suffix = ""
-
-[node name="item4" type="CheckButton" parent="PrepareDialog" index="3"]
-
-editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 282.0
-margin_right = 253.0
-margin_bottom = 326.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = true
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "Rumput Laut Basah"
-flat = false
-align = 0
-
-[node name="SpinBox" type="SpinBox" parent="PrepareDialog/item4" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 291.0
-margin_top = -5.0
-margin_right = 437.0
-margin_bottom = 41.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-min_value = 0.0
-max_value = 100.0
-step = 1.0
-page = 0.0
-value = 0.0
-exp_edit = false
-rounded = false
-editable = true
-prefix = ""
-suffix = ""
-
-[node name="BtnProceed" type="Button" parent="PrepareDialog" index="4"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 376.0
-margin_right = 253.0
-margin_bottom = 420.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "Produksi Sekarang!"
-flat = false
-align = 1
-
-[node name="BtnKembali" type="Button" parent="PrepareDialog" index="5" groups=[
-"kembali",
-]]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 470.0
-margin_right = 253.0
-margin_bottom = 514.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "Batal"
-flat = false
-align = 1
-
-[connection signal="pressed" from="TabContainer/Pabrik/BtnProduksi" to="." method="_on_BtnPrepareProduksi_pressed"]
+[connection signal="pressed" from="btnClose" to="." method="_on_btnClose_pressed"]
 
 

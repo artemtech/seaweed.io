@@ -38,8 +38,9 @@ func get_all_player():
 		var file = dir.get_next()
 		if file == "":
 			break
-		elif not file.begins_with("."):
+		elif not file.begins_with(".") and file.ends_with(".dat"):
 			file = "user://%s" % file
+			print(file)
 			files.append([_data_reader(file).name,_data_reader(file).company])
 	dir.list_dir_end()
 #	print(files)

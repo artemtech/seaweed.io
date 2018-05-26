@@ -1,0 +1,88 @@
+[gd_scene load_steps=31 format=2]
+
+[ext_resource path="res://Scripts/Tambak/Tools.gd" type="Script" id=1]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/tambak/bibit/anim/Bibit.png" type="Texture" id=2]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/tambak/bibit/anim/1.png" type="Texture" id=3]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/tambak/bibit/anim/2.png" type="Texture" id=4]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/tambak/bibit/anim/3.png" type="Texture" id=5]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/tambak/bibit/anim/4.png" type="Texture" id=6]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/tambak/bibit/anim/5.png" type="Texture" id=7]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/tambak/siram/anim/Semprot Nutrient Klik.png" type="Texture" id=8]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/tambak/siram/anim/1.png" type="Texture" id=9]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/tambak/siram/anim/2.png" type="Texture" id=10]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/tambak/siram/anim/3.png" type="Texture" id=11]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/tambak/siram/anim/4.png" type="Texture" id=12]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/tambak/siram/anim/5.png" type="Texture" id=13]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/tambak/siram/anim/6.png" type="Texture" id=14]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/tambak/siram/anim/7.png" type="Texture" id=15]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/tambak/siram/anim/8.png" type="Texture" id=16]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/tambak/siram/anim/9.png" type="Texture" id=17]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/tambak/siram/anim/10.png" type="Texture" id=18]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/tambak/arit/anim/Arit Klik.png" type="Texture" id=19]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/tambak/arit/anim/1.png" type="Texture" id=20]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/tambak/arit/anim/2.png" type="Texture" id=21]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/tambak/arit/anim/3.png" type="Texture" id=22]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/tambak/arit/anim/4.png" type="Texture" id=23]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/tambak/pupuk/anim/Pupuk Klik.png" type="Texture" id=24]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/tambak/pupuk/anim/1.png" type="Texture" id=25]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/tambak/pupuk/anim/2.png" type="Texture" id=26]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/tambak/pupuk/anim/3.png" type="Texture" id=27]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/tambak/pupuk/anim/4.png" type="Texture" id=28]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
+"loop": false,
+"name": "bibit",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ) ],
+"loop": false,
+"name": "nutrien",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 23 ), ExtResource( 23 ) ],
+"loop": false,
+"name": "panen",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ) ],
+"loop": false,
+"name": "pupuk",
+"speed": 8.0
+} ]
+
+[sub_resource type="CircleShape2D" id=2]
+
+custom_solver_bias = 0.0
+radius = 45.8349
+
+[node name="Tools" type="Area2D"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+tipe_tools = null
+
+[node name="Sprite" type="AnimatedSprite" parent="." index="0"]
+
+frames = SubResource( 1 )
+animation = "bibit"
+_sections_unfolded = [ "Region" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+
+shape = SubResource( 2 )
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
+
+[connection signal="animation_finished" from="Sprite" to="." method="_on_Sprite_animation_finished"]
+
+

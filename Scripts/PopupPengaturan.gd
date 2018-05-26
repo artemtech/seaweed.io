@@ -8,6 +8,7 @@ func _ready():
 func _on_BtnSaveGame_pressed():
 	var game_data = get_parent().game_data
 	FileManager.save_data(game_data)
+	$Notifikasi.show()
 	print("OK!!")
 
 

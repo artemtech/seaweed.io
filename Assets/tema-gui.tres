@@ -232,5 +232,5 @@ WindowDialog/fonts/title_font = SubResource( 5 )
 WindowDialog/icons/close = null
 WindowDialog/icons/close_highlight = null
 WindowDialog/styles/panel = SubResource( 6 )
-_sections_unfolded = [ "Button", "Button/styles", "ColorPicker/icons", "ColorPickerButton", "ColorPickerButton/colors", "Dialogs/constants", "GridContainer/constants", "HBoxContainer/constants", "Label/colors", "PanelContainer/styles", "PopupMenu", "PopupMenu/styles", "PopupPanel", "PopupPanel/styles", "RichTextLabel", "TextEdit/constants", "TextEdit/fonts", "TextEdit/icons", "TextEdit/styles", "VBoxContainer/constants", "WindowDialog", "WindowDialog/colors", "WindowDialog/styles" ]
+_sections_unfolded = [ "Button", "Button/styles", "ColorPicker/icons", "ColorPickerButton", "ColorPickerButton/colors", "Dialogs/constants", "GridContainer/constants", "HBoxContainer/constants", "Label/colors", "PanelContainer/styles", "PopupMenu", "PopupMenu/styles", "PopupPanel", "PopupPanel/styles", "RichTextLabel", "TextEdit/constants", "TextEdit/fonts", "TextEdit/icons", "TextEdit/styles", "VBoxContainer", "VBoxContainer/constants", "WindowDialog", "WindowDialog/colors", "WindowDialog/styles" ]
 

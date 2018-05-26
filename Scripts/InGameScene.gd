@@ -6,15 +6,15 @@ enum GAME_STATE {NEW,LOAD,PAUSED,GAMEOVER}
 
 signal gamedata_changed
 
-onready var tokocontrol = load("res://Scenes/GameObjects/TokoControl.tscn")
-onready var konsumencontrol = load("res://Scenes/GameObjects/KonsumenControl.tscn")
-onready var bankcontrol = load("res://Scenes/GameObjects/BankControl.tscn")
-onready var pabrikcontrol = load("res://Scenes/GameObjects/PabrikControl.tscn")
-onready var tambakcontrol = load("res://Scenes/GameObjects/TambakControl.tscn")
+var tokocontrol = load("res://Scenes/GameObjects/TokoControl.tscn")
+var konsumencontrol = load("res://Scenes/GameObjects/KonsumenControl.tscn")
+var bankcontrol = load("res://Scenes/GameObjects/BankControl.tscn")
+var pabrikcontrol = load("res://Scenes/GameObjects/PabrikControl.tscn")
+var tambakcontrol = load("res://Scenes/GameObjects/TambakControl.tscn")
 
 var game_data = {
 	"money" : 5000,
-	"time" : "00:00:00",
+	"time" : {"h":0,"m":0,"s":0},
 	"day" : 0,
 	"reputasi" : 200,
 	"game_state" : NEW,

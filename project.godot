@@ -20,9 +20,17 @@ Transition="*res://Scenes/Transition.tscn"
 Utils="*res://Scripts/Helper/Utils.gd"
 FileManager="*res://Scripts/Helper/FileManager.gd"
 
+[debug]
+
+shapes/stdout/verbose_stdout=true
+shapes/enable_file_logging=true
+shapes/size/fullscreen=true
+shapes/stretch/aspect="keep"
+
 [display]
 
 window/size/height=768
+window/size/fullscreen=true
 window/stretch/mode="viewport"
 
 [locale]

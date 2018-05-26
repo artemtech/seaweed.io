@@ -104,7 +104,6 @@ func on_btn_beli_pressed(good):
 		return
 	get_parent().game_data.money -= total
 	get_parent().game_data.gudang[good].qty += qty
-	emit_signal("gamedata_changed")
 	refresh_game_ui()
 	reset_form(good)
 	pass

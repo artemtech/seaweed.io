@@ -1,97 +1,278 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=104 format=2]
 
-[ext_resource path="res://Assets/tema-gui.tres" type="Theme" id=1]
-[ext_resource path="res://Scripts/TambakControl.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/TambakControl.gd" type="Script" id=1]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/1.png" type="Texture" id=2]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/2.png" type="Texture" id=3]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/3.png" type="Texture" id=4]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/4.png" type="Texture" id=5]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/5.png" type="Texture" id=6]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/6.png" type="Texture" id=7]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/7.png" type="Texture" id=8]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/8.png" type="Texture" id=9]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/9.png" type="Texture" id=10]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/10.png" type="Texture" id=11]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/11.png" type="Texture" id=12]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/12.png" type="Texture" id=13]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/13.png" type="Texture" id=14]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/14.png" type="Texture" id=15]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/15.png" type="Texture" id=16]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/16.png" type="Texture" id=17]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/17.png" type="Texture" id=18]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/18.png" type="Texture" id=19]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/19.png" type="Texture" id=20]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/20.png" type="Texture" id=21]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/21.png" type="Texture" id=22]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/22.png" type="Texture" id=23]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/23.png" type="Texture" id=24]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/24.png" type="Texture" id=25]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/25.png" type="Texture" id=26]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Malam/1.png" type="Texture" id=27]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Malam/2.png" type="Texture" id=28]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Malam/3.png" type="Texture" id=29]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Malam/4.png" type="Texture" id=30]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Malam/5.png" type="Texture" id=31]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Malam/6.png" type="Texture" id=32]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Malam/7.png" type="Texture" id=33]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Malam/8.png" type="Texture" id=34]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Malam/9.png" type="Texture" id=35]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Malam/10.png" type="Texture" id=36]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Malam/11.png" type="Texture" id=37]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Malam/12.png" type="Texture" id=38]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/tambak/bibit/Bibit.png" type="Texture" id=39]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/tambak/bibit/anim/Bibit.png" type="Texture" id=40]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/tambak/bibit/Bibit Hover.png" type="Texture" id=41]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/tambak/pupuk/Pupuk.png" type="Texture" id=42]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/tambak/pupuk/Pupuk Klik.png" type="Texture" id=43]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/tambak/pupuk/Pupuk Hover.png" type="Texture" id=44]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/tambak/siram/Semprot Nutrient.png" type="Texture" id=45]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/tambak/siram/Semprot Nutrient Klik.png" type="Texture" id=46]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/tambak/siram/Semprot Nutrient Hover.png" type="Texture" id=47]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/tambak/arit/Arit.png" type="Texture" id=48]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/tambak/arit/Arit Klik.png" type="Texture" id=49]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/tambak/arit/Arit Hover.png" type="Texture" id=50]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/tambak/pupuk/amino/Asam Amino.png" type="Texture" id=51]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/tambak/pupuk/amino/Asam Amino Klik.png" type="Texture" id=52]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/tambak/pupuk/amino/Asam Amino Hover.png" type="Texture" id=53]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/tambak/pupuk/kalium/Kalium.png" type="Texture" id=54]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/tambak/pupuk/kalium/Kalium Klik.png" type="Texture" id=55]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/tambak/pupuk/kalium/Kalium Hover.png" type="Texture" id=56]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/tambak/pupuk/nitrogen/Nitrogen.png" type="Texture" id=57]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/tambak/pupuk/nitrogen/Nitrogen Klik.png" type="Texture" id=58]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/tambak/pupuk/nitrogen/Nitrogen Hover.png" type="Texture" id=59]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/tambak/pupuk/posfat/Phospat.png" type="Texture" id=60]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/tambak/pupuk/posfat/Phospat Klik.png" type="Texture" id=61]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/tambak/pupuk/posfat/Phospat Hover.png" type="Texture" id=62]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/tambak/pupuk/urea/Urea.png" type="Texture" id=63]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/tambak/pupuk/urea/Urea Klik.png" type="Texture" id=64]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/tambak/pupuk/urea/Urea Hover.png" type="Texture" id=65]
+[ext_resource path="res://Assets/BG/in-game/tambak/Kolam/Kolam 1 0 M.png" type="Texture" id=66]
+[ext_resource path="res://Assets/BG/in-game/tambak/Kolam/Kolam 1 20 M.png" type="Texture" id=67]
+[ext_resource path="res://Assets/BG/in-game/tambak/Kolam/Kolam 1 30 M.png" type="Texture" id=68]
+[ext_resource path="res://Assets/BG/in-game/tambak/Kolam/Kolam 1 40 M.png" type="Texture" id=69]
+[ext_resource path="res://Assets/BG/in-game/tambak/Kolam/Kolam 1 50 M.png" type="Texture" id=70]
+[ext_resource path="res://Assets/BG/in-game/tambak/Kolam/Kolam 1 60 M.png" type="Texture" id=71]
+[ext_resource path="res://Assets/BG/in-game/tambak/Kolam/Kolam 1 70 M.png" type="Texture" id=72]
+[ext_resource path="res://Assets/BG/in-game/tambak/Kolam/Kolam 1 80 M.png" type="Texture" id=73]
+[ext_resource path="res://Assets/BG/in-game/tambak/Kolam/Ukuran Kolam 1.png" type="Texture" id=74]
+[ext_resource path="res://Assets/GameObjects/btn/Tempat Atas 1 2 3.png" type="Texture" id=75]
+[ext_resource path="res://Assets/GameObjects/btn/Tempat Atas 1 2 3 Klik.png" type="Texture" id=76]
+[ext_resource path="res://Assets/GameObjects/btn/Tempat Bawah 4 5 6.png" type="Texture" id=77]
+[ext_resource path="res://Assets/GameObjects/btn/Tempat Bawah 4 5 6 Klik.png" type="Texture" id=78]
+[ext_resource path="res://Assets/tema-gui.tres" type="Theme" id=79]
+[ext_resource path="res://Assets/Fonts/papercuts-2.ttf" type="DynamicFontData" id=80]
+[ext_resource path="res://Assets/BG/in-game/tambak/Kolam 2/Kolam 2 0 M.png" type="Texture" id=81]
+[ext_resource path="res://Assets/BG/in-game/tambak/Kolam 2/Kolam 2 20 M.png" type="Texture" id=82]
+[ext_resource path="res://Assets/BG/in-game/tambak/Kolam 2/Kolam 2 30 M.png" type="Texture" id=83]
+[ext_resource path="res://Assets/BG/in-game/tambak/Kolam 2/Kolam 2 40 M.png" type="Texture" id=84]
+[ext_resource path="res://Assets/BG/in-game/tambak/Kolam 2/Kolam 2 50 M.png" type="Texture" id=85]
+[ext_resource path="res://Assets/BG/in-game/tambak/Kolam 2/Kolam 2 60 M.png" type="Texture" id=86]
+[ext_resource path="res://Assets/BG/in-game/tambak/Kolam 2/Kolam 2 70 M.png" type="Texture" id=87]
+[ext_resource path="res://Assets/BG/in-game/tambak/Kolam 2/Kolam 2 80 M.png" type="Texture" id=88]
+[ext_resource path="res://Assets/BG/in-game/tambak/Kolam 2/Ukuran Kolam 2.png" type="Texture" id=89]
+[ext_resource path="res://Assets/GameObjects/btn/Tambah.png" type="Texture" id=90]
+[ext_resource path="res://Assets/GameObjects/btn/Tambah Klik.png" type="Texture" id=91]
+[ext_resource path="res://Assets/GameObjects/btn/Tambah Hover.png" type="Texture" id=92]
+[ext_resource path="res://Assets/GameObjects/btn/Kurang.png" type="Texture" id=93]
+[ext_resource path="res://Assets/GameObjects/btn/Kurang Klik.png" type="Texture" id=94]
+[ext_resource path="res://Assets/GameObjects/btn/Kurang Hover.png" type="Texture" id=95]
 
-[node name="TambakControl" type="Control"]
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ) ],
+"loop": true,
+"name": "siang",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ) ],
+"loop": true,
+"name": "malam",
+"speed": 12.0
+} ]
+
+[sub_resource type="SpriteFrames" id=2]
+
+animations = [ {
+"frames": [ ExtResource( 66 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 70 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 73 ) ],
+"loop": true,
+"name": "kolam",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+
+animations = [ {
+"frames": [ ExtResource( 75 ), ExtResource( 76 ), ExtResource( 77 ), ExtResource( 78 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="DynamicFont" id=4]
+
+size = 32
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 80 )
+_sections_unfolded = [ "Font" ]
+
+[sub_resource type="SpriteFrames" id=5]
+
+animations = [ {
+"frames": [ ExtResource( 81 ), ExtResource( 82 ), ExtResource( 83 ), ExtResource( 84 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 88 ) ],
+"loop": true,
+"name": "kolam2",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=6]
+
+animations = [ {
+"frames": [ ExtResource( 77 ), ExtResource( 78 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=7]
+
+animations = [ {
+"frames": [ ExtResource( 77 ), ExtResource( 78 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=8]
+
+animations = [ {
+"frames": [ ExtResource( 77 ), ExtResource( 78 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="TambakControl" type="Node2D" index="0"]
 
 pause_mode = 2
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-theme = ExtResource( 1 )
-script = ExtResource( 2 )
+script = ExtResource( 1 )
 _sections_unfolded = [ "Pause", "Theme" ]
 
-[node name="TabContainer" type="TabContainer" parent="." index="0"]
+[node name="Background" type="AnimatedSprite" parent="." index="0"]
+
+position = Vector2( 512, 384 )
+frames = SubResource( 1 )
+animation = "siang"
+frame = 1
+playing = true
+_sections_unfolded = [ "Transform" ]
+
+[node name="Tools" type="HBoxContainer" parent="." index="1"]
 
 editor/display_folded = true
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -208.0
-margin_top = -244.5
-margin_right = 208.0
-margin_bottom = 244.5
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 14.0
+margin_top = 18.0
+margin_right = 114.0
+margin_bottom = 116.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+
+[node name="BtnBibit" type="TextureButton" parent="Tools" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 100.0
+margin_bottom = 98.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+hint_tooltip = "Bibit"
+focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-tab_align = 2
-tabs_visible = true
-_sections_unfolded = [ "Rect" ]
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 39 )
+texture_pressed = ExtResource( 40 )
+texture_hover = ExtResource( 41 )
+texture_focused = ExtResource( 41 )
+_sections_unfolded = [ "Hint", "Textures" ]
 
-[node name="Tambak" type="Tabs" parent="TabContainer" index="0"]
+[node name="BtnPupuk" type="TextureButton" parent="Tools" index="1"]
 
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -175.5
-margin_top = -172.0
-margin_right = 175.5
-margin_bottom = 172.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 104.0
+margin_right = 204.0
+margin_bottom = 98.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
+hint_tooltip = "Pupuk"
+focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-tab_align = 1
-scrolling_enabled = true
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 42 )
+texture_pressed = ExtResource( 43 )
+texture_hover = ExtResource( 44 )
+texture_focused = ExtResource( 44 )
+_sections_unfolded = [ "Hint", "Textures" ]
 
-[node name="Awal" type="VBoxContainer" parent="TabContainer/Tambak" index="0"]
-
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -140.5
-margin_top = -201.0
-margin_right = 138.5
-margin_bottom = 219.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-alignment = 1
-_sections_unfolded = [ "Mouse", "Theme" ]
-
-[node name="BtnTanam" type="Button" parent="TabContainer/Tambak/Awal" index="0"]
+[node name="BtnNutrien" type="TextureButton" parent="Tools" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 30.0
-margin_right = 279.0
-margin_bottom = 62.0
+margin_left = 208.0
+margin_right = 308.0
+margin_bottom = 98.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
+hint_tooltip = "Nutrien"
 focus_mode = 2
-mouse_filter = 1
+mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
@@ -99,24 +280,26 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "Tanam Bibit"
-flat = false
-align = 1
-_sections_unfolded = [ "Mouse", "Theme" ]
+texture_normal = ExtResource( 45 )
+texture_pressed = ExtResource( 46 )
+texture_hover = ExtResource( 47 )
+texture_focused = ExtResource( 47 )
+_sections_unfolded = [ "Hint", "Textures" ]
 
-[node name="BtnPupuk" type="Button" parent="TabContainer/Tambak/Awal" index="1"]
+[node name="BtnPanen" type="TextureButton" parent="Tools" index="3"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 112.0
-margin_right = 279.0
-margin_bottom = 144.0
+margin_left = 312.0
+margin_right = 412.0
+margin_bottom = 98.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
+hint_tooltip = "Pemanen"
 focus_mode = 2
-mouse_filter = 1
+mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
@@ -124,24 +307,45 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "Beri Pupuk"
-flat = false
-align = 1
-_sections_unfolded = [ "Mouse", "Theme" ]
+texture_normal = ExtResource( 48 )
+texture_pressed = ExtResource( 49 )
+texture_hover = ExtResource( 50 )
+texture_focused = ExtResource( 50 )
+_sections_unfolded = [ "Hint", "Textures" ]
 
-[node name="BtnLihat" type="Button" parent="TabContainer/Tambak/Awal" index="2"]
+[node name="ListPupuk" type="HBoxContainer" parent="." index="2"]
+
+editor/display_folded = true
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 125.0
+margin_top = 122.0
+margin_right = 537.0
+margin_bottom = 220.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+
+[node name="BtnAmino" type="TextureButton" parent="ListPupuk" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 194.0
-margin_right = 279.0
-margin_bottom = 226.0
+margin_right = 100.0
+margin_bottom = 98.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
+hint_tooltip = "Pupuk Amino"
 focus_mode = 2
-mouse_filter = 1
+mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
@@ -149,24 +353,26 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "Lihat Tambak"
-flat = false
-align = 1
-_sections_unfolded = [ "Mouse", "Theme" ]
+texture_normal = ExtResource( 51 )
+texture_pressed = ExtResource( 52 )
+texture_hover = ExtResource( 53 )
+texture_focused = ExtResource( 53 )
+_sections_unfolded = [ "Hint", "Textures" ]
 
-[node name="BtnPanen" type="Button" parent="TabContainer/Tambak/Awal" index="3"]
+[node name="BtnKalium" type="TextureButton" parent="ListPupuk" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 276.0
-margin_right = 279.0
-margin_bottom = 308.0
+margin_left = 104.0
+margin_right = 204.0
+margin_bottom = 98.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
+hint_tooltip = "Pupuk Kalium"
 focus_mode = 2
-mouse_filter = 1
+mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
@@ -174,20 +380,416 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "Panen Hasil"
-flat = false
-align = 1
-_sections_unfolded = [ "Mouse", "Theme" ]
+texture_normal = ExtResource( 54 )
+texture_pressed = ExtResource( 55 )
+texture_hover = ExtResource( 56 )
+texture_focused = ExtResource( 56 )
+_sections_unfolded = [ "Hint", "Textures" ]
 
-[node name="BtnKeluar" type="Button" parent="TabContainer/Tambak/Awal" index="4"]
+[node name="BtnNitrogen" type="TextureButton" parent="ListPupuk" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 358.0
-margin_right = 279.0
-margin_bottom = 390.0
+margin_left = 208.0
+margin_right = 308.0
+margin_bottom = 98.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+hint_tooltip = "Pupuk Nitrogen"
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 57 )
+texture_pressed = ExtResource( 58 )
+texture_hover = ExtResource( 59 )
+texture_focused = ExtResource( 59 )
+_sections_unfolded = [ "Hint", "Textures" ]
+
+[node name="BtnPosfat" type="TextureButton" parent="ListPupuk" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 312.0
+margin_right = 412.0
+margin_bottom = 98.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+hint_tooltip = "Pupuk Phosfat"
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 60 )
+texture_pressed = ExtResource( 61 )
+texture_hover = ExtResource( 62 )
+texture_focused = ExtResource( 62 )
+_sections_unfolded = [ "Hint", "Textures" ]
+
+[node name="BtnUrea" type="TextureButton" parent="ListPupuk" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 416.0
+margin_right = 516.0
+margin_bottom = 98.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+hint_tooltip = "Pupuk Urea"
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 63 )
+texture_pressed = ExtResource( 64 )
+texture_hover = ExtResource( 65 )
+texture_focused = ExtResource( 65 )
+_sections_unfolded = [ "Hint", "Textures" ]
+
+[node name="Kolam1" type="AnimatedSprite" parent="." index="3"]
+
+position = Vector2( 506.613, 481.247 )
+frames = SubResource( 2 )
+animation = "kolam"
+
+[node name="Ukuran" type="Sprite" parent="Kolam1" index="0"]
+
+position = Vector2( 407.581, 46.6821 )
+texture = ExtResource( 74 )
+
+[node name="kolam1a" type="Area2D" parent="Kolam1" index="1"]
+
+position = Vector2( -219.617, 13.3236 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="indikator" type="AnimatedSprite" parent="Kolam1/kolam1a" index="0"]
+
+position = Vector2( 2.21606, -15.5124 )
+frames = SubResource( 3 )
+animation = "default"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Kolam1/kolam1a" index="1"]
+
+build_mode = 0
+polygon = PoolVector2Array( -42.816, -56.9214, 46.4793, -56.9214, 93.0682, 33.0209, -85.5224, 31.0797 )
+
+[node name="kolam1b" type="Area2D" parent="Kolam1" index="2"]
+
+position = Vector2( 3.29205, 13.3236 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="indikator" type="AnimatedSprite" parent="Kolam1/kolam1b" index="0"]
+
+position = Vector2( 0.913208, -15.5124 )
+frames = SubResource( 3 )
+animation = "default"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Kolam1/kolam1b" index="1"]
+
+build_mode = 0
+polygon = PoolVector2Array( -42.816, -56.9214, 46.4793, -56.9214, 93.0682, 33.0209, -85.5224, 31.0797 )
+
+[node name="kolam1c" type="Area2D" parent="Kolam1" index="3"]
+
+position = Vector2( 230.182, 13.3236 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="indikator" type="AnimatedSprite" parent="Kolam1/kolam1c" index="0"]
+
+position = Vector2( 2.27759, -15.5124 )
+frames = SubResource( 3 )
+animation = "default"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Kolam1/kolam1c" index="1"]
+
+build_mode = 0
+polygon = PoolVector2Array( -42.816, -56.9214, 46.4793, -56.9214, 93.0682, 33.0209, -85.5224, 31.0797 )
+
+[node name="Label" type="Label" parent="Kolam1" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 379.0
+margin_top = 6.0
+margin_right = 419.0
+margin_bottom = 54.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+theme = ExtResource( 79 )
+custom_fonts/font = SubResource( 4 )
+text = "0m"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Theme", "custom_fonts" ]
+
+[node name="Kolam2" type="AnimatedSprite" parent="." index="4"]
+
+position = Vector2( 505.206, 669.245 )
+frames = SubResource( 5 )
+animation = "kolam2"
+
+[node name="Ukuran" type="Sprite" parent="Kolam2" index="0"]
+
+position = Vector2( 445.197, -55.978 )
+texture = ExtResource( 89 )
+
+[node name="kolam2a" type="Area2D" parent="Kolam2" index="1"]
+
+position = Vector2( -277.958, -3.6626 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="indikator" type="AnimatedSprite" parent="Kolam2/kolam2a" index="0"]
+
+position = Vector2( 4.34653, -0.375 )
+frames = SubResource( 6 )
+animation = "default"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Kolam2/kolam2a" index="1"]
+
+position = Vector2( -7.35092, 4.41052 )
+build_mode = 0
+polygon = PoolVector2Array( -42.816, -56.9214, 63.6476, -56.1296, 113.634, 46.7833, -98.0727, 46.7833 )
+
+[node name="kolam2b" type="Area2D" parent="Kolam2" index="2"]
+
+position = Vector2( 6.69897, -8.07312 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="indikator" type="AnimatedSprite" parent="Kolam2/kolam2b" index="0"]
+
+position = Vector2( 5.56146, 6.25159 )
+frames = SubResource( 7 )
+animation = "default"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Kolam2/kolam2b" index="1"]
+
+build_mode = 0
+polygon = PoolVector2Array( -47.5277, -47.3086, 53.9151, -45.8384, 109.782, 55.6044, -97.5139, 55.6044 )
+
+[node name="kolam2c" type="Area2D" parent="Kolam2" index="3"]
+
+position = Vector2( 296.807, -6.60284 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="indikator" type="AnimatedSprite" parent="Kolam2/kolam2c" index="0"]
+
+position = Vector2( -0.890503, 2.56531 )
+frames = SubResource( 8 )
+animation = "default"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Kolam2/kolam2c" index="1"]
+
+build_mode = 0
+polygon = PoolVector2Array( -55.36, -47.3087, 57.8442, -48.7789, 104.89, 54.1341, -103.876, 54.1341 )
+
+[node name="Label" type="Label" parent="Kolam2" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 410.0
+margin_top = -92.0
+margin_right = 450.0
+margin_bottom = -44.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+theme = ExtResource( 79 )
+custom_fonts/font = SubResource( 4 )
+text = "0m"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Theme", "custom_fonts" ]
+
+[node name="btnPlusKolam1" type="TextureButton" parent="." index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 126.0
+margin_top = 411.0
+margin_right = 181.0
+margin_bottom = 463.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+hint_tooltip = "Isi Air"
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 90 )
+texture_pressed = ExtResource( 91 )
+texture_hover = ExtResource( 92 )
+_sections_unfolded = [ "Focus", "Hint", "Textures" ]
+
+[node name="btnMinusKolam1" type="TextureButton" parent="." index="6"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 93.0
+margin_top = 470.0
+margin_right = 148.0
+margin_bottom = 522.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+hint_tooltip = "Kuras Air"
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 93 )
+texture_pressed = ExtResource( 94 )
+texture_hover = ExtResource( 95 )
+_sections_unfolded = [ "Hint", "Textures" ]
+
+[node name="btnPlusKolam2" type="TextureButton" parent="." index="7"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 50.0
+margin_top = 580.0
+margin_right = 105.0
+margin_bottom = 632.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+hint_tooltip = "Isi Air"
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 90 )
+texture_pressed = ExtResource( 91 )
+texture_hover = ExtResource( 92 )
+_sections_unfolded = [ "Hint", "Textures" ]
+
+[node name="btnMinusKolam2" type="TextureButton" parent="." index="8"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 19.0
+margin_top = 640.0
+margin_right = 74.0
+margin_bottom = 692.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+hint_tooltip = "Kuras Air"
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 93 )
+texture_pressed = ExtResource( 94 )
+texture_hover = ExtResource( 95 )
+_sections_unfolded = [ "Hint", "Textures" ]
+
+[node name="BtnKeluar" type="Button" parent="." index="9"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 832.0
+margin_top = 43.0
+margin_right = 988.0
+margin_bottom = 75.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -195,6 +797,7 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+theme = ExtResource( 79 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -204,6 +807,34 @@ flat = false
 align = 1
 _sections_unfolded = [ "Mouse", "Theme" ]
 
-[connection signal="pressed" from="TabContainer/Tambak/Awal/BtnKeluar" to="." method="_on_BtnKeluar_pressed"]
+[connection signal="pressed" from="Tools/BtnBibit" to="." method="_on_BtnBibit_pressed"]
+
+[connection signal="pressed" from="Tools/BtnPupuk" to="." method="_on_BtnPupuk_pressed"]
+
+[connection signal="pressed" from="Tools/BtnNutrien" to="." method="_on_BtnNutrien_pressed"]
+
+[connection signal="pressed" from="Tools/BtnPanen" to="." method="_on_BtnPanen_pressed"]
+
+[connection signal="pressed" from="ListPupuk/BtnAmino" to="." method="_on_BtnAmino_pressed"]
+
+[connection signal="pressed" from="ListPupuk/BtnKalium" to="." method="_on_BtnKalium_pressed"]
+
+[connection signal="pressed" from="ListPupuk/BtnNitrogen" to="." method="_on_BtnNitrogen_pressed"]
+
+[connection signal="pressed" from="ListPupuk/BtnPosfat" to="." method="_on_BtnPosfat_pressed"]
+
+[connection signal="pressed" from="ListPupuk/BtnUrea" to="." method="_on_BtnUrea_pressed"]
+
+[connection signal="area_shape_entered" from="Kolam1/kolam1a" to="." method="_on_kolam1a_area_shape_entered"]
+
+[connection signal="pressed" from="btnPlusKolam1" to="." method="_on_btnPlusKolam1_pressed"]
+
+[connection signal="pressed" from="btnMinusKolam1" to="." method="_on_btnMinusKolam1_pressed"]
+
+[connection signal="pressed" from="btnPlusKolam2" to="." method="_on_btnPlusKolam2_pressed"]
+
+[connection signal="pressed" from="btnMinusKolam2" to="." method="_on_btnMinusKolam2_pressed"]
+
+[connection signal="pressed" from="BtnKeluar" to="." method="_on_BtnKeluar_pressed"]
 
 
