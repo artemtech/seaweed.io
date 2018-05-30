@@ -1,43 +1,43 @@
 [gd_scene load_steps=104 format=2]
 
 [ext_resource path="res://Scripts/TambakControl.gd" type="Script" id=1]
-[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/1.png" type="Texture" id=2]
-[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/2.png" type="Texture" id=3]
-[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/3.png" type="Texture" id=4]
-[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/4.png" type="Texture" id=5]
-[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/5.png" type="Texture" id=6]
-[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/6.png" type="Texture" id=7]
-[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/7.png" type="Texture" id=8]
-[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/8.png" type="Texture" id=9]
-[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/9.png" type="Texture" id=10]
-[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/10.png" type="Texture" id=11]
-[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/11.png" type="Texture" id=12]
-[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/12.png" type="Texture" id=13]
-[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/13.png" type="Texture" id=14]
-[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/14.png" type="Texture" id=15]
-[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/15.png" type="Texture" id=16]
-[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/16.png" type="Texture" id=17]
-[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/17.png" type="Texture" id=18]
-[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/18.png" type="Texture" id=19]
-[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/19.png" type="Texture" id=20]
-[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/20.png" type="Texture" id=21]
-[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/21.png" type="Texture" id=22]
-[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/22.png" type="Texture" id=23]
-[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/23.png" type="Texture" id=24]
-[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/24.png" type="Texture" id=25]
-[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/25.png" type="Texture" id=26]
-[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Malam/1.png" type="Texture" id=27]
-[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Malam/2.png" type="Texture" id=28]
-[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Malam/3.png" type="Texture" id=29]
-[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Malam/4.png" type="Texture" id=30]
-[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Malam/5.png" type="Texture" id=31]
-[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Malam/6.png" type="Texture" id=32]
-[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Malam/7.png" type="Texture" id=33]
-[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Malam/8.png" type="Texture" id=34]
-[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Malam/9.png" type="Texture" id=35]
-[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Malam/10.png" type="Texture" id=36]
-[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Malam/11.png" type="Texture" id=37]
-[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Malam/12.png" type="Texture" id=38]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Malam/1.png" type="Texture" id=2]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Malam/2.png" type="Texture" id=3]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Malam/3.png" type="Texture" id=4]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Malam/4.png" type="Texture" id=5]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Malam/5.png" type="Texture" id=6]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Malam/6.png" type="Texture" id=7]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Malam/7.png" type="Texture" id=8]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Malam/8.png" type="Texture" id=9]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Malam/9.png" type="Texture" id=10]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Malam/10.png" type="Texture" id=11]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Malam/11.png" type="Texture" id=12]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Malam/12.png" type="Texture" id=13]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/1.png" type="Texture" id=14]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/2.png" type="Texture" id=15]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/3.png" type="Texture" id=16]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/4.png" type="Texture" id=17]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/5.png" type="Texture" id=18]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/6.png" type="Texture" id=19]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/7.png" type="Texture" id=20]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/8.png" type="Texture" id=21]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/9.png" type="Texture" id=22]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/10.png" type="Texture" id=23]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/11.png" type="Texture" id=24]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/12.png" type="Texture" id=25]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/13.png" type="Texture" id=26]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/14.png" type="Texture" id=27]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/15.png" type="Texture" id=28]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/16.png" type="Texture" id=29]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/17.png" type="Texture" id=30]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/18.png" type="Texture" id=31]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/19.png" type="Texture" id=32]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/20.png" type="Texture" id=33]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/21.png" type="Texture" id=34]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/22.png" type="Texture" id=35]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/23.png" type="Texture" id=36]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/24.png" type="Texture" id=37]
+[ext_resource path="res://Assets/BG/in-game/tambak/Animasi Tambak Siang/25.png" type="Texture" id=38]
 [ext_resource path="res://Assets/GameObjects/in-game/controls/tambak/bibit/Bibit.png" type="Texture" id=39]
 [ext_resource path="res://Assets/GameObjects/in-game/controls/tambak/bibit/anim/Bibit.png" type="Texture" id=40]
 [ext_resource path="res://Assets/GameObjects/in-game/controls/tambak/bibit/Bibit Hover.png" type="Texture" id=41]
@@ -99,14 +99,14 @@
 [sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ) ],
-"loop": true,
-"name": "siang",
-"speed": 12.0
-}, {
-"frames": [ ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ) ],
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
 "loop": true,
 "name": "malam",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ) ],
+"loop": true,
+"name": "siang",
 "speed": 12.0
 } ]
 
@@ -172,7 +172,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[node name="TambakControl" type="Node2D" index="0"]
+[node name="TambakControl" type="Node2D"]
 
 pause_mode = 2
 script = ExtResource( 1 )
@@ -183,7 +183,7 @@ _sections_unfolded = [ "Pause", "Theme" ]
 position = Vector2( 512, 384 )
 frames = SubResource( 1 )
 animation = "siang"
-frame = 1
+frame = 8
 playing = true
 _sections_unfolded = [ "Transform" ]
 
@@ -480,6 +480,7 @@ texture = ExtResource( 74 )
 
 [node name="kolam1a" type="Area2D" parent="Kolam1" index="1"]
 
+editor/display_folded = true
 position = Vector2( -219.617, 13.3236 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -502,6 +503,7 @@ polygon = PoolVector2Array( -42.816, -56.9214, 46.4793, -56.9214, 93.0682, 33.02
 
 [node name="kolam1b" type="Area2D" parent="Kolam1" index="2"]
 
+editor/display_folded = true
 position = Vector2( 3.29205, 13.3236 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -524,6 +526,7 @@ polygon = PoolVector2Array( -42.816, -56.9214, 46.4793, -56.9214, 93.0682, 33.02
 
 [node name="kolam1c" type="Area2D" parent="Kolam1" index="3"]
 
+editor/display_folded = true
 position = Vector2( 230.182, 13.3236 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -571,6 +574,7 @@ _sections_unfolded = [ "Theme", "custom_fonts" ]
 
 [node name="Kolam2" type="AnimatedSprite" parent="." index="4"]
 
+editor/display_folded = true
 position = Vector2( 505.206, 669.245 )
 frames = SubResource( 5 )
 animation = "kolam2"
@@ -582,6 +586,7 @@ texture = ExtResource( 89 )
 
 [node name="kolam2a" type="Area2D" parent="Kolam2" index="1"]
 
+editor/display_folded = true
 position = Vector2( -277.958, -3.6626 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -605,6 +610,7 @@ polygon = PoolVector2Array( -42.816, -56.9214, 63.6476, -56.1296, 113.634, 46.78
 
 [node name="kolam2b" type="Area2D" parent="Kolam2" index="2"]
 
+editor/display_folded = true
 position = Vector2( 6.69897, -8.07312 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -627,6 +633,7 @@ polygon = PoolVector2Array( -47.5277, -47.3086, 53.9151, -45.8384, 109.782, 55.6
 
 [node name="kolam2c" type="Area2D" parent="Kolam2" index="3"]
 
+editor/display_folded = true
 position = Vector2( 296.807, -6.60284 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -826,6 +833,10 @@ _sections_unfolded = [ "Mouse", "Theme" ]
 [connection signal="pressed" from="ListPupuk/BtnUrea" to="." method="_on_BtnUrea_pressed"]
 
 [connection signal="area_shape_entered" from="Kolam1/kolam1a" to="." method="_on_kolam1a_area_shape_entered"]
+
+[connection signal="area_shape_exited" from="Kolam1/kolam1a" to="." method="_on_kolam1a_area_shape_exited"]
+
+[connection signal="input_event" from="Kolam1/kolam1a" to="." method="_on_kolam1a_input_event"]
 
 [connection signal="pressed" from="btnPlusKolam1" to="." method="_on_btnPlusKolam1_pressed"]
 

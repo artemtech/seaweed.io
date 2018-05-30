@@ -30,6 +30,7 @@ func _input(event):
 			pass
 		# klik kanan
 		if event.get_button_index() == BUTTON_RIGHT and event.is_pressed():
+			emit_signal("area_shape_exited")
 			queue_free()
 			print("kanan!")
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
@@ -44,3 +45,12 @@ func _on_input_event(viewport, event, shape_idx):
 func _on_Sprite_animation_finished():
 	$Sprite.set_frame(0)
 	$Sprite.playing = false
+
+
+func _on_area_shape_entered(area_id, area, area_shape, self_shape):
+	print("from tools, area enter is: %s"% area.get_name())
+
+
+func _on_Tools_area_shape_exited(area_id, area, area_shape, self_shape):
+	print("from tools, booohh!!")
+	area.emit_signal("area_shape_exited")

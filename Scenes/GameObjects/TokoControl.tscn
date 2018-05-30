@@ -1,10 +1,17 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scripts/TokoControl.gd" type="Script" id=1]
 [ext_resource path="res://Assets/toko_theme.tres" type="Theme" id=2]
 [ext_resource path="res://Assets/tema-gui.tres" type="Theme" id=3]
-[ext_resource path="res://icon.png" type="Texture" id=4]
-[ext_resource path="res://icon28.png" type="Texture" id=5]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/toko/Bibit.png" type="Texture" id=4]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/toko/Gula.png" type="Texture" id=5]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/toko/Garam.png" type="Texture" id=6]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/toko/Metil Alkohol.png" type="Texture" id=7]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/toko/Pewarna.png" type="Texture" id=8]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/toko/Perasa.png" type="Texture" id=9]
+[ext_resource path="res://Assets/GameObjects/btn/Close.png" type="Texture" id=10]
+[ext_resource path="res://Assets/GameObjects/btn/Close Klik.png" type="Texture" id=11]
+[ext_resource path="res://Assets/GameObjects/btn/Close Hover.png" type="Texture" id=12]
 
 [node name="TokoControl" type="Control" index="0"]
 
@@ -24,15 +31,10 @@ _sections_unfolded = [ "Mouse", "Pause", "Rect", "Theme" ]
 
 [node name="TabContainer" type="TabContainer" parent="." index="0"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
-anchor_right = 0.01
-anchor_bottom = 0.0
-margin_left = 144.5
-margin_top = 62.0
-margin_right = 869.26
-margin_bottom = 706.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -41,7 +43,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 theme = ExtResource( 2 )
 tab_align = 1
-tabs_visible = true
+tabs_visible = false
 _sections_unfolded = [ "Anchor", "Margin", "Theme" ]
 
 [node name="Toko" type="Tabs" parent="TabContainer" index="0"]
@@ -50,10 +52,6 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 4.0
-margin_top = 42.0
-margin_right = -4.0
-margin_bottom = -4.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -68,12 +66,12 @@ _sections_unfolded = [ "Anchor", "Mouse", "Rect" ]
 
 anchor_left = 0.0
 anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 53.0
-margin_top = 77.0
-margin_right = 684.0
-margin_bottom = 474.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 191.0
+margin_top = 212.0
+margin_right = -53.0
+margin_bottom = -185.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
 mouse_filter = 0
@@ -85,7 +83,7 @@ scroll_horizontal_enabled = true
 scroll_horizontal = 0
 scroll_vertical_enabled = true
 scroll_vertical = 0
-_sections_unfolded = [ "Anchor", "Size Flags", "Theme" ]
+_sections_unfolded = [ "Anchor", "Margin", "Size Flags", "Theme" ]
 
 [node name="ItemContainer" type="GridContainer" parent="TabContainer/Toko/ItemList" index="0"]
 
@@ -93,27 +91,55 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 631.0
+margin_right = 780.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 1
+custom_constants/hseparation = 120
 columns = 3
-_sections_unfolded = [ "Anchor", "custom_constants" ]
+_sections_unfolded = [ "custom_constants" ]
 
-[node name="HBoxContainer" type="HBoxContainer" parent="." index="1"]
+[node name="OurKoin" type="Label" parent="." index="1" groups=[
+"inventory",
+]]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 230.0
+margin_top = 55.0
+margin_right = 367.0
+margin_bottom = 91.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+theme = ExtResource( 2 )
+text = "koin"
+align = 2
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Theme" ]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." index="2"]
 
 editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 252.0
-margin_top = 625.0
-margin_right = 766.0
-margin_bottom = 689.0
+margin_left = 391.0
+margin_top = 662.0
+margin_right = 929.0
+margin_bottom = 740.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -124,41 +150,33 @@ theme = ExtResource( 3 )
 alignment = 0
 _sections_unfolded = [ "Rect", "Size Flags", "Theme" ]
 
-[node name="BtnTutup" type="Button" parent="HBoxContainer" index="0"]
+[node name="GridContainer" type="GridContainer" parent="HBoxContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 16.0
-margin_right = 66.0
-margin_bottom = 48.0
+margin_right = 538.0
+margin_bottom = 128.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
+mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
-size_flags_vertical = 4
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "< Kembali"
-flat = false
-align = 1
-_sections_unfolded = [ "Size Flags", "Theme" ]
+size_flags_vertical = 1
+columns = 6
+_sections_unfolded = [ "Hint", "Size Flags", "Theme" ]
 
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer" index="1"]
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/GridContainer" index="0"]
 
 editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 166.0
-margin_right = 230.0
+margin_right = 48.0
 margin_bottom = 64.0
+rect_min_size = Vector2( 48, 64 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -166,64 +184,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 texture = ExtResource( 4 )
-stretch_mode = 0
-
-[node name="OurKoin" type="Label" parent="HBoxContainer/TextureRect" index="0" groups=[
-"inventory",
-]]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 64.0
-margin_top = 17.0
-margin_right = 101.0
-margin_bottom = 53.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-text = "koin"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="GridContainer" type="GridContainer" parent="HBoxContainer" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 330.0
-margin_right = 514.0
-margin_bottom = 64.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-columns = 3
-_sections_unfolded = [ "Hint", "Size Flags", "Theme" ]
-
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer/GridContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 28.0
-margin_bottom = 28.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-texture = ExtResource( 5 )
+expand = true
 stretch_mode = 0
 _sections_unfolded = [ "Rect" ]
 
@@ -235,16 +196,17 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 36.0
-margin_top = -2.0
-margin_right = 93.0
-margin_bottom = 34.0
+margin_left = 57.0
+margin_top = 16.0
+margin_right = 114.0
+margin_bottom = 52.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "2"
 percent_visible = 1.0
 lines_skipped = 0
@@ -252,13 +214,15 @@ max_lines_visible = -1
 
 [node name="TextureRect3" type="TextureRect" parent="HBoxContainer/GridContainer" index="1"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 78.0
-margin_right = 106.0
-margin_bottom = 28.0
+margin_left = 98.0
+margin_right = 146.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 48, 64 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -266,6 +230,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 texture = ExtResource( 5 )
+expand = true
 stretch_mode = 0
 _sections_unfolded = [ "Rect" ]
 
@@ -277,16 +242,17 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 36.0
-margin_top = -2.0
-margin_right = 93.0
-margin_bottom = 34.0
+margin_left = 57.0
+margin_top = 16.0
+margin_right = 114.0
+margin_bottom = 52.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "0"
 percent_visible = 1.0
 lines_skipped = 0
@@ -294,20 +260,23 @@ max_lines_visible = -1
 
 [node name="TextureRect4" type="TextureRect" parent="HBoxContainer/GridContainer" index="2"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 156.0
-margin_right = 184.0
-margin_bottom = 28.0
+margin_left = 196.0
+margin_right = 244.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 48, 64 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
+expand = true
 stretch_mode = 0
 _sections_unfolded = [ "Rect" ]
 
@@ -319,16 +288,17 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 36.0
-margin_top = -2.0
-margin_right = 93.0
-margin_bottom = 34.0
+margin_left = 57.0
+margin_top = 16.0
+margin_right = 114.0
+margin_bottom = 52.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "0"
 percent_visible = 1.0
 lines_skipped = 0
@@ -336,20 +306,23 @@ max_lines_visible = -1
 
 [node name="TextureRect5" type="TextureRect" parent="HBoxContainer/GridContainer" index="3"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 36.0
-margin_right = 28.0
+margin_left = 294.0
+margin_right = 342.0
 margin_bottom = 64.0
+rect_min_size = Vector2( 48, 64 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 5 )
+texture = ExtResource( 7 )
+expand = true
 stretch_mode = 0
 _sections_unfolded = [ "Rect" ]
 
@@ -361,16 +334,17 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 36.0
-margin_top = -2.0
-margin_right = 93.0
-margin_bottom = 34.0
+margin_left = 57.0
+margin_top = 16.0
+margin_right = 114.0
+margin_bottom = 52.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "0"
 percent_visible = 1.0
 lines_skipped = 0
@@ -378,21 +352,23 @@ max_lines_visible = -1
 
 [node name="TextureRect6" type="TextureRect" parent="HBoxContainer/GridContainer" index="4"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 78.0
-margin_top = 36.0
-margin_right = 106.0
+margin_left = 392.0
+margin_right = 440.0
 margin_bottom = 64.0
+rect_min_size = Vector2( 48, 64 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 5 )
+texture = ExtResource( 8 )
+expand = true
 stretch_mode = 0
 _sections_unfolded = [ "Rect" ]
 
@@ -404,16 +380,17 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 36.0
-margin_top = -2.0
-margin_right = 93.0
-margin_bottom = 34.0
+margin_left = 57.0
+margin_top = 16.0
+margin_right = 114.0
+margin_bottom = 52.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "0"
 percent_visible = 1.0
 lines_skipped = 0
@@ -421,21 +398,23 @@ max_lines_visible = -1
 
 [node name="TextureRect7" type="TextureRect" parent="HBoxContainer/GridContainer" index="5"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 156.0
-margin_top = 36.0
-margin_right = 184.0
+margin_left = 490.0
+margin_right = 538.0
 margin_bottom = 64.0
+rect_min_size = Vector2( 48, 64 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 5 )
+texture = ExtResource( 9 )
+expand = true
 stretch_mode = 0
 _sections_unfolded = [ "Rect" ]
 
@@ -447,22 +426,49 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 36.0
-margin_top = -2.0
-margin_right = 93.0
-margin_bottom = 34.0
+margin_left = 57.0
+margin_top = 16.0
+margin_right = 114.0
+margin_bottom = 52.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "0"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Notifikasi" type="AcceptDialog" parent="." index="2"]
+[node name="BtnTutup" type="TextureButton" parent="." index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 913.0
+margin_top = 51.0
+margin_right = 963.0
+margin_bottom = 101.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 11 )
+texture_hover = ExtResource( 12 )
+_sections_unfolded = [ "Size Flags", "Textures", "Theme" ]
+
+[node name="Notifikasi" type="AcceptDialog" parent="." index="4"]
 
 visible = false
 anchor_left = 0.5
@@ -486,6 +492,6 @@ resizable = false
 dialog_hide_on_ok = true
 _sections_unfolded = [ "Dialog", "Theme" ]
 
-[connection signal="pressed" from="HBoxContainer/BtnTutup" to="." method="_on_BtnTutup_pressed"]
+[connection signal="pressed" from="BtnTutup" to="." method="_on_BtnTutup_pressed"]
 
 

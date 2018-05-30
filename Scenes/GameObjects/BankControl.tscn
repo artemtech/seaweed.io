@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Assets/tema-gui.tres" type="Theme" id=1]
 [ext_resource path="res://Scripts/BankControl.gd" type="Script" id=2]
@@ -6,16 +6,15 @@
 [ext_resource path="res://Assets/BG/in-game/bank/2.png" type="Texture" id=4]
 [ext_resource path="res://Assets/GameObjects/in-game/controls/bank/Pilihan 1.png" type="Texture" id=5]
 [ext_resource path="res://Assets/GameObjects/in-game/controls/bank/Pilihan 1 Klik.png" type="Texture" id=6]
-[ext_resource path="res://Assets/GameObjects/in-game/controls/bank/Pilihan 3 Klik.png" type="Texture" id=7]
-[ext_resource path="res://Assets/GameObjects/in-game/controls/bank/Pilihan 2.png" type="Texture" id=8]
-[ext_resource path="res://Assets/GameObjects/in-game/controls/bank/Pilihan 2 Klik.png" type="Texture" id=9]
-[ext_resource path="res://Assets/GameObjects/in-game/controls/bank/Pilihan 3.png" type="Texture" id=10]
-[ext_resource path="res://Assets/Fonts/papercuts-2.ttf" type="DynamicFontData" id=11]
-[ext_resource path="res://Assets/GameObjects/btn/Pilih.png" type="Texture" id=12]
-[ext_resource path="res://Assets/GameObjects/btn/Pilih Klik.png" type="Texture" id=13]
-[ext_resource path="res://Assets/GameObjects/btn/Close.png" type="Texture" id=14]
-[ext_resource path="res://Assets/GameObjects/btn/Close Klik.png" type="Texture" id=15]
-[ext_resource path="res://Assets/GameObjects/btn/Close Hover.png" type="Texture" id=16]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/bank/Pilihan 2.png" type="Texture" id=7]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/bank/Pilihan 2 Klik.png" type="Texture" id=8]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/bank/Pilihan 3.png" type="Texture" id=9]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/bank/Pilihan 3 Klik.png" type="Texture" id=10]
+[ext_resource path="res://Assets/GameObjects/btn/Pilih.png" type="Texture" id=11]
+[ext_resource path="res://Assets/GameObjects/btn/Pilih Klik.png" type="Texture" id=12]
+[ext_resource path="res://Assets/GameObjects/btn/Close.png" type="Texture" id=13]
+[ext_resource path="res://Assets/GameObjects/btn/Close Klik.png" type="Texture" id=14]
+[ext_resource path="res://Assets/GameObjects/btn/Close Hover.png" type="Texture" id=15]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -26,15 +25,7 @@ animations = [ {
 "speed": 2.0
 } ]
 
-[sub_resource type="DynamicFont" id=2]
-
-size = 24
-use_mipmaps = false
-use_filter = false
-font_data = ExtResource( 11 )
-_sections_unfolded = [ "Font", "Settings" ]
-
-[node name="BankControl" type="Control"]
+[node name="BankControl" type="Control" index="0"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -56,12 +47,12 @@ _sections_unfolded = [ "Pause", "Theme" ]
 position = Vector2( 512, 384 )
 frames = SubResource( 1 )
 animation = "default"
-frame = 1
 playing = true
 _sections_unfolded = [ "Transform" ]
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." index="1"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -102,7 +93,7 @@ group = null
 texture_normal = ExtResource( 5 )
 texture_pressed = ExtResource( 6 )
 texture_hover = ExtResource( 6 )
-texture_focused = ExtResource( 7 )
+texture_focused = ExtResource( 6 )
 _sections_unfolded = [ "Textures" ]
 
 [node name="opsi2" type="TextureButton" parent="HBoxContainer" index="1"]
@@ -125,10 +116,10 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 8 )
-texture_pressed = ExtResource( 9 )
-texture_hover = ExtResource( 9 )
-texture_focused = ExtResource( 7 )
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 8 )
+texture_hover = ExtResource( 8 )
+texture_focused = ExtResource( 8 )
 _sections_unfolded = [ "Textures" ]
 
 [node name="opsi3" type="TextureButton" parent="HBoxContainer" index="2"]
@@ -151,72 +142,84 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 10 )
-texture_pressed = ExtResource( 7 )
-texture_hover = ExtResource( 7 )
-texture_focused = ExtResource( 7 )
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 10 )
+texture_hover = ExtResource( 10 )
+texture_focused = ExtResource( 10 )
 _sections_unfolded = [ "Textures" ]
 
-[node name="Label" type="RichTextLabel" parent="." index="2"]
+[node name="dialog" type="HBoxContainer" parent="." index="2"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 278.0
+margin_top = 616.0
+margin_right = 934.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/separation = 15
+alignment = 0
+_sections_unfolded = [ "custom_constants" ]
+
+[node name="label" type="Label" parent="dialog" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 282.0
-margin_top = 623.0
-margin_right = 743.0
-margin_bottom = 705.0
+margin_right = 469.0
+margin_bottom = 104.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
 mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/normal_font = SubResource( 2 )
-custom_colors/default_color = Color( 0.14902, 0.14902, 0.14902, 1 )
-bbcode_enabled = true
-bbcode_text = "Anda hendak meminjam koin sebesar $$$$
-dalam waktu XX hari harus kembali. Yakin ?"
-visible_characters = -1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Anda hendak meminjam koin sebesar $$$$ dalam waktu XX hari harus kembali. Yakin ?"
+valign = 1
+autowrap = true
+clip_text = true
 percent_visible = 1.0
-meta_underlined = true
-tab_size = 4
-text = "Anda hendak meminjam koin sebesar $$$$
-dalam waktu XX hari harus kembali. Yakin ?"
-scroll_active = true
-scroll_following = false
-selection_enabled = false
-override_selected_font_color = false
-_sections_unfolded = [ "BBCode", "custom_colors" ]
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "BBCode", "Grow Direction", "Rect", "Size Flags", "custom_colors" ]
 
-[node name="btnPilih" type="TextureButton" parent="." index="3"]
+[node name="btnPilih" type="TextureButton" parent="dialog" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 756.0
-margin_top = 637.0
-margin_right = 932.0
-margin_bottom = 703.0
+margin_left = 484.0
+margin_top = 25.0
+margin_right = 656.0
+margin_bottom = 79.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
-size_flags_vertical = 1
+size_flags_vertical = 4
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 12 )
-texture_pressed = ExtResource( 12 )
-texture_hover = ExtResource( 13 )
-_sections_unfolded = [ "Textures" ]
+texture_normal = ExtResource( 11 )
+texture_pressed = ExtResource( 11 )
+texture_hover = ExtResource( 12 )
+_sections_unfolded = [ "Size Flags", "Textures" ]
 
-[node name="btnClose" type="TextureButton" parent="." index="4"]
+[node name="btnClose" type="TextureButton" parent="." index="3"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -237,12 +240,12 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 14 )
-texture_pressed = ExtResource( 15 )
-texture_hover = ExtResource( 16 )
+texture_normal = ExtResource( 13 )
+texture_pressed = ExtResource( 14 )
+texture_hover = ExtResource( 15 )
 _sections_unfolded = [ "Textures" ]
 
-[node name="TabContainer" type="TabContainer" parent="." index="5"]
+[node name="TabContainer" type="TabContainer" parent="." index="4"]
 
 editor/display_folded = true
 visible = false
@@ -502,6 +505,14 @@ text = "< Kembali"
 flat = false
 align = 1
 _sections_unfolded = [ "Theme" ]
+
+[connection signal="pressed" from="HBoxContainer/opsi1" to="." method="_on_opsi_pressed" binds= [ "opsi1" ]]
+
+[connection signal="pressed" from="HBoxContainer/opsi2" to="." method="_on_opsi_pressed" binds= [ "opsi2" ]]
+
+[connection signal="pressed" from="HBoxContainer/opsi3" to="." method="_on_opsi_pressed" binds= [ "opsi3" ]]
+
+[connection signal="pressed" from="dialog/btnPilih" to="." method="_on_btnPilih_pressed"]
 
 [connection signal="pressed" from="btnClose" to="." method="_on_btnKeluar_pressed"]
 

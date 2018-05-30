@@ -80,11 +80,9 @@ var game_data = {
 		}
 	},
 	"bank" : {
-		"hutang" : {
-			"status" : true,
-			"nominal" : 5000,
-			"tempo" : 10*24*3600
-		}
+		"bisa" : true,
+		"harga" : 0,
+		"day" : 0
 	},
 	"konsumen" : {
 		"namanya" : {

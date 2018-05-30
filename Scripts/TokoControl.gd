@@ -3,37 +3,37 @@ extends Control
 var toko = {
 		"bibit" : {
 			"nama" : "Bibit Rumput Laut",
-			"img" : "res://icon.png",
+			"img" : "res://Assets/GameObjects/in-game/controls/toko/Bibit.png",
 			"harga" : 500
 		},
 		"gula" : {
 			"nama" : "Gula",
-			"img" : "res://icon.png",
+			"img" : "res://Assets/GameObjects/in-game/controls/toko/Gula.png",
 			"harga" : 25
 		},
 		"garam" : {
 			"nama" : "Garam",
-			"img" : "res://icon.png",
+			"img" : "res://Assets/GameObjects/in-game/controls/toko/Garam.png",
 			"harga" : 25
 		},
 		"metil_alkohol" : {
 			"nama" : "Metil Alkohol",
-			"img" : "res://icon.png",
+			"img" : "res://Assets/GameObjects/in-game/controls/toko/Metil Alkohol.png",
 			"harga" : 25
 		},
 		"pewarna" : {
 			"nama" : "Pewarna",
-			"img" : "res://icon.png",
+			"img" : "res://Assets/GameObjects/in-game/controls/toko/Pewarna.png",
 			"harga" : 25
 		},
 		"perasa" : {
 			"nama" : "Perasa",
-			"img" : "res://icon.png",
+			"img" : "res://Assets/GameObjects/in-game/controls/toko/Perasa.png",
 			"harga" : 25
 		},
 }
 onready var goods_container = $TabContainer/Toko/ItemList/ItemContainer
-onready var our_koin = $HBoxContainer/TextureRect/OurKoin
+onready var our_koin = $OurKoin
 onready var our_bibit = $HBoxContainer/GridContainer/TextureRect/OurBibit
 onready var our_gula = $HBoxContainer/GridContainer/TextureRect3/OurGula
 onready var our_garam = $HBoxContainer/GridContainer/TextureRect4/OurGaram
@@ -49,6 +49,7 @@ func _ready():
 		
 		var item_icon = TextureRect.new()
 		item_icon.texture = load(toko[good].img)
+		item_icon.size_flags_horizontal = SIZE_SHRINK_CENTER
 		
 		var item_desc = Label.new()
 		item_desc.align = item_desc.ALIGN_CENTER
@@ -79,6 +80,7 @@ func _ready():
 		btn_beli.name = "btn_beli"
 		btn_beli.text = "BELI"
 		btn_beli.connect("pressed",self,"on_btn_beli_pressed",[good])
+#		btn_beli.size_flags_horizontal = SIZE_SHRINK_CENTER
 #		btn_beli.connect("gamedata_changed",self,"refresh_game_ui")
 		
 		item.add_child(item_icon)
@@ -86,7 +88,7 @@ func _ready():
 		item.add_child(hcontainer)
 		item.add_child(item_total)
 		item.add_child(btn_beli)
-		item.size_flags_horizontal = SIZE_EXPAND_FILL
+		item.size_flags_horizontal = SIZE_SHRINK_CENTER
 		
 		goods_container.add_child(item)
 		

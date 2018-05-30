@@ -1,6 +1,7 @@
-[gd_resource type="Theme" load_steps=9 format=2]
+[gd_resource type="Theme" load_steps=11 format=2]
 
-[ext_resource path="res://Assets/Fonts/papercuts-2.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Assets/BG/in-game/toko/1.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Fonts/papercuts-2.ttf" type="DynamicFontData" id=2]
 
 [sub_resource type="StyleBoxFlat" id=1]
 
@@ -118,12 +119,31 @@ anti_aliasing = true
 anti_aliasing_size = 1
 _sections_unfolded = [ "Corner Radius", "Expand Margin" ]
 
+[sub_resource type="StyleBoxTexture" id=8]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 1024, 768 )
+margin_left = 0.0
+margin_right = 0.0
+margin_top = 0.0
+margin_bottom = 0.0
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+modulate_color = Color( 1, 1, 1, 1 )
+draw_center = true
+
 [sub_resource type="DynamicFont" id=5]
 
 size = 20
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 1 )
+font_data = ExtResource( 2 )
 _sections_unfolded = [ "Settings" ]
 
 [sub_resource type="StyleBoxFlat" id=6]
@@ -160,8 +180,8 @@ _sections_unfolded = [ "Border" ]
 size = 16
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 1 )
-fallback/0 = ExtResource( 1 )
+font_data = ExtResource( 2 )
+fallback/0 = ExtResource( 2 )
 _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
 [resource]
@@ -192,6 +212,24 @@ Label/constants/shadow_offset_y = 1
 Label/fonts/font = null
 Label/styles/normal = null
 SpinBox/icons/updown = null
+TabContainer/colors/font_color_bg = Color( 0.690196, 0.690196, 0.690196, 1 )
+TabContainer/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
+TabContainer/colors/font_color_fg = Color( 0.941176, 0.941176, 0.941176, 1 )
+TabContainer/constants/hseparation = 4
+TabContainer/constants/label_valign_bg = 2
+TabContainer/constants/label_valign_fg = 0
+TabContainer/constants/side_margin = 8
+TabContainer/constants/top_margin = 24
+TabContainer/fonts/font = null
+TabContainer/icons/decrement = null
+TabContainer/icons/decrement_highlight = null
+TabContainer/icons/increment = null
+TabContainer/icons/increment_highlight = null
+TabContainer/icons/menu = null
+TabContainer/icons/menu_highlight = null
+TabContainer/styles/panel = SubResource( 8 )
+TabContainer/styles/tab_bg = null
+TabContainer/styles/tab_fg = null
 VBoxContainer/constants/separation = 10
 WindowDialog/colors/title_color = Color( 0.613312, 0.773438, 0.773438, 1 )
 WindowDialog/constants/close_h_ofs = 25
@@ -202,5 +240,5 @@ WindowDialog/fonts/title_font = SubResource( 5 )
 WindowDialog/icons/close = null
 WindowDialog/icons/close_highlight = null
 WindowDialog/styles/panel = SubResource( 6 )
-_sections_unfolded = [ "Button", "Button/styles", "ColorPicker/icons", "ColorPickerButton", "ColorPickerButton/colors", "Dialogs/constants", "GridContainer/constants", "HBoxContainer", "HBoxContainer/constants", "Label/colors", "PanelContainer/styles", "PopupMenu", "PopupMenu/styles", "PopupPanel", "PopupPanel/styles", "RichTextLabel", "SpinBox/icons", "TextEdit", "TextEdit/styles", "VBoxContainer/constants", "VScrollBar", "VScrollBar/styles", "WindowDialog/colors", "WindowDialog/styles" ]
+_sections_unfolded = [ "ColorPicker/icons", "ColorPickerButton", "ColorPickerButton/colors", "Dialogs/constants", "GridContainer", "GridContainer/constants", "HBoxContainer/constants", "Label/colors", "PanelContainer/styles", "PopupMenu", "PopupMenu/styles", "PopupPanel", "PopupPanel/styles", "RichTextLabel", "SpinBox/icons", "TextEdit", "TextEdit/styles", "VBoxContainer/constants", "VScrollBar/icons", "VScrollBar/styles", "WindowDialog/colors", "WindowDialog/icons" ]
 
