@@ -49,10 +49,11 @@ func _process(delta):
 				h = 0
 				day += 1
 			t = 1
-#		if s<10:
-#			$LblTime.text = "%d:%d:0%d" %[h,m,s]
-#		if m<10:
-#			$LblTime.text = "%d:0%d:%d" %[h,m,s]
+		if s<10:
+			$LblTime.text = "%d:%d:0%d" %[h,m,s]
+		if m<10:
+			$LblTime.text = "%d:0%d:%d" %[h,m,s]
+		$LblTime.text = "%d:%d:%d" %[h,m,s]
 
 func update_kepemilikan():
 	for x in pabrik_data["pabrik"]:

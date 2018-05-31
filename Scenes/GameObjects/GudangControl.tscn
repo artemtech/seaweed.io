@@ -1,11 +1,19 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Assets/tema-gui.tres" type="Theme" id=1]
 [ext_resource path="res://Scripts/GudangControl.gd" type="Script" id=2]
 [ext_resource path="res://Assets/toko_theme.tres" type="Theme" id=3]
-[ext_resource path="res://icon.png" type="Texture" id=4]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/gudang/RL Kering.png" type="Texture" id=4]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/gudang/Tepung.png" type="Texture" id=5]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/gudang/Nutrijel.png" type="Texture" id=6]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/gudang/Bibit.png" type="Texture" id=7]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/gudang/Garam.png" type="Texture" id=8]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/gudang/Gula.png" type="Texture" id=9]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/gudang/Metil Alkohol.png" type="Texture" id=10]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/gudang/Perasa.png" type="Texture" id=11]
+[ext_resource path="res://Assets/GameObjects/in-game/controls/gudang/Pewarna.png" type="Texture" id=12]
 
-[node name="GudangControl" type="Control"]
+[node name="GudangControl" type="Control" index="0"]
 
 pause_mode = 2
 anchor_left = 0.0
@@ -24,6 +32,7 @@ _sections_unfolded = [ "Pause", "Theme" ]
 
 [node name="TabContainer2" type="TabContainer" parent="." index="0"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.01
@@ -38,13 +47,13 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-theme = ExtResource( 3 )
 tab_align = 1
 tabs_visible = true
 _sections_unfolded = [ "Anchor", "Margin", "Theme" ]
 
 [node name="Gudang" type="Tabs" parent="TabContainer2" index="0"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 1.0
@@ -65,6 +74,7 @@ _sections_unfolded = [ "Anchor", "Mouse", "Rect" ]
 
 [node name="ItemList" type="ScrollContainer" parent="TabContainer2/Gudang" index="0"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -84,7 +94,7 @@ scroll_horizontal_enabled = true
 scroll_horizontal = 0
 scroll_vertical_enabled = true
 scroll_vertical = 0
-_sections_unfolded = [ "Anchor", "Size Flags", "Theme" ]
+_sections_unfolded = [ "Anchor", "Scroll", "Size Flags", "Theme" ]
 
 [node name="ItemContainer" type="GridContainer" parent="TabContainer2/Gudang/ItemList" index="0"]
 
@@ -93,7 +103,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 619.0
-margin_bottom = 846.0
+margin_bottom = 1380.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -103,7 +113,7 @@ size_flags_vertical = 1
 columns = 1
 _sections_unfolded = [ "Anchor", "custom_constants" ]
 
-[node name="RLK_S" type="TextureRect" parent="TabContainer2/Gudang/ItemList/ItemContainer" index="0"]
+[node name="rl_kering_s" type="TextureRect" parent="TabContainer2/Gudang/ItemList/ItemContainer" index="0"]
 
 editor/display_folded = true
 anchor_left = 0.0
@@ -112,6 +122,7 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 64.0
 margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -120,10 +131,11 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 texture = ExtResource( 4 )
+expand = true
 stretch_mode = 0
-_sections_unfolded = [ "Mouse", "Textures" ]
+_sections_unfolded = [ "Mouse", "Rect", "Textures" ]
 
-[node name="Label" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/RLK_S" index="0"]
+[node name="nama" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/rl_kering_s" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -143,7 +155,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Label3" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/RLK_S" index="1"]
+[node name="lbl_stok" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/rl_kering_s" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -164,28 +176,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Label5" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/RLK_S" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 306.0
-margin_top = -3.0
-margin_right = 432.0
-margin_bottom = 21.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-text = "Harga Jual = $400"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="Label4" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/RLK_S" index="3"]
+[node name="stok" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/rl_kering_s" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -206,7 +197,28 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Label6" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/RLK_S" index="4"]
+[node name="h_jual" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/rl_kering_s" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 306.0
+margin_top = -3.0
+margin_right = 432.0
+margin_bottom = 21.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Harga Jual = $400"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="total" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/rl_kering_s" index="4"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -227,7 +239,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Label2" type="SpinBox" parent="TabContainer2/Gudang/ItemList/ItemContainer/RLK_S" index="5"]
+[node name="qty" type="SpinBox" parent="TabContainer2/Gudang/ItemList/ItemContainer/rl_kering_s" index="5"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -249,12 +261,12 @@ step = 1.0
 page = 0.0
 value = 0.0
 exp_edit = false
-rounded = false
+rounded = true
 editable = true
 prefix = ""
 suffix = ""
 
-[node name="BtnDoJual" type="Button" parent="TabContainer2/Gudang/ItemList/ItemContainer/RLK_S" index="6"]
+[node name="BtnDoJual" type="Button" parent="TabContainer2/Gudang/ItemList/ItemContainer/rl_kering_s" index="6"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -280,7 +292,7 @@ flat = false
 align = 1
 _sections_unfolded = [ "Rect", "Size Flags", "Theme" ]
 
-[node name="RLK_M" type="TextureRect" parent="TabContainer2/Gudang/ItemList/ItemContainer" index="1"]
+[node name="rl_kering_m" type="TextureRect" parent="TabContainer2/Gudang/ItemList/ItemContainer" index="1"]
 
 editor/display_folded = true
 anchor_left = 0.0
@@ -290,6 +302,7 @@ anchor_bottom = 0.0
 margin_top = 94.0
 margin_right = 64.0
 margin_bottom = 158.0
+rect_min_size = Vector2( 64, 64 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -298,10 +311,11 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 texture = ExtResource( 4 )
+expand = true
 stretch_mode = 0
-_sections_unfolded = [ "Textures" ]
+_sections_unfolded = [ "Mouse", "Rect", "Textures" ]
 
-[node name="Label" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/RLK_M" index="0"]
+[node name="nama" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/rl_kering_m" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -321,7 +335,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Label3" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/RLK_M" index="1"]
+[node name="lbl_stok" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/rl_kering_m" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -342,7 +356,28 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Label5" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/RLK_M" index="2"]
+[node name="stok" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/rl_kering_m" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 133.0
+margin_top = 28.0
+margin_right = 161.0
+margin_bottom = 52.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "50"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="h_jual" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/rl_kering_m" index="3"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -363,28 +398,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Label4" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/RLK_M" index="3"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 133.0
-margin_top = 28.0
-margin_right = 161.0
-margin_bottom = 52.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-text = "50"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="Label6" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/RLK_M" index="4"]
+[node name="total" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/rl_kering_m" index="4"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -405,7 +419,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Label2" type="SpinBox" parent="TabContainer2/Gudang/ItemList/ItemContainer/RLK_M" index="5"]
+[node name="qty" type="SpinBox" parent="TabContainer2/Gudang/ItemList/ItemContainer/rl_kering_m" index="5"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -417,7 +431,7 @@ margin_right = 412.0
 margin_bottom = 54.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
-mouse_filter = 2
+mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
@@ -427,13 +441,12 @@ step = 1.0
 page = 0.0
 value = 0.0
 exp_edit = false
-rounded = false
+rounded = true
 editable = true
 prefix = ""
 suffix = ""
-_sections_unfolded = [ "Mouse" ]
 
-[node name="BtnDoJual" type="Button" parent="TabContainer2/Gudang/ItemList/ItemContainer/RLK_M" index="6"]
+[node name="BtnDoJual" type="Button" parent="TabContainer2/Gudang/ItemList/ItemContainer/rl_kering_m" index="6"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -459,7 +472,7 @@ flat = false
 align = 1
 _sections_unfolded = [ "Rect", "Size Flags", "Theme" ]
 
-[node name="RLK_L" type="TextureRect" parent="TabContainer2/Gudang/ItemList/ItemContainer" index="2"]
+[node name="rl_kering_l" type="TextureRect" parent="TabContainer2/Gudang/ItemList/ItemContainer" index="2"]
 
 editor/display_folded = true
 anchor_left = 0.0
@@ -469,6 +482,7 @@ anchor_bottom = 0.0
 margin_top = 188.0
 margin_right = 64.0
 margin_bottom = 252.0
+rect_min_size = Vector2( 64, 64 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -477,10 +491,11 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 texture = ExtResource( 4 )
+expand = true
 stretch_mode = 0
-_sections_unfolded = [ "Textures" ]
+_sections_unfolded = [ "Mouse", "Rect", "Textures" ]
 
-[node name="Label" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/RLK_L" index="0"]
+[node name="nama" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/rl_kering_l" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -500,7 +515,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Label3" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/RLK_L" index="1"]
+[node name="lbl_stok" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/rl_kering_l" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -521,28 +536,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Label5" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/RLK_L" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 306.0
-margin_top = -3.0
-margin_right = 432.0
-margin_bottom = 21.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-text = "Harga Jual = $500"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="Label4" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/RLK_L" index="3"]
+[node name="stok" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/rl_kering_l" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -563,7 +557,28 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Label6" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/RLK_L" index="4"]
+[node name="h_jual" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/rl_kering_l" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 306.0
+margin_top = -3.0
+margin_right = 432.0
+margin_bottom = 21.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Harga Jual = $400"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="total" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/rl_kering_l" index="4"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -584,7 +599,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Label2" type="SpinBox" parent="TabContainer2/Gudang/ItemList/ItemContainer/RLK_L" index="5"]
+[node name="qty" type="SpinBox" parent="TabContainer2/Gudang/ItemList/ItemContainer/rl_kering_l" index="5"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -596,7 +611,7 @@ margin_right = 412.0
 margin_bottom = 54.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
-mouse_filter = 2
+mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
@@ -606,12 +621,12 @@ step = 1.0
 page = 0.0
 value = 0.0
 exp_edit = false
-rounded = false
+rounded = true
 editable = true
 prefix = ""
 suffix = ""
 
-[node name="BtnDoJual" type="Button" parent="TabContainer2/Gudang/ItemList/ItemContainer/RLK_L" index="6"]
+[node name="BtnDoJual" type="Button" parent="TabContainer2/Gudang/ItemList/ItemContainer/rl_kering_l" index="6"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -637,7 +652,7 @@ flat = false
 align = 1
 _sections_unfolded = [ "Rect", "Size Flags", "Theme" ]
 
-[node name="TPG_S" type="TextureRect" parent="TabContainer2/Gudang/ItemList/ItemContainer" index="3"]
+[node name="tepung_s" type="TextureRect" parent="TabContainer2/Gudang/ItemList/ItemContainer" index="3"]
 
 editor/display_folded = true
 anchor_left = 0.0
@@ -647,6 +662,7 @@ anchor_bottom = 0.0
 margin_top = 282.0
 margin_right = 64.0
 margin_bottom = 346.0
+rect_min_size = Vector2( 64, 64 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -654,11 +670,12 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
+expand = true
 stretch_mode = 0
-_sections_unfolded = [ "Textures" ]
+_sections_unfolded = [ "Mouse", "Rect", "Textures" ]
 
-[node name="Label" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/TPG_S" index="0"]
+[node name="nama" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/tepung_s" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -666,7 +683,7 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 94.0
 margin_right = 253.0
-margin_bottom = 51.0
+margin_bottom = 24.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -678,7 +695,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Label3" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/TPG_S" index="1"]
+[node name="lbl_stok" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/tepung_s" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -699,28 +716,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Label5" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/TPG_S" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 306.0
-margin_top = -3.0
-margin_right = 432.0
-margin_bottom = 21.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-text = "Harga Jual = $500"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="Label4" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/TPG_S" index="3"]
+[node name="stok" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/tepung_s" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -741,7 +737,28 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Label6" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/TPG_S" index="4"]
+[node name="h_jual" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/tepung_s" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 306.0
+margin_top = -3.0
+margin_right = 432.0
+margin_bottom = 21.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Harga Jual = $400"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="total" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/tepung_s" index="4"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -762,7 +779,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Label2" type="SpinBox" parent="TabContainer2/Gudang/ItemList/ItemContainer/TPG_S" index="5"]
+[node name="qty" type="SpinBox" parent="TabContainer2/Gudang/ItemList/ItemContainer/tepung_s" index="5"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -774,7 +791,7 @@ margin_right = 412.0
 margin_bottom = 54.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
-mouse_filter = 2
+mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
@@ -784,12 +801,12 @@ step = 1.0
 page = 0.0
 value = 0.0
 exp_edit = false
-rounded = false
+rounded = true
 editable = true
 prefix = ""
 suffix = ""
 
-[node name="BtnDoJual" type="Button" parent="TabContainer2/Gudang/ItemList/ItemContainer/TPG_S" index="6"]
+[node name="BtnDoJual" type="Button" parent="TabContainer2/Gudang/ItemList/ItemContainer/tepung_s" index="6"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -815,7 +832,7 @@ flat = false
 align = 1
 _sections_unfolded = [ "Rect", "Size Flags", "Theme" ]
 
-[node name="TPG_M" type="TextureRect" parent="TabContainer2/Gudang/ItemList/ItemContainer" index="4"]
+[node name="tepung_m" type="TextureRect" parent="TabContainer2/Gudang/ItemList/ItemContainer" index="4"]
 
 editor/display_folded = true
 anchor_left = 0.0
@@ -825,6 +842,7 @@ anchor_bottom = 0.0
 margin_top = 376.0
 margin_right = 64.0
 margin_bottom = 440.0
+rect_min_size = Vector2( 64, 64 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -832,18 +850,19 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
+expand = true
 stretch_mode = 0
-_sections_unfolded = [ "Textures" ]
+_sections_unfolded = [ "Mouse", "Rect", "Textures" ]
 
-[node name="Label" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/TPG_M" index="0"]
+[node name="nama" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/tepung_m" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 94.0
-margin_right = 250.0
+margin_right = 253.0
 margin_bottom = 24.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -856,7 +875,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Label3" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/TPG_M" index="1"]
+[node name="lbl_stok" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/tepung_m" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -877,28 +896,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Label5" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/TPG_M" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 306.0
-margin_top = -3.0
-margin_right = 432.0
-margin_bottom = 21.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-text = "Harga Jual = $600"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="Label4" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/TPG_M" index="3"]
+[node name="stok" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/tepung_m" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -919,7 +917,28 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Label6" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/TPG_M" index="4"]
+[node name="h_jual" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/tepung_m" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 306.0
+margin_top = -3.0
+margin_right = 432.0
+margin_bottom = 21.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Harga Jual = $400"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="total" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/tepung_m" index="4"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -940,7 +959,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Label2" type="SpinBox" parent="TabContainer2/Gudang/ItemList/ItemContainer/TPG_M" index="5"]
+[node name="qty" type="SpinBox" parent="TabContainer2/Gudang/ItemList/ItemContainer/tepung_m" index="5"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -952,7 +971,7 @@ margin_right = 412.0
 margin_bottom = 54.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
-mouse_filter = 2
+mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
@@ -962,12 +981,12 @@ step = 1.0
 page = 0.0
 value = 0.0
 exp_edit = false
-rounded = false
+rounded = true
 editable = true
 prefix = ""
 suffix = ""
 
-[node name="BtnDoJual" type="Button" parent="TabContainer2/Gudang/ItemList/ItemContainer/TPG_M" index="6"]
+[node name="BtnDoJual" type="Button" parent="TabContainer2/Gudang/ItemList/ItemContainer/tepung_m" index="6"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -993,7 +1012,7 @@ flat = false
 align = 1
 _sections_unfolded = [ "Rect", "Size Flags", "Theme" ]
 
-[node name="TPG_L" type="TextureRect" parent="TabContainer2/Gudang/ItemList/ItemContainer" index="5"]
+[node name="tepung_l" type="TextureRect" parent="TabContainer2/Gudang/ItemList/ItemContainer" index="5"]
 
 editor/display_folded = true
 anchor_left = 0.0
@@ -1003,6 +1022,7 @@ anchor_bottom = 0.0
 margin_top = 470.0
 margin_right = 64.0
 margin_bottom = 534.0
+rect_min_size = Vector2( 64, 64 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -1010,18 +1030,19 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
+expand = true
 stretch_mode = 0
-_sections_unfolded = [ "Textures" ]
+_sections_unfolded = [ "Mouse", "Rect", "Textures" ]
 
-[node name="Label" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/TPG_L" index="0"]
+[node name="nama" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/tepung_l" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 94.0
-margin_right = 250.0
+margin_right = 253.0
 margin_bottom = 24.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1034,7 +1055,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Label3" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/TPG_L" index="1"]
+[node name="lbl_stok" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/tepung_l" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -1055,28 +1076,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Label5" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/TPG_L" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 306.0
-margin_top = -3.0
-margin_right = 432.0
-margin_bottom = 21.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-text = "Harga Jual = $600"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="Label4" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/TPG_L" index="3"]
+[node name="stok" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/tepung_l" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -1097,7 +1097,28 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Label6" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/TPG_L" index="4"]
+[node name="h_jual" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/tepung_l" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 306.0
+margin_top = -3.0
+margin_right = 432.0
+margin_bottom = 21.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Harga Jual = $400"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="total" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/tepung_l" index="4"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -1118,7 +1139,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Label2" type="SpinBox" parent="TabContainer2/Gudang/ItemList/ItemContainer/TPG_L" index="5"]
+[node name="qty" type="SpinBox" parent="TabContainer2/Gudang/ItemList/ItemContainer/tepung_l" index="5"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -1130,7 +1151,7 @@ margin_right = 412.0
 margin_bottom = 54.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
-mouse_filter = 2
+mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
@@ -1140,12 +1161,12 @@ step = 1.0
 page = 0.0
 value = 0.0
 exp_edit = false
-rounded = false
+rounded = true
 editable = true
 prefix = ""
 suffix = ""
 
-[node name="BtnDoJual" type="Button" parent="TabContainer2/Gudang/ItemList/ItemContainer/TPG_L" index="6"]
+[node name="BtnDoJual" type="Button" parent="TabContainer2/Gudang/ItemList/ItemContainer/tepung_l" index="6"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -1171,7 +1192,7 @@ flat = false
 align = 1
 _sections_unfolded = [ "Rect", "Size Flags", "Theme" ]
 
-[node name="AGR_S" type="TextureRect" parent="TabContainer2/Gudang/ItemList/ItemContainer" index="6"]
+[node name="agar2_s" type="TextureRect" parent="TabContainer2/Gudang/ItemList/ItemContainer" index="6"]
 
 editor/display_folded = true
 anchor_left = 0.0
@@ -1181,6 +1202,7 @@ anchor_bottom = 0.0
 margin_top = 564.0
 margin_right = 64.0
 margin_bottom = 628.0
+rect_min_size = Vector2( 64, 64 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -1188,11 +1210,12 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 4 )
+texture = ExtResource( 6 )
+expand = true
 stretch_mode = 0
-_sections_unfolded = [ "Textures" ]
+_sections_unfolded = [ "Mouse", "Rect", "Textures" ]
 
-[node name="Label" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/AGR_S" index="0"]
+[node name="nama" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/agar2_s" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -1200,7 +1223,7 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 94.0
 margin_right = 253.0
-margin_bottom = 51.0
+margin_bottom = 24.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -1212,7 +1235,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Label3" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/AGR_S" index="1"]
+[node name="lbl_stok" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/agar2_s" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -1233,28 +1256,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Label5" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/AGR_S" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 306.0
-margin_top = -3.0
-margin_right = 432.0
-margin_bottom = 21.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-text = "Harga Jual = $500"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="Label4" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/AGR_S" index="3"]
+[node name="stok" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/agar2_s" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -1275,7 +1277,28 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Label6" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/AGR_S" index="4"]
+[node name="h_jual" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/agar2_s" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 306.0
+margin_top = -3.0
+margin_right = 432.0
+margin_bottom = 21.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Harga Jual = $400"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="total" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/agar2_s" index="4"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -1296,7 +1319,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Label2" type="SpinBox" parent="TabContainer2/Gudang/ItemList/ItemContainer/AGR_S" index="5"]
+[node name="qty" type="SpinBox" parent="TabContainer2/Gudang/ItemList/ItemContainer/agar2_s" index="5"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -1308,7 +1331,7 @@ margin_right = 412.0
 margin_bottom = 54.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
-mouse_filter = 2
+mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
@@ -1318,12 +1341,12 @@ step = 1.0
 page = 0.0
 value = 0.0
 exp_edit = false
-rounded = false
+rounded = true
 editable = true
 prefix = ""
 suffix = ""
 
-[node name="BtnDoJual" type="Button" parent="TabContainer2/Gudang/ItemList/ItemContainer/AGR_S" index="6"]
+[node name="BtnDoJual" type="Button" parent="TabContainer2/Gudang/ItemList/ItemContainer/agar2_s" index="6"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -1349,7 +1372,7 @@ flat = false
 align = 1
 _sections_unfolded = [ "Rect", "Size Flags", "Theme" ]
 
-[node name="AGR_M" type="TextureRect" parent="TabContainer2/Gudang/ItemList/ItemContainer" index="7"]
+[node name="agar2_m" type="TextureRect" parent="TabContainer2/Gudang/ItemList/ItemContainer" index="7"]
 
 editor/display_folded = true
 anchor_left = 0.0
@@ -1359,6 +1382,7 @@ anchor_bottom = 0.0
 margin_top = 658.0
 margin_right = 64.0
 margin_bottom = 722.0
+rect_min_size = Vector2( 64, 64 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -1366,18 +1390,19 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 4 )
+texture = ExtResource( 6 )
+expand = true
 stretch_mode = 0
-_sections_unfolded = [ "Textures" ]
+_sections_unfolded = [ "Mouse", "Rect", "Textures" ]
 
-[node name="Label" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/AGR_M" index="0"]
+[node name="nama" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/agar2_m" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 94.0
-margin_right = 250.0
+margin_right = 253.0
 margin_bottom = 24.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1390,7 +1415,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Label3" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/AGR_M" index="1"]
+[node name="lbl_stok" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/agar2_m" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -1411,28 +1436,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Label5" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/AGR_M" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 306.0
-margin_top = -3.0
-margin_right = 432.0
-margin_bottom = 21.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-text = "Harga Jual = $600"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="Label4" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/AGR_M" index="3"]
+[node name="stok" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/agar2_m" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -1453,7 +1457,28 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Label6" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/AGR_M" index="4"]
+[node name="h_jual" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/agar2_m" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 306.0
+margin_top = -3.0
+margin_right = 432.0
+margin_bottom = 21.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Harga Jual = $400"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="total" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/agar2_m" index="4"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -1474,7 +1499,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Label2" type="SpinBox" parent="TabContainer2/Gudang/ItemList/ItemContainer/AGR_M" index="5"]
+[node name="qty" type="SpinBox" parent="TabContainer2/Gudang/ItemList/ItemContainer/agar2_m" index="5"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -1486,7 +1511,7 @@ margin_right = 412.0
 margin_bottom = 54.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
-mouse_filter = 2
+mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
@@ -1496,12 +1521,12 @@ step = 1.0
 page = 0.0
 value = 0.0
 exp_edit = false
-rounded = false
+rounded = true
 editable = true
 prefix = ""
 suffix = ""
 
-[node name="BtnDoJual" type="Button" parent="TabContainer2/Gudang/ItemList/ItemContainer/AGR_M" index="6"]
+[node name="BtnDoJual" type="Button" parent="TabContainer2/Gudang/ItemList/ItemContainer/agar2_m" index="6"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -1527,7 +1552,7 @@ flat = false
 align = 1
 _sections_unfolded = [ "Rect", "Size Flags", "Theme" ]
 
-[node name="AGR_L" type="TextureRect" parent="TabContainer2/Gudang/ItemList/ItemContainer" index="8"]
+[node name="agar2_l" type="TextureRect" parent="TabContainer2/Gudang/ItemList/ItemContainer" index="8"]
 
 editor/display_folded = true
 anchor_left = 0.0
@@ -1537,6 +1562,7 @@ anchor_bottom = 0.0
 margin_top = 752.0
 margin_right = 64.0
 margin_bottom = 816.0
+rect_min_size = Vector2( 64, 64 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -1544,18 +1570,19 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 4 )
+texture = ExtResource( 6 )
+expand = true
 stretch_mode = 0
-_sections_unfolded = [ "Textures" ]
+_sections_unfolded = [ "Mouse", "Rect", "Textures" ]
 
-[node name="Label" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/AGR_L" index="0"]
+[node name="nama" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/agar2_l" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 94.0
-margin_right = 250.0
+margin_right = 253.0
 margin_bottom = 24.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1568,7 +1595,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Label3" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/AGR_L" index="1"]
+[node name="lbl_stok" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/agar2_l" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -1589,28 +1616,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Label5" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/AGR_L" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 306.0
-margin_top = -3.0
-margin_right = 432.0
-margin_bottom = 21.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-text = "Harga Jual = $600"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="Label4" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/AGR_L" index="3"]
+[node name="stok" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/agar2_l" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -1631,7 +1637,28 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Label6" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/AGR_L" index="4"]
+[node name="h_jual" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/agar2_l" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 306.0
+margin_top = -3.0
+margin_right = 432.0
+margin_bottom = 21.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Harga Jual = $400"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="total" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/agar2_l" index="4"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -1652,7 +1679,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Label2" type="SpinBox" parent="TabContainer2/Gudang/ItemList/ItemContainer/AGR_L" index="5"]
+[node name="qty" type="SpinBox" parent="TabContainer2/Gudang/ItemList/ItemContainer/agar2_l" index="5"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -1664,7 +1691,7 @@ margin_right = 412.0
 margin_bottom = 54.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
-mouse_filter = 2
+mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
@@ -1674,12 +1701,12 @@ step = 1.0
 page = 0.0
 value = 0.0
 exp_edit = false
-rounded = false
+rounded = true
 editable = true
 prefix = ""
 suffix = ""
 
-[node name="BtnDoJual" type="Button" parent="TabContainer2/Gudang/ItemList/ItemContainer/AGR_L" index="6"]
+[node name="BtnDoJual" type="Button" parent="TabContainer2/Gudang/ItemList/ItemContainer/agar2_l" index="6"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -1704,6 +1731,516 @@ text = "Jual"
 flat = false
 align = 1
 _sections_unfolded = [ "Rect", "Size Flags", "Theme" ]
+
+[node name="bibit" type="TextureRect" parent="TabContainer2/Gudang/ItemList/ItemContainer" index="9"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 846.0
+margin_right = 64.0
+margin_bottom = 910.0
+rect_min_size = Vector2( 64, 64 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 0
+_sections_unfolded = [ "Mouse", "Rect", "Textures" ]
+
+[node name="nama" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/bibit" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 94.0
+margin_right = 253.0
+margin_bottom = 24.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Bibit"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="lbl_stok" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/bibit" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 94.0
+margin_top = 28.0
+margin_right = 122.0
+margin_bottom = 52.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Stok"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="stok" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/bibit" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 133.0
+margin_top = 28.0
+margin_right = 161.0
+margin_bottom = 52.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "50"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="garam" type="TextureRect" parent="TabContainer2/Gudang/ItemList/ItemContainer" index="10"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 940.0
+margin_right = 64.0
+margin_bottom = 1004.0
+rect_min_size = Vector2( 64, 64 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 0
+_sections_unfolded = [ "Mouse", "Rect", "Textures" ]
+
+[node name="nama" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/garam" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 94.0
+margin_right = 253.0
+margin_bottom = 24.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Garam"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="lbl_stok" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/garam" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 94.0
+margin_top = 28.0
+margin_right = 122.0
+margin_bottom = 52.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Stok"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="stok" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/garam" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 133.0
+margin_top = 28.0
+margin_right = 161.0
+margin_bottom = 52.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "50"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="gula" type="TextureRect" parent="TabContainer2/Gudang/ItemList/ItemContainer" index="11"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 1034.0
+margin_right = 64.0
+margin_bottom = 1098.0
+rect_min_size = Vector2( 64, 64 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 9 )
+expand = true
+stretch_mode = 0
+_sections_unfolded = [ "Mouse", "Rect", "Textures" ]
+
+[node name="nama" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/gula" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 94.0
+margin_right = 253.0
+margin_bottom = 24.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Gula"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="lbl_stok" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/gula" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 94.0
+margin_top = 28.0
+margin_right = 122.0
+margin_bottom = 52.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Stok"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="stok" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/gula" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 133.0
+margin_top = 28.0
+margin_right = 161.0
+margin_bottom = 52.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "50"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="metil_alkohol" type="TextureRect" parent="TabContainer2/Gudang/ItemList/ItemContainer" index="12"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 1128.0
+margin_right = 64.0
+margin_bottom = 1192.0
+rect_min_size = Vector2( 64, 64 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 10 )
+expand = true
+stretch_mode = 0
+_sections_unfolded = [ "Mouse", "Rect", "Textures" ]
+
+[node name="nama" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/metil_alkohol" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 94.0
+margin_right = 253.0
+margin_bottom = 24.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Metil Alkohol"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="lbl_stok" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/metil_alkohol" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 94.0
+margin_top = 28.0
+margin_right = 122.0
+margin_bottom = 52.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Stok"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="stok" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/metil_alkohol" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 133.0
+margin_top = 28.0
+margin_right = 161.0
+margin_bottom = 52.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "50"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="perasa" type="TextureRect" parent="TabContainer2/Gudang/ItemList/ItemContainer" index="13"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 1222.0
+margin_right = 64.0
+margin_bottom = 1286.0
+rect_min_size = Vector2( 64, 64 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 11 )
+expand = true
+stretch_mode = 0
+_sections_unfolded = [ "Mouse", "Rect", "Textures" ]
+
+[node name="nama" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/perasa" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 94.0
+margin_right = 253.0
+margin_bottom = 24.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Perasa"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="lbl_stok" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/perasa" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 94.0
+margin_top = 28.0
+margin_right = 122.0
+margin_bottom = 52.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Stok"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="stok" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/perasa" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 133.0
+margin_top = 28.0
+margin_right = 161.0
+margin_bottom = 52.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "50"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="pewarna" type="TextureRect" parent="TabContainer2/Gudang/ItemList/ItemContainer" index="14"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 1316.0
+margin_right = 64.0
+margin_bottom = 1380.0
+rect_min_size = Vector2( 64, 64 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 12 )
+expand = true
+stretch_mode = 0
+_sections_unfolded = [ "Mouse", "Rect", "Textures" ]
+
+[node name="nama" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/pewarna" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 94.0
+margin_right = 253.0
+margin_bottom = 24.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Pewarna"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="lbl_stok" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/pewarna" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 94.0
+margin_top = 28.0
+margin_right = 122.0
+margin_bottom = 52.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Stok"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="stok" type="Label" parent="TabContainer2/Gudang/ItemList/ItemContainer/pewarna" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 133.0
+margin_top = 28.0
+margin_right = 161.0
+margin_bottom = 52.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "50"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
 
 [node name="BtnKeluar" type="Button" parent="TabContainer2/Gudang" index="1"]
 
@@ -1731,17 +2268,17 @@ flat = false
 align = 1
 _sections_unfolded = [ "Rect", "Theme" ]
 
-[node name="Notifikasi" type="AcceptDialog" parent="." index="1"]
+[node name="Notifikasi" type="ConfirmationDialog" parent="." index="1"]
 
 visible = false
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -135.0
-margin_top = -70.0
-margin_right = 134.0
-margin_bottom = 70.0
+margin_left = -285.0
+margin_top = -65.0
+margin_right = 214.0
+margin_bottom = 75.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -1750,11 +2287,37 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 theme = ExtResource( 1 )
 popup_exclusive = false
-window_title = "Alert!"
+window_title = "Konfirmasi"
 resizable = false
 dialog_hide_on_ok = true
-_sections_unfolded = [ "Dialog", "Theme" ]
+_sections_unfolded = [ "Dialog", "Pause", "Theme" ]
+
+[node name="Sukses" type="AcceptDialog" parent="." index="2"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 388.0
+margin_top = 355.0
+margin_right = 647.0
+margin_bottom = 471.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+popup_exclusive = false
+window_title = "Yeeaay"
+resizable = false
+dialog_text = "Berhasil Menjual Produk"
+dialog_hide_on_ok = true
+_sections_unfolded = [ "Dialog" ]
 
 [connection signal="pressed" from="TabContainer2/Gudang/BtnKeluar" to="." method="_on_BtnKeluar_pressed"]
+
+[connection signal="confirmed" from="Notifikasi" to="." method="_on_Notifikasi_confirmed"]
 
 

@@ -158,6 +158,7 @@ func _on_BtnLoadGame_pressed():
 	current_scene = "LoadScene"
 
 func _on_BtnPlayGame_pressed():
+	queue_free()
 	Transition.fade_to("res://Scenes/InGameScene.tscn")
 
 func _on_BtnDelete_pressed():

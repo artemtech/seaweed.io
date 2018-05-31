@@ -6,12 +6,6 @@ enum GAME_STATE {NEW,LOAD,PAUSED,GAMEOVER}
 
 signal gamedata_changed
 
-var tokocontrol = load("res://Scenes/GameObjects/TokoControl.tscn")
-var konsumencontrol = load("res://Scenes/GameObjects/KonsumenControl.tscn")
-var bankcontrol = load("res://Scenes/GameObjects/BankControl.tscn")
-var pabrikcontrol = load("res://Scenes/GameObjects/PabrikControl.tscn")
-var tambakcontrol = load("res://Scenes/GameObjects/TambakControl.tscn")
-
 var game_data = {
 	"money" : 5000,
 	"time" : {"h":0,"m":0,"s":0},
@@ -117,7 +111,7 @@ var game_data = {
 			"harga" : 550
 		},
 		"rl_kering_l" : {
-			"qty" : 0,
+			"qty" : 10,
 			"harga" : 580
 		},
 		"tepung_s" : {
@@ -172,30 +166,35 @@ func _ready():
 	pass
 
 func _on_Toko_pressed():
+	var tokocontrol = load("res://Scenes/GameObjects/TokoControl.tscn")
 	if not has_node("TokoControl"):
 			var child = tokocontrol.instance()
 			add_child(child)
 			get_node("TokoControl").show()
 
 func _on_Konsumen_pressed():
+	var konsumencontrol = load("res://Scenes/GameObjects/KonsumenControl.tscn")
 	if not has_node("KonsumenControl"):
 			var child = konsumencontrol.instance()
 			add_child(child)
 			get_node("KonsumenControl").show()
 
 func _on_Bank_pressed():
+	var bankcontrol = load("res://Scenes/GameObjects/BankControl.tscn")
 	if not has_node("BankControl"):
 			var child = bankcontrol.instance()
 			add_child(child)
 			get_node("BankControl").show()
 
 func _on_Pabrik_pressed():
+	var pabrikcontrol = load("res://Scenes/GameObjects/PabrikControl.tscn")
 	if not has_node("PabrikControl"):
 			var child = pabrikcontrol.instance()
 			add_child(child)
 			get_node("PabrikControl").show()
 
 func _on_Tambak_pressed():
+	var tambakcontrol = load("res://Scenes/GameObjects/TambakControl.tscn")
 	if not has_node("TambakControl"):
 			var child = tambakcontrol.instance()
 			add_child(child)
