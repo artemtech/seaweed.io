@@ -11,28 +11,28 @@ var game_data = {
 	"time" : {"h":0,"m":0,"s":0},
 	"day" : 0,
 	"reputasi" : 200,
-	"game_state" : NEW,
+	"game_state" : GAME_STATE.NEW,
 	"pabrik" : {
 		"m_kering" : {
-			"status" : LOCKED,
+			"status" : STATUS.LOCKED,
 			"harga" : 3000,
 			"on_production" : false,
 			"time_remaining" : -1,
-			"hasil" : NOTHING
+			"hasil" : HASIL.NOTHING
 		},
 		"m_tepung" : {
-			"status" : LOCKED,
+			"status" : STATUS.LOCKED,
 			"harga" : 4000,
 			"on_production" : false,
 			"time_remaining" : -1,
-			"hasil" : NOTHING
+			"hasil" : HASIL.NOTHING
 		},
 		"m_agar2" : {
-			"status" : LOCKED,
+			"status" : STATUS.LOCKED,
 			"harga" : 7500,
 			"on_production" : false,
 			"time_remaining" : -1,
-			"hasil" : NOTHING
+			"hasil" : HASIL.NOTHING
 		},
 	},
 	"tambak" : {
@@ -40,37 +40,37 @@ var game_data = {
 			"time_remaining" : 10,
 			"on_production" : true,
 			"actions" : [],
-			"hasil" : NOTHING
+			"hasil" : HASIL.NOTHING
 		},
 		"petak2": {
 			"time_remaining" : -1,
 			"on_production" : false,
 			"actions" : [],
-			"hasil" : NOTHING
+			"hasil" : HASIL.NOTHING
 		},
 		"petak3": {
 			"time_remaining" : -1,
 			"on_production" : false,
 			"actions" : [],
-			"hasil" : NOTHING
+			"hasil" : HASIL.NOTHING
 		},
 		"petak4": {
 			"time_remaining" : -1,
 			"on_production" : false,
 			"actions" : [],
-			"hasil" : NOTHING
+			"hasil" : HASIL.NOTHING
 		},
 		"petak5": {
 			"time_remaining" : -1,
 			"on_production" : false,
 			"actions" : [],
-			"hasil" : NOTHING
+			"hasil" : HASIL.NOTHING
 		},
 		"petak6": {
 			"time_remaining" : -1,
 			"on_production" : false,
 			"actions" : [],
-			"hasil" : NOTHING
+			"hasil" : HASIL.NOTHING
 		}
 	},
 	"bank" : {
@@ -199,3 +199,20 @@ func _on_Tambak_pressed():
 			var child = tambakcontrol.instance()
 			add_child(child)
 			get_node("TambakControl").show()
+			toogle_btn(false)
+			
+func toogle_btn(status):
+	if status:
+		$HUD.show()
+		$Toko.show()
+		$Konsumen.show()
+		$Bank.show()
+		$Pabrik.show()
+		$Tambak.show()
+	else:
+		$HUD.hide()
+		$Toko.hide()
+		$Konsumen.hide()
+		$Bank.hide()
+		$Pabrik.hide()
+		$Tambak.hide()

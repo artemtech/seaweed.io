@@ -1,8 +1,9 @@
 extends Node2D
 
 func _on_BtnKeluar_pressed():
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	get_parent().toogle_btn(true)
 	queue_free()
-	get_tree().paused = false
 	
 
 func reset_peralatan():

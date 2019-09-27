@@ -10,46 +10,25 @@
 [ext_resource path="res://icon.png" type="Texture" id=8]
 
 [sub_resource type="DynamicFont" id=1]
-
-size = 16
-use_mipmaps = false
-use_filter = false
 font_data = ExtResource( 5 )
-_sections_unfolded = [ "Font", "Settings" ]
 
 [node name="MainMenuGame" type="Node"]
-
 script = ExtResource( 1 )
-_sections_unfolded = [ "Pause" ]
 
-[node name="Background" type="Sprite" parent="." index="0"]
-
+[node name="Background" type="Sprite" parent="."]
 position = Vector2( 512, 385 )
 texture = ExtResource( 2 )
-_sections_unfolded = [ "Pause", "Transform" ]
 
-[node name="FirstScene" type="Control" parent="." index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
+[node name="FirstScene" type="Control" parent="."]
+editor/display_folded = true
 anchor_right = 1.0
 anchor_bottom = 1.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-_sections_unfolded = [ "Rect" ]
 
-[node name="Background" type="Sprite" parent="FirstScene" index="0"]
-
+[node name="Background" type="Sprite" parent="FirstScene"]
 position = Vector2( 512, 384 )
 texture = ExtResource( 3 )
-_sections_unfolded = [ "Transform" ]
 
-[node name="BtnContainer" type="VBoxContainer" parent="FirstScene" index="1"]
-
+[node name="BtnContainer" type="VBoxContainer" parent="FirstScene"]
 editor/display_folded = true
 anchor_left = 0.5
 anchor_top = 0.5
@@ -59,117 +38,42 @@ margin_left = -123.5
 margin_top = -69.0
 margin_right = 123.5
 margin_bottom = 69.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 theme = ExtResource( 4 )
-alignment = 0
 
-[node name="BtnNewGame" type="Button" parent="FirstScene/BtnContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="BtnNewGame" type="Button" parent="FirstScene/BtnContainer"]
 margin_right = 247.0
 margin_bottom = 32.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 theme = ExtResource( 4 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
 text = "New Game"
-flat = false
-align = 1
-_sections_unfolded = [ "Theme" ]
 
-[node name="BtnLoadGame" type="Button" parent="FirstScene/BtnContainer" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="BtnLoadGame" type="Button" parent="FirstScene/BtnContainer"]
 margin_top = 82.0
 margin_right = 247.0
 margin_bottom = 114.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 theme = ExtResource( 4 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
 text = "Load Game"
-flat = false
-align = 1
-_sections_unfolded = [ "Theme" ]
 
-[node name="BtnExit" type="Button" parent="FirstScene" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="BtnExit" type="Button" parent="FirstScene"]
 margin_left = 679.0
 margin_top = 576.0
 margin_right = 938.0
 margin_bottom = 687.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 3
 theme = ExtResource( 4 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
 text = "Exit"
-flat = false
-align = 1
-_sections_unfolded = [ "Pause", "Theme" ]
 
-[node name="NewScene" type="Control" parent="." index="2"]
-
+[node name="NewScene" type="Control" parent="."]
+editor/display_folded = true
 visible = false
-anchor_left = 0.0
-anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 theme = ExtResource( 4 )
-_sections_unfolded = [ "Rect", "Theme" ]
 
-[node name="Background" type="Sprite" parent="NewScene" index="0"]
-
+[node name="Background" type="Sprite" parent="NewScene"]
 position = Vector2( 512, 384 )
 texture = ExtResource( 3 )
-_sections_unfolded = [ "Transform" ]
 
-[node name="BtnContainer" type="VBoxContainer" parent="NewScene" index="1"]
-
+[node name="BtnContainer" type="VBoxContainer" parent="NewScene"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -178,179 +82,57 @@ margin_left = -124.0
 margin_top = -133.0
 margin_right = 123.0
 margin_bottom = 138.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 theme = ExtResource( 4 )
 custom_constants/separation = 20
-alignment = 0
-_sections_unfolded = [ "Theme", "custom_constants" ]
 
-[node name="LblUname" type="Label" parent="NewScene/BtnContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="LblUname" type="Label" parent="NewScene/BtnContainer"]
 margin_right = 247.0
 margin_bottom = 24.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 1
 custom_fonts/font = SubResource( 1 )
 text = "Username"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
-[node name="TxtUname" type="LineEdit" parent="NewScene/BtnContainer" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="TxtUname" type="LineEdit" parent="NewScene/BtnContainer"]
 margin_top = 44.0
 margin_right = 247.0
-margin_bottom = 90.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 1
-size_flags_horizontal = 1
-size_flags_vertical = 1
+margin_bottom = 78.0
 max_length = 20
-focus_mode = 2
-context_menu_enabled = true
-placeholder_alpha = 0.6
-caret_blink = false
-caret_blink_speed = 0.65
-caret_position = 0
 
-[node name="LblComp" type="Label" parent="NewScene/BtnContainer" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 110.0
+[node name="LblComp" type="Label" parent="NewScene/BtnContainer"]
+margin_top = 98.0
 margin_right = 247.0
-margin_bottom = 134.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
+margin_bottom = 122.0
 size_flags_vertical = 1
 custom_fonts/font = SubResource( 1 )
 text = "Company Name"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="TxtComp" type="LineEdit" parent="NewScene/BtnContainer" index="3"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 154.0
+[node name="TxtComp" type="LineEdit" parent="NewScene/BtnContainer"]
+margin_top = 142.0
 margin_right = 247.0
-margin_bottom = 200.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 1
-size_flags_horizontal = 1
-size_flags_vertical = 1
+margin_bottom = 176.0
 max_length = 20
-focus_mode = 2
-context_menu_enabled = true
-placeholder_alpha = 0.6
-caret_blink = false
-caret_blink_speed = 0.65
-caret_position = 0
 
-[node name="NewGameContainer" type="HBoxContainer" parent="NewScene/BtnContainer" index="4"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 220.0
+[node name="NewGameContainer" type="HBoxContainer" parent="NewScene/BtnContainer"]
+margin_top = 196.0
 margin_right = 247.0
-margin_bottom = 264.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
+margin_bottom = 228.0
 alignment = 1
 
-[node name="BtnCancel" type="Button" parent="NewScene/BtnContainer/NewGameContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 20.0
-margin_right = 80.0
-margin_bottom = 44.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
+[node name="BtnCancel" type="Button" parent="NewScene/BtnContainer/NewGameContainer"]
+margin_left = 38.0
+margin_right = 78.0
+margin_bottom = 32.0
 theme = ExtResource( 4 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
 text = "Cancel"
-flat = false
-align = 1
-_sections_unfolded = [ "Size Flags", "Theme" ]
 
-[node name="BtnPlay" type="Button" parent="NewScene/BtnContainer/NewGameContainer" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 180.0
-margin_right = 226.0
-margin_bottom = 44.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
+[node name="BtnPlay" type="Button" parent="NewScene/BtnContainer/NewGameContainer"]
+margin_left = 178.0
+margin_right = 208.0
+margin_bottom = 32.0
 theme = ExtResource( 4 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
 text = "Play!"
-flat = false
-align = 1
-_sections_unfolded = [ "Size Flags", "Theme" ]
 
-[node name="PopUp" type="AcceptDialog" parent="NewScene" index="2"]
-
-visible = false
+[node name="PopUp" type="AcceptDialog" parent="NewScene"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -359,41 +141,20 @@ margin_left = -134.5
 margin_top = -70.0
 margin_right = 134.5
 margin_bottom = 70.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 popup_exclusive = true
 window_title = "Alert!"
-resizable = false
-dialog_hide_on_ok = true
-_sections_unfolded = [ "Dialog", "Popup" ]
 
-[node name="LoadScene" type="Control" parent="." index="3"]
-
+[node name="LoadScene" type="Control" parent="."]
+editor/display_folded = true
 visible = false
-anchor_left = 0.0
-anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-_sections_unfolded = [ "Rect" ]
 
-[node name="Background" type="Sprite" parent="LoadScene" index="0"]
-
+[node name="Background" type="Sprite" parent="LoadScene"]
 position = Vector2( 512, 385.761 )
 texture = ExtResource( 3 )
-_sections_unfolded = [ "Transform" ]
 
-[node name="BtnContainer" type="VBoxContainer" parent="LoadScene" index="1"]
-
+[node name="BtnContainer" type="VBoxContainer" parent="LoadScene"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -402,466 +163,167 @@ margin_left = -124.0
 margin_top = -133.0
 margin_right = 123.0
 margin_bottom = 138.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 custom_constants/separation = 30
-alignment = 0
-_sections_unfolded = [ "Theme", "custom_constants" ]
 
-[node name="LblUserList" type="Label" parent="LoadScene/BtnContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="LblUserList" type="Label" parent="LoadScene/BtnContainer"]
 margin_right = 267.0
 margin_bottom = 24.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 1
 custom_fonts/font = SubResource( 1 )
 text = "User List"
 align = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
-[node name="UserContainer" type="ScrollContainer" parent="LoadScene/BtnContainer" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="UserContainer" type="ScrollContainer" parent="LoadScene/BtnContainer"]
 margin_top = 54.0
 margin_right = 267.0
 margin_bottom = 174.0
 rect_min_size = Vector2( 267, 120 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = true
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 scroll_horizontal_enabled = false
-scroll_horizontal = 0
-scroll_vertical_enabled = true
-scroll_vertical = 0
-_sections_unfolded = [ "Grow Direction", "Scroll", "Size Flags", "Theme" ]
 
-[node name="UserLists" type="VBoxContainer" parent="LoadScene/BtnContainer/UserContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="UserLists" type="VBoxContainer" parent="LoadScene/BtnContainer/UserContainer"]
 margin_right = 267.0
 margin_bottom = 120.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 10
 alignment = 1
-_sections_unfolded = [ "Anchor", "Margin", "Size Flags", "custom_constants" ]
 
-[node name="CurrentUser" type="Label" parent="LoadScene/BtnContainer" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="CurrentUser" type="Label" parent="LoadScene/BtnContainer"]
 margin_top = 204.0
 margin_right = 267.0
 margin_bottom = 228.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 1
 custom_fonts/font = SubResource( 1 )
 text = "CLICK ON PROFILE ABOVE"
 align = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="LoadScene/BtnContainer" index="3"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="HBoxContainer" type="HBoxContainer" parent="LoadScene/BtnContainer"]
 margin_top = 258.0
 margin_right = 267.0
 margin_bottom = 302.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 custom_constants/separation = 50
 alignment = 1
-_sections_unfolded = [ "custom_constants" ]
 
-[node name="BtnCancel" type="Button" parent="LoadScene/BtnContainer/HBoxContainer" index="0" groups=[
+[node name="BtnCancel" type="Button" parent="LoadScene/BtnContainer/HBoxContainer" groups=[
 "tombol_cancel",
 ]]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_right = 60.0
 margin_bottom = 44.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 theme = ExtResource( 4 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
 text = "Cancel"
-flat = false
-align = 1
-_sections_unfolded = [ "Size Flags", "Theme" ]
 
-[node name="BtnDelete" type="Button" parent="LoadScene/BtnContainer/HBoxContainer" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="BtnDelete" type="Button" parent="LoadScene/BtnContainer/HBoxContainer"]
 margin_left = 110.0
 margin_right = 171.0
 margin_bottom = 44.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 theme = ExtResource( 4 )
 custom_colors/font_color = Color( 0.75, 0.307617, 0.307617, 1 )
 custom_colors/font_color_hover = Color( 1, 0, 0, 1 )
 custom_colors/font_color_pressed = Color( 0.367188, 0.0114746, 0.0114746, 1 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
 text = "Delete!"
-flat = false
-align = 1
-_sections_unfolded = [ "custom_colors" ]
 
-[node name="BtnPlay" type="Button" parent="LoadScene/BtnContainer/HBoxContainer" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="BtnPlay" type="Button" parent="LoadScene/BtnContainer/HBoxContainer"]
 margin_left = 221.0
 margin_right = 267.0
 margin_bottom = 44.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 theme = ExtResource( 4 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
 text = "Play!"
-flat = false
-align = 1
-_sections_unfolded = [ "Size Flags", "Theme" ]
 
-[node name="MainScene" type="Control" parent="." index="4"]
-
+[node name="MainScene" type="Control" parent="."]
+editor/display_folded = true
 visible = false
-anchor_left = 0.0
-anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-_sections_unfolded = [ "Rect" ]
 
-[node name="MainMenu" type="VBoxContainer" parent="MainScene" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="MainMenu" type="VBoxContainer" parent="MainScene"]
 margin_left = 664.0
 margin_top = 182.0
 margin_right = 923.0
 margin_bottom = 615.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 theme = ExtResource( 4 )
 alignment = 1
-_sections_unfolded = [ "Pause" ]
 
-[node name="BtnPlayGame" type="Button" parent="MainScene/MainMenu" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="BtnPlayGame" type="Button" parent="MainScene/MainMenu"]
 margin_right = 259.0
 margin_bottom = 111.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 3
 theme = ExtResource( 4 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
 text = "Play !"
-flat = false
-align = 1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="BtnHelp" type="Button" parent="MainScene/MainMenu" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="BtnHelp" type="Button" parent="MainScene/MainMenu"]
 margin_top = 161.0
 margin_right = 259.0
 margin_bottom = 272.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 3
 theme = ExtResource( 4 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
 text = "Help"
-flat = false
-align = 1
-_sections_unfolded = [ "Theme" ]
 
-[node name="BtnCancel" type="Button" parent="MainScene/MainMenu" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="BtnCancel" type="Button" parent="MainScene/MainMenu"]
 margin_top = 322.0
 margin_right = 259.0
 margin_bottom = 433.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 3
 theme = ExtResource( 4 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
 text = "Quit to menu"
-flat = false
-align = 1
-_sections_unfolded = [ "Theme" ]
 
-[node name="Username Panel" type="Sprite" parent="MainScene" index="1"]
-
+[node name="Username Panel" type="Sprite" parent="MainScene"]
 position = Vector2( 275, 65 )
 texture = ExtResource( 6 )
-_sections_unfolded = [ "Transform" ]
 
-[node name="username_main_label" type="Label" parent="MainScene/Username Panel" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="username_main_label" type="Label" parent="MainScene/Username Panel"]
 margin_left = -159.0
 margin_top = 13.0
 margin_right = 166.0
 margin_bottom = 49.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
 theme = ExtResource( 4 )
 text = "Hello Wrold!"
 align = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Rect", "Theme", "custom_colors", "custom_fonts" ]
 
-[node name="HelpScene" type="Control" parent="." index="5"]
-
+[node name="HelpScene" type="Control" parent="."]
+editor/display_folded = true
 visible = false
-anchor_left = 0.0
-anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 
-[node name="BG" type="Sprite" parent="HelpScene" index="0"]
-
+[node name="BG" type="Sprite" parent="HelpScene"]
 position = Vector2( 512, 384 )
 texture = ExtResource( 7 )
-_sections_unfolded = [ "Transform" ]
 
-[node name="HelpContents" type="Sprite" parent="HelpScene" index="1"]
-
+[node name="HelpContents" type="Sprite" parent="HelpScene"]
 position = Vector2( 517.647, 316.714 )
 texture = ExtResource( 8 )
-_sections_unfolded = [ "Transform" ]
 
-[node name="HelpBtnContainer" type="HBoxContainer" parent="HelpScene" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="HelpBtnContainer" type="HBoxContainer" parent="HelpScene"]
 margin_left = 237.0
 margin_top = 619.0
 margin_right = 814.0
 margin_bottom = 663.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 theme = ExtResource( 4 )
-alignment = 0
-_sections_unfolded = [ "Theme" ]
 
-[node name="BtnPrev" type="Button" parent="HelpScene/HelpBtnContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="BtnPrev" type="Button" parent="HelpScene/HelpBtnContainer"]
 margin_right = 123.0
 margin_bottom = 44.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
 text = "< Prev"
-flat = false
-align = 1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="BtnCancel" type="Button" parent="HelpScene/HelpBtnContainer" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="BtnCancel" type="Button" parent="HelpScene/HelpBtnContainer"]
 margin_left = 223.0
 margin_right = 354.0
 margin_bottom = 44.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
 text = "Back to Menu"
-flat = false
-align = 1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="BtnNext" type="Button" parent="HelpScene/HelpBtnContainer" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="BtnNext" type="Button" parent="HelpScene/HelpBtnContainer"]
 margin_left = 454.0
 margin_right = 577.0
 margin_bottom = 44.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
 text = "Next >"
-flat = false
-align = 1
-_sections_unfolded = [ "Size Flags" ]
 
-[node name="Konfirmasi" type="ConfirmationDialog" parent="." index="6"]
-
+[node name="Konfirmasi" type="ConfirmationDialog" parent="."]
 pause_mode = 2
-visible = false
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -870,61 +332,25 @@ margin_left = -264.5
 margin_top = -70.0
 margin_right = 264.5
 margin_bottom = 70.0
-rect_min_size = Vector2( 200, 70 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 theme = ExtResource( 4 )
 popup_exclusive = true
 window_title = "Confirmation"
-resizable = false
 dialog_text = "Anda yakin ingin keluar ?"
-dialog_hide_on_ok = true
-_sections_unfolded = [ "Dialog", "Pause", "Theme" ]
 
-[node name="Notifikasi" type="AcceptDialog" parent="." index="7"]
-
-visible = false
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Notifikasi" type="AcceptDialog" parent="."]
 margin_left = 384.0
 margin_top = 272.0
 margin_right = 653.0
 margin_bottom = 412.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 theme = ExtResource( 4 )
-popup_exclusive = false
 window_title = "Alert!"
-resizable = false
-dialog_hide_on_ok = true
-_sections_unfolded = [ "Dialog", "Theme" ]
 
 [connection signal="pressed" from="FirstScene/BtnContainer/BtnNewGame" to="." method="_on_BtnNewGame_pressed"]
-
 [connection signal="pressed" from="FirstScene/BtnContainer/BtnLoadGame" to="." method="_on_BtnLoadGame_pressed"]
-
 [connection signal="pressed" from="FirstScene/BtnExit" to="." method="_on_BtnExit_pressed"]
-
 [connection signal="pressed" from="NewScene/BtnContainer/NewGameContainer/BtnPlay" to="." method="_on_BtnPlay_pressed"]
-
 [connection signal="pressed" from="LoadScene/BtnContainer/HBoxContainer/BtnDelete" to="." method="_on_BtnDelete_pressed"]
-
 [connection signal="pressed" from="LoadScene/BtnContainer/HBoxContainer/BtnPlay" to="." method="_on_BtnPlay_pressed"]
-
 [connection signal="pressed" from="MainScene/MainMenu/BtnPlayGame" to="." method="_on_BtnPlayGame_pressed"]
-
 [connection signal="pressed" from="MainScene/MainMenu/BtnHelp" to="." method="_on_BtnHelp_pressed"]
-
 [connection signal="confirmed" from="Konfirmasi" to="." method="_on_Konfirmasi_confirmed"]
-
-
